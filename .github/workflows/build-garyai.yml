@@ -1,12 +1,17 @@
 name: Build GaryAI APK
 
 # Manual-only build used for the GaryAI rebrand sideload APK.
-# Produces an unsigned-by-CI key debug APK (auto debug keystore) — do NOT use
-# for distribution; this is for installing on the owner's own device.
+# Debug APK signed with an auto-generated CI debug keystore (owner's device only).
 on:
   workflow_dispatch:
   push:
     branches: [garyai]
+
+env:
+  # ubuntu-latest runners ship a preinstalled SDK; using it avoids the
+  # sdkmanager 'Failed to find package tools' failure in setup-android.
+  ANDROID_HOME: /usr/local/lib/android/sdk
+  ANDROID_SDK_ROOT: /usr/local/lib/android/sdk
 
 jobs:
   build:
@@ -19,19 +24,18 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
+          cache: gradle
 
-      - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
-
-      - name: Accept licenses
-        run: yes | sdkmanager --licenses > /dev/null || true
+      - name: Show SDK
+        run: ls "$ANDROID_HOME/platforms" && ls "$ANDROID_HOME/build-tools" | tail -2
 
       - name: Build sideload debug APK
-        run: ./gradlew assembleSideloadDebug --no-daemon --stacktrace
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleSideloadDebug --no-daemon --stacktrace
 
       - name: Locate APK
-        run: |
-          find app/build/outputs/apk -name '*.apk' -print -exec ls -lh {} \;
+        run: find app/build/outputs/apk -name '*.apk' -print -exec ls -lh {} \;
 
       - name: Upload APK
         uses: actions/upload-artifact@v4
