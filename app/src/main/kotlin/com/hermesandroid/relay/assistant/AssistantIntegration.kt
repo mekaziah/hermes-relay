@@ -236,7 +236,7 @@ object AssistantSessionProtocol {
                     activation.id,
                     AssistantSessionSnapshot(
                         phase = AssistantSessionPhase.Error,
-                        error = failure.message ?: "Hermes voice could not start",
+                        error = failure.message ?: "Gary voice could not start",
                     ),
                 )
             },
@@ -468,7 +468,7 @@ class AssistantSessionLifecycleReceiver : BroadcastReceiver() {
                         id,
                         AssistantSessionSnapshot(
                             phase = AssistantSessionPhase.Error,
-                            error = failure.message ?: "Hermes voice could not start",
+                            error = failure.message ?: "Gary voice could not start",
                         ),
                     )
                 },

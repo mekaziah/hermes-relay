@@ -376,7 +376,7 @@ class BridgeForegroundService : Service() {
             .setContentTitle(getString(R.string.bridge_notification_control_title))
             .setContentText(getString(R.string.bridge_notification_control_body))
             .setStyle(NotificationCompat.BigTextStyle().bigText(
-                "The Hermes agent can currently read the screen and perform " +
+                "The Gary agent can currently read the screen and perform " +
                     "actions on your behalf through the accessibility service. " +
                     "Tap Disable to turn this off immediately."
             ))
@@ -399,7 +399,7 @@ class BridgeForegroundService : Service() {
             CHANNEL_NAME,
             NotificationManager.IMPORTANCE_DEFAULT,
         ).apply {
-            description = "Persistent indicator while the Hermes agent has device control."
+            description = "Persistent indicator while the Gary agent has device control."
             setShowBadge(false)
         }
         nm.createNotificationChannel(channel)

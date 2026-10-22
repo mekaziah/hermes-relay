@@ -79,7 +79,7 @@ data class ReliabilityReport(
         "${environment.versionName} (code ${environment.versionCode}) ${environment.flavor}"
 
     fun environmentBlock(): String = buildString {
-        appendLine("- Hermes-Relay version/tag: ${environment.versionName} (code ${environment.versionCode})")
+        appendLine("- GaryAI version/tag: ${environment.versionName} (code ${environment.versionCode})")
         appendLine(
             "- Install surface: " +
                 if (environment.flavor.equals("sideload", ignoreCase = true)) "sideload APK" else "Google Play",
@@ -94,7 +94,7 @@ data class ReliabilityReport(
     /** Exact local review/copy/share payload. Redaction is repeated for legacy defense in depth. */
     fun toPlainText(): String = ReliabilityRedactor.redact(
         buildString {
-            appendLine("Hermes-Relay support information")
+            appendLine("GaryAI support information")
             appendLine("Report:  $reportId")
             appendLine("Session: $appSessionId")
             appendLine("Time:    $timeIso")
@@ -151,7 +151,7 @@ fun migrateLegacyCrash(
     owner = ReliabilityOwner.Android,
     severity = ReliabilitySeverity.Fatal,
     summary = ReliabilityRedactor.redact(old.exceptionSummary, 240),
-    recovery = "The app restarted. Work already running on Hermes may still be active.",
+    recovery = "The app restarted. Work already running on Gary may still be active.",
     reportRecommended = true,
     technicalDetail = ReliabilityRedactor.redact("Thread: ${old.threadName}\n${old.stackTrace}"),
     environment = ReliabilityEnvironment(
@@ -346,7 +346,7 @@ object SupportBundleBuilder {
         val selected = reports.sortedByDescending { it.timeIso }.take(MAX_REPORTS)
         return ReliabilityRedactor.redact(
             buildString {
-                appendLine("Hermes-Relay support bundle")
+                appendLine("GaryAI support bundle")
                 appendLine("Local-only export · review before sharing")
                 appendLine("Reports: ${selected.size}")
                 selected.forEachIndexed { index, report ->

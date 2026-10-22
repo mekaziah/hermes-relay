@@ -180,8 +180,8 @@ fun EndpointCandidate.displayLabel(): String {
         } else {
             "Dashboard"
         }
-        "plugin_proxy", "plugin-proxy" -> "Hermes Secure Link"
-        "outbound_broker", "broker", "relay_broker" -> "Hermes Reach · Experimental"
+        "plugin_proxy", "plugin-proxy" -> "Gary Secure Link"
+        "outbound_broker", "broker", "relay_broker" -> "Gary Reach · Experimental"
         else -> displayName?.trim()?.takeIf { it.isNotBlank() } ?: "Custom route ($role)"
     }
 }

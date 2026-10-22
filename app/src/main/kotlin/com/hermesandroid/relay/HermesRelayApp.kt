@@ -32,7 +32,7 @@ class HermesRelayApp : Application(), SingletonImageLoader.Factory {
      */
     val runtime: HermesProcessRuntime by lazy(LazyThreadSafetyMode.SYNCHRONIZED) {
         check(isMainApplicationProcess()) {
-            "HermesProcessRuntime may only be created in the main application process"
+            "GaryProcessRuntime may only be created in the main application process"
         }
         HermesProcessRuntime(this)
     }

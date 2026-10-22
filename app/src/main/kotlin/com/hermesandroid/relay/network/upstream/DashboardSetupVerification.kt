@@ -32,7 +32,7 @@ suspend fun DashboardApiClient.verifySetup(): DashboardSetupVerification {
 }
 
 class DashboardLocalAuthenticationRequiredException : IOException(
-    "Hermes is reachable, but protected requests are not authorized. If the Dashboard is forwarded " +
+    "Gary is reachable, but protected requests are not authorized. If the Dashboard is forwarded " +
         "from loopback, check its bind address, authentication provider, and dashboard.public_url " +
         "on the host. A 401 alone does not identify the cause.",
 )

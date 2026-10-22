@@ -96,7 +96,7 @@ data class PhoneSnapshot(
 )
 
 private const val PREAMBLE =
-    "The user is chatting via the Hermes-Relay Android app. " +
+    "The user is chatting via the GaryAI Android app. " +
     "Keep responses mobile-friendly and concise when possible."
 
 /** Representative capability used only by the Settings preview fixture. */

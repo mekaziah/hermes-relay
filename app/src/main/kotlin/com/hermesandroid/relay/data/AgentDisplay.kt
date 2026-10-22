@@ -86,7 +86,7 @@ object AgentDisplay {
         return when {
             personalityName.isNotBlank() && personalityName != "default" ->
                 titleCase(personalityName.trim())
-            else -> "Hermes"
+            else -> "Gary"
         }
     }
 

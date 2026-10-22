@@ -25,7 +25,7 @@ import kotlinx.serialization.json.jsonPrimitive
  *     "message_id": "...",
  *     "chat_id": "phone",
  *     "text": "build is green",
- *     "title": "Hermes",
+ *     "title": "Gary",
  *     "surfacing": null,          // "notification" | "inbox" | "session" | null(default)
  *     "reply_to": null,
  *     "metadata": { ... },

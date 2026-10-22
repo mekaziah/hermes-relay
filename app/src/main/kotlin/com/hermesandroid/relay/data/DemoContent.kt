@@ -16,7 +16,7 @@ package com.hermesandroid.relay.data
  *
  * Content contract (keep it this way):
  *  - **Obviously fictional, English, no real personal/server data** — public
- *    repo hygiene. "Aurora Bay" is a made-up city; "Hermes" is the agent.
+ *    repo hygiene. "Aurora Bay" is a made-up city; "Gary" is the agent.
  *  - **Fully self-contained / renders with zero network** — every message is
  *    terminal (not streaming), every attachment is [AttachmentState.LOADED]
  *    with no `relayToken` (which would trigger a relay fetch), and no inline
@@ -37,7 +37,7 @@ object DemoContent {
     const val DEMO_SESSION_ID: String = "demo-session"
 
     /** Display name used on the assistant bubbles in the demo. */
-    const val DEMO_AGENT_NAME: String = "Hermes"
+    const val DEMO_AGENT_NAME: String = "Gary"
 
     /**
      * The canned conversation, oldest-first (the order `ChatScreen` renders).
@@ -49,7 +49,7 @@ object DemoContent {
         ChatMessage(
             id = "demo-user-1",
             role = MessageRole.USER,
-            content = "Hey Hermes — what can this app do? And what's the weather in Aurora Bay?",
+            content = "Hey Gary — what can this app do? And what's the weather in Aurora Bay?",
             timestamp = DEMO_BASE_TIME,
             clientOnly = true,
         ),

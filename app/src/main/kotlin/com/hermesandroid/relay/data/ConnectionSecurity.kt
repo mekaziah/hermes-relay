@@ -95,7 +95,7 @@ fun classifySurfaceSecurity(
     val secureLinkProtected = activeEndpoint.secureLinkProtects(label, url)
     val (kind, mechanism) = when {
         secureLinkProtected -> SurfaceSecurityKind.Tls to
-            if (activeEndpoint?.hasHermesReach() == true) "Hermes Reach" else "Hermes Secure Link"
+            if (activeEndpoint?.hasHermesReach() == true) "Gary Reach" else "Gary Secure Link"
         isTlsUrl(url) -> SurfaceSecurityKind.Tls to "TLS"
         activeEndpoint.isEncryptedOverlayRoute(isTailscaleDetected) ->
             SurfaceSecurityKind.Overlay to activeEndpoint.overlayMechanism(isTailscaleDetected)

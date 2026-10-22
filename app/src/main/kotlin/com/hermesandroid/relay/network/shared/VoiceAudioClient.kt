@@ -129,7 +129,7 @@ class AutoVoiceAudioClient(
                 if (!standardReadyProvider()) {
                     Result.failure(
                         IllegalStateException(
-                            "Vanilla Hermes voice is not available — check dashboard sign-in in Manage",
+                            "Vanilla Gary voice is not available — check dashboard sign-in in Manage",
                         ),
                     )
                 } else {
@@ -162,7 +162,7 @@ class AutoVoiceAudioClient(
             return relayFailure ?: result
         }
         return relayFailure ?: Result.failure(
-            IllegalStateException("Voice needs a reachable Hermes dashboard or Relay voice route"),
+            IllegalStateException("Voice needs a reachable Gary dashboard or Relay voice route"),
         )
     }
 }

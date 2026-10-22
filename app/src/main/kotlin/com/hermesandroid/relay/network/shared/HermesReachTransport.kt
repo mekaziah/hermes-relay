@@ -128,16 +128,16 @@ internal object HermesReachHandshake {
 
     fun validateMatched(payload: String): String? {
         val control = runCatching { json.decodeFromString<ReachControl>(payload) }
-            .getOrElse { return "Hermes Reach returned an invalid match response" }
+            .getOrElse { return "Gary Reach returned an invalid match response" }
         if (control.type == "error") {
-            return "Hermes Reach rejected the route (${control.code ?: "unknown"})"
+            return "Gary Reach rejected the route (${control.code ?: "unknown"})"
         }
         val streamIdValid = control.streamId?.let(::isCanonicalId) == true
         if (control.type != "matched" ||
             control.protocolVersion != REACH_PROTOCOL_VERSION ||
             !streamIdValid
         ) {
-            return "Hermes Reach returned a mismatched route response"
+            return "Gary Reach returned a mismatched route response"
         }
         return null
     }
@@ -159,7 +159,7 @@ class HermesReachSocketFactory(
     private val route: HermesReachRoute,
 ) : SocketFactory() {
     init {
-        require(route.tunnelUrlOrNull() != null) { "Invalid Hermes Reach route" }
+        require(route.tunnelUrlOrNull() != null) { "Invalid Gary Reach route" }
     }
 
     override fun createSocket(): Socket = HermesReachSocket(outerClient, route)
@@ -207,13 +207,13 @@ private class HermesReachSocket(
 
         override fun write(bytes: ByteArray, offset: Int, length: Int) {
             if (length == 0) return
-            if (!matched || closed) throw SocketException("Hermes Reach tunnel is not open")
+            if (!matched || closed) throw SocketException("Gary Reach tunnel is not open")
             var cursor = offset
             var remaining = length
             while (remaining > 0) {
                 val count = minOf(remaining, REACH_MAX_FRAME_BYTES)
                 val accepted = webSocket?.send(ByteString.of(*bytes.copyOfRange(cursor, cursor + count))) == true
-                if (!accepted) throw SocketException("Hermes Reach could not queue tunnel bytes")
+                if (!accepted) throw SocketException("Gary Reach could not queue tunnel bytes")
                 cursor += count
                 remaining -= count
             }
@@ -226,7 +226,7 @@ private class HermesReachSocket(
         if (connected) throw SocketException("Socket is already connected")
         if (closed) throw SocketException("Socket is closed")
         remote = endpoint as? InetSocketAddress
-            ?: throw SocketException("Hermes Reach requires an internet socket target")
+            ?: throw SocketException("Gary Reach requires an internet socket target")
         val request = Request.Builder().url(requireNotNull(route.tunnelUrlOrNull())).build()
         webSocket = outerClient.newWebSocket(request, listener)
         val waitMs = minOf(
@@ -234,10 +234,10 @@ private class HermesReachSocket(
             REACH_MATCH_TIMEOUT_MS,
         )
         if (!matchLatch.await(waitMs, TimeUnit.MILLISECONDS)) {
-            closeWithError(IOException("Hermes Reach host match timed out"))
+            closeWithError(IOException("Gary Reach host match timed out"))
         }
         matchError?.let { throw it }
-        if (!matched) throw IOException("Hermes Reach closed before matching the host")
+        if (!matched) throw IOException("Gary Reach closed before matching the host")
         connected = true
     }
 
@@ -245,13 +245,13 @@ private class HermesReachSocket(
         override fun onOpen(webSocket: WebSocket, response: Response) {
             val registration = HermesReachHandshake.registration(route, connectionId)
             if (!webSocket.send(registration)) {
-                closeWithError(IOException("Hermes Reach registration could not be sent"))
+                closeWithError(IOException("Gary Reach registration could not be sent"))
             }
         }
 
         override fun onMessage(webSocket: WebSocket, text: String) {
             if (matched) {
-                closeWithError(IOException("Hermes Reach sent text after matching"))
+                closeWithError(IOException("Gary Reach sent text after matching"))
                 return
             }
             HermesReachHandshake.validateMatched(text)?.let { message ->
@@ -264,15 +264,15 @@ private class HermesReachSocket(
 
         override fun onMessage(webSocket: WebSocket, bytes: ByteString) {
             if (!matched) {
-                closeWithError(IOException("Hermes Reach sent bytes before matching"))
+                closeWithError(IOException("Gary Reach sent bytes before matching"))
                 return
             }
             if (bytes.size > REACH_MAX_FRAME_BYTES) {
-                closeWithError(IOException("Hermes Reach frame exceeds 1 MiB"))
+                closeWithError(IOException("Gary Reach frame exceeds 1 MiB"))
                 return
             }
             if (!inbound.offer(bytes.toByteArray())) {
-                closeWithError(IOException("Hermes Reach receive queue exceeded its safe limit"))
+                closeWithError(IOException("Gary Reach receive queue exceeded its safe limit"))
             }
         }
 
@@ -281,14 +281,14 @@ private class HermesReachSocket(
         }
 
         override fun onClosed(webSocket: WebSocket, code: Int, reason: String) {
-            if (!matched) matchError = IOException("Hermes Reach closed before matching the host")
+            if (!matched) matchError = IOException("Gary Reach closed before matching the host")
             closed = true
             inbound.close(matchError)
             matchLatch.countDown()
         }
 
         override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
-            closeWithError(IOException("Hermes Reach connection failed", t))
+            closeWithError(IOException("Gary Reach connection failed", t))
         }
     }
 
@@ -301,13 +301,13 @@ private class HermesReachSocket(
     }
 
     override fun getInputStream(): InputStream {
-        if (!connected || closed) throw SocketException("Hermes Reach tunnel is not open")
+        if (!connected || closed) throw SocketException("Gary Reach tunnel is not open")
         inbound.readTimeoutMs = readTimeoutMs
         return inbound
     }
 
     override fun getOutputStream(): OutputStream {
-        if (!connected || closed) throw SocketException("Hermes Reach tunnel is not open")
+        if (!connected || closed) throw SocketException("Gary Reach tunnel is not open")
         return outbound
     }
 
@@ -376,7 +376,7 @@ internal class ReachInputStream : InputStream() {
                 val elapsed = TimeUnit.NANOSECONDS.toMillis(System.nanoTime() - started)
                 (readTimeoutMs - elapsed).coerceAtLeast(0)
             } else 0L
-            if (readTimeoutMs > 0 && waitMs == 0L) throw java.net.SocketTimeoutException("Hermes Reach read timed out")
+            if (readTimeoutMs > 0 && waitMs == 0L) throw java.net.SocketTimeoutException("Gary Reach read timed out")
             (this as java.lang.Object).wait(if (readTimeoutMs > 0) waitMs else 0L)
         }
         if (chunks.isEmpty()) {

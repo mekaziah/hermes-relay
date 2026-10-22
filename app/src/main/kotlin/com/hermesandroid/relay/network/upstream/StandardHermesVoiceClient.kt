@@ -87,7 +87,7 @@ class StandardHermesVoiceClient(
         // the file size, so guard here to avoid a wasted ~33 MB base64 upload.
         if (audioFile.length() > MAX_TRANSCRIBE_BYTES) {
             return@withContext Result.failure(
-                IOException("Recording too long for Hermes - try a shorter utterance"),
+                IOException("Recording too long for Gary - try a shorter utterance"),
             )
         }
 
@@ -110,12 +110,12 @@ class StandardHermesVoiceClient(
             .header("Accept", "application/json")
             .build()
 
-        executeJson(request, "Hermes audio transcribe", callClient).mapCatching { root ->
+        executeJson(request, "Gary audio transcribe", callClient).mapCatching { root ->
             val transcript = root.stringField("transcript")
                 ?: root.stringField("text")
                 ?: root.stringField("message")
             if (transcript.isNullOrBlank()) {
-                throw IOException("Hermes audio transcribe returned an empty transcript")
+                throw IOException("Gary audio transcribe returned an empty transcript")
             }
             transcript
         }
@@ -144,17 +144,17 @@ class StandardHermesVoiceClient(
             .header("Accept", "application/json")
             .build()
 
-        executeJson(request, "Hermes audio speak", callClient).mapCatching { root ->
+        executeJson(request, "Gary audio speak", callClient).mapCatching { root ->
             val dataUrl = root.stringField("data_url") ?: root.stringField("dataUrl")
             if (dataUrl.isNullOrBlank()) {
-                throw IOException("Hermes audio speak returned no audio")
+                throw IOException("Gary audio speak returned no audio")
             }
             val mimeType = root.stringField("mime_type")
                 ?: root.stringField("mimeType")
                 ?: mimeTypeFromDataUrl(dataUrl)
                 ?: "audio/mpeg"
             val bytes = decodeDataUrl(dataUrl)
-            if (bytes.isEmpty()) throw IOException("Hermes audio speak returned empty audio")
+            if (bytes.isEmpty()) throw IOException("Gary audio speak returned empty audio")
 
             val extension = extensionForMimeType(mimeType)
             File(context.cacheDir, "hermes_voice_${System.currentTimeMillis()}.$extension")
@@ -167,10 +167,10 @@ class StandardHermesVoiceClient(
     ): Result<VoiceSpeechStream?> = withContext(Dispatchers.IO) {
         try {
             val baseUrl = dashboardBaseUrl()
-                ?: throw IllegalStateException("Hermes dashboard URL not configured")
+                ?: throw IllegalStateException("Gary dashboard URL not configured")
             val callClient = callClient(baseUrl)
             val ticketUrl = "$baseUrl/api/auth/ws-ticket".toHttpUrlOrNull()
-                ?: throw IOException("Hermes dashboard URL is not a valid address: $baseUrl")
+                ?: throw IOException("Gary dashboard URL is not a valid address: $baseUrl")
             val ticketRequest = Request.Builder()
                 .url(ticketUrl)
                 .post(ByteArray(0).toRequestBody(null))
@@ -184,7 +184,7 @@ class StandardHermesVoiceClient(
                 ticket = ticket,
                 path = "/api/audio/speak-stream",
                 profile = activeProfile(),
-            ) ?: throw IOException("Could not build Hermes speech stream URL")
+            ) ?: throw IOException("Could not build Gary speech stream URL")
             val request = Request.Builder().url(websocketUrl).build()
             StandardHermesSpeechStream(
                 request = request,
@@ -256,8 +256,8 @@ class StandardHermesVoiceClient(
         val message = when (response.code) {
             400 -> "$operation rejected that input - ${detail.ifBlank { "bad request" }}"
             401, 403 -> "$operation needs dashboard sign-in - open Manage to sign in"
-            404 -> "$operation unavailable on this Hermes build - update hermes-agent or use Relay"
-            413 -> "Recording too long for Hermes - try a shorter utterance"
+            404 -> "$operation unavailable on this Gary build - update hermes-agent or use Relay"
+            413 -> "Recording too long for Gary - try a shorter utterance"
             in 500..599 -> "$operation failed - server error HTTP ${response.code}"
             else -> "$operation failed - HTTP ${response.code}: $detail"
         }
@@ -406,7 +406,7 @@ private class StandardHermesSpeechStream(
                     if (channels != 1) {
                         settle(
                             status = VoiceSpeechStreamStatus.Fallback,
-                            error = IOException("Hermes speech stream returned $channels channels; mono required"),
+                            error = IOException("Gary speech stream returned $channels channels; mono required"),
                         )
                         webSocket.cancel()
                         return
@@ -454,12 +454,12 @@ private class StandardHermesSpeechStream(
         }
 
         override fun onClosing(webSocket: WebSocket, code: Int, reason: String) {
-            settleForDisconnect(IOException("Hermes speech stream closed ($code): $reason"))
+            settleForDisconnect(IOException("Gary speech stream closed ($code): $reason"))
             webSocket.close(code, reason)
         }
 
         override fun onClosed(webSocket: WebSocket, code: Int, reason: String) {
-            settleForDisconnect(IOException("Hermes speech stream closed ($code): $reason"))
+            settleForDisconnect(IOException("Gary speech stream closed ($code): $reason"))
         }
 
         override fun onFailure(webSocket: WebSocket, t: Throwable, response: Response?) {
@@ -514,7 +514,7 @@ private class StandardHermesSpeechStream(
             socket
         }
         if (current?.send(encoded) != true) {
-            settleForDisconnect(IOException("Hermes speech stream send failed"))
+            settleForDisconnect(IOException("Gary speech stream send failed"))
         }
     }
 

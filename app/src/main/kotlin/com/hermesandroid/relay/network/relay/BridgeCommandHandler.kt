@@ -554,7 +554,7 @@ class BridgeCommandHandler(
                     put(
                         "error",
                         "Device Control is not included in the Google Play build " +
-                            "of Hermes-Relay. This build keeps Hermes Bridge Core " +
+                            "of GaryAI. This build keeps Gary Bridge Core " +
                             "features such as chat, voice, terminal, media, " +
                             "notifications, and relay status, but it does not " +
                             "ship AccessibilityService, screen reading, taps, " +
@@ -575,10 +575,10 @@ class BridgeCommandHandler(
                 buildJsonObject {
                     put(
                         "error",
-                        "Hermes accessibility service is not enabled. " +
+                        "Gary accessibility service is not enabled. " +
                             "The phone IS paired and connected — this is " +
                             "NOT a pairing problem. The user must enable " +
-                            "the Hermes-Relay accessibility service in " +
+                            "the GaryAI accessibility service in " +
                             "Android Settings > Accessibility > " +
                             "Installed services before the bridge can " +
                             "dispatch phone-control commands.",
@@ -586,7 +586,7 @@ class BridgeCommandHandler(
                     put("error_code", "service_unavailable")
                     put(
                         "required_action",
-                        "User enables Hermes-Relay in Android Accessibility Settings",
+                        "User enables GaryAI in Android Accessibility Settings",
                     )
                 }
             )
@@ -608,13 +608,13 @@ class BridgeCommandHandler(
                         "Bridge agent control is disabled by the user. " +
                             "The phone IS paired and connected — this is " +
                             "NOT a pairing problem. The user must enable " +
-                            "'Agent Control' in the Hermes Bridge tab " +
+                            "'Agent Control' in the Gary Bridge tab " +
                             "master toggle before the bridge accepts commands.",
                     )
                     put("error_code", "bridge_disabled")
                     put(
                         "required_action",
-                        "User toggles Agent Control ON in the Hermes Bridge tab",
+                        "User toggles Agent Control ON in the Gary Bridge tab",
                     )
                 }
             )
@@ -1263,7 +1263,7 @@ class BridgeCommandHandler(
                     respond(
                         requestId, 403,
                         buildJsonObject {
-                            put("error", "android_location is only available on the sideload flavor of Hermes-Relay. This build is googlePlay.")
+                            put("error", "android_location is only available on the sideload flavor of GaryAI. This build is googlePlay.")
                             put("error_code", "sideload_only")
                             put("flavor", "googlePlay")
                         }
@@ -1278,7 +1278,7 @@ class BridgeCommandHandler(
                     respond(
                         requestId, 403,
                         buildJsonObject {
-                            put("error", "android_search_contacts is only available on the sideload flavor of Hermes-Relay. This build is googlePlay.")
+                            put("error", "android_search_contacts is only available on the sideload flavor of GaryAI. This build is googlePlay.")
                             put("error_code", "sideload_only")
                             put("flavor", "googlePlay")
                         }
@@ -1302,7 +1302,7 @@ class BridgeCommandHandler(
                     respond(
                         requestId, 403,
                         buildJsonObject {
-                            put("error", "android_call auto-dial is only available on the sideload flavor of Hermes-Relay. This build is googlePlay.")
+                            put("error", "android_call auto-dial is only available on the sideload flavor of GaryAI. This build is googlePlay.")
                             put("error_code", "sideload_only")
                             put("flavor", "googlePlay")
                         }
@@ -1356,7 +1356,7 @@ class BridgeCommandHandler(
                     respond(
                         requestId, 403,
                         buildJsonObject {
-                            put("error", "android_send_sms is only available on the sideload flavor of Hermes-Relay. This build is googlePlay.")
+                            put("error", "android_send_sms is only available on the sideload flavor of GaryAI. This build is googlePlay.")
                             put("error_code", "sideload_only")
                             put("flavor", "googlePlay")
                         }
@@ -1414,7 +1414,7 @@ class BridgeCommandHandler(
                     respond(
                         requestId, 403,
                         buildJsonObject {
-                            put("error", "$path is only available on the sideload flavor of Hermes-Relay. This build is googlePlay.")
+                            put("error", "$path is only available on the sideload flavor of GaryAI. This build is googlePlay.")
                             put("error_code", "sideload_only")
                             put("flavor", "googlePlay")
                         }
@@ -1455,9 +1455,9 @@ class BridgeCommandHandler(
                     val target = if (to.isBlank()) "the selected recipient" else to
                     "Send MMS compose to $target with $attachmentCount attachment(s)?"
                 } else if (attachmentCount > 0) {
-                    "Share $attachmentCount attachment(s) from Hermes-Relay?"
+                    "Share $attachmentCount attachment(s) from GaryAI?"
                 } else {
-                    "Share text from Hermes-Relay?"
+                    "Share text from GaryAI?"
                 }
                 val allowed = safetyManager.awaitConfirmation(path, confirmText)
                 if (!allowed) {

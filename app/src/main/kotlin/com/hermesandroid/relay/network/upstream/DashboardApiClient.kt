@@ -768,7 +768,7 @@ class DashboardApiClient(
         openOutput: () -> OutputStream,
     ): Result<String> = download(
         path = "/api/ops/backup/download?archive=${queryValue(archive)}",
-        operation = "Hermes backup",
+        operation = "Gary backup",
         openOutput = openOutput,
     )
 

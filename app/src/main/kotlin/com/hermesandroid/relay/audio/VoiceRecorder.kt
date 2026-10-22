@@ -153,7 +153,7 @@ class VoiceRecorder(
                 readPcmLoop(recorder, minBuffer)
                 done.countDown()
             },
-            "HermesVoiceRecorder",
+            "GaryVoiceRecorder",
         ).also { it.start() }
         return outFile
     }

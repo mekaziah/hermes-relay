@@ -103,7 +103,7 @@ fun buildPluginProxyClient(
             val request = if (token != null) {
                 chain.request().newBuilder()
                     .credentialHeader(
-                        "X-Hermes-Relay-Session",
+                        "X-GaryAI-Session",
                         token,
                         "Relay session credential",
                     )

@@ -95,8 +95,8 @@ private fun classifyIoMessage(msg: String, context: String?, ctx: Context?): Hum
     return when {
         "hermes broker auth failed" in msg ||
             "relay-side hermes credential" in msg -> HumanError(
-            title = ctx?.getString(R.string.error_classify_relay_auth) ?: "Relay Hermes auth failed",
-            body = "The relay could not authenticate to Hermes. Update the server-side Hermes credential and restart the relay.",
+            title = ctx?.getString(R.string.error_classify_relay_auth) ?: "Relay Gary auth failed",
+            body = "The relay could not authenticate to Gary. Update the server-side Gary credential and restart the relay.",
             retryable = false,
         )
         "xai realtime auth" in msg ||
@@ -113,7 +113,7 @@ private fun classifyIoMessage(msg: String, context: String?, ctx: Context?): Hum
             ("401" in msg || "403" in msg || "unauthorized" in msg || "forbidden" in msg) -> HumanError(
             title = ctx?.getString(R.string.power_feature_dashboard_signin_label) ?: "Dashboard sign-in required",
             body = ctx?.getString(R.string.power_feature_dashboard_signin_explain)
-                ?: "Sign in to the Hermes Dashboard to load profile sessions.",
+                ?: "Sign in to the Gary Dashboard to load profile sessions.",
             retryable = false,
         )
         (
@@ -125,7 +125,7 @@ private fun classifyIoMessage(msg: String, context: String?, ctx: Context?): Hum
                 (context == "send_message" && ("401" in msg || "unauthorized" in msg))
             ) -> HumanError(
             title = ctx?.getString(R.string.error_classify_api_key) ?: "API key rejected",
-            body = "The Hermes API rejected the saved API key - update it in Settings",
+            body = "The Gary API rejected the saved API key - update it in Settings",
             retryable = false,
             actionLabel = ctx?.getString(R.string.error_classify_settings) ?: "Settings",
         )
@@ -148,7 +148,7 @@ private fun classifyIoMessage(msg: String, context: String?, ctx: Context?): Hum
         // input errors. Tell the user to update the relay, not to retry.
         "400" in msg && "unsupported" in msg && "field" in msg -> HumanError(
             title = ctx?.getString(R.string.error_classify_relay_update) ?: "Relay update needed",
-            body = "This feature needs a newer Hermes Relay plugin on your " +
+            body = "This feature needs a newer GaryAI plugin on your " +
                 "server. Update the relay, then try again.",
             retryable = false,
         )
@@ -262,7 +262,7 @@ private fun classifyErrorInternal(t: Throwable?, context: String?, ctx: Context?
         return when (t.statusCode) {
             401 -> HumanError(
                 title = ctx?.getString(R.string.power_feature_dashboard_signin_label) ?: "Dashboard sign-in required",
-                body = "Sign in to the Hermes Dashboard to continue this action.",
+                body = "Sign in to the Gary Dashboard to continue this action.",
             )
             403 -> HumanError(
                 title = ctx?.getString(R.string.error_classify_not_allowed) ?: "Not allowed",
@@ -300,8 +300,8 @@ private fun classifyErrorInternal(t: Throwable?, context: String?, ctx: Context?
     // 503s: the server is healthy and will accept work after the drain clears.
     if (msg.startsWith("api error 503: gateway_draining:")) {
         return HumanError(
-            title = "Hermes is restarting",
-            body = "Hermes is draining active work. Wait a moment, then retry this message.",
+            title = "Gary is restarting",
+            body = "Gary is draining active work. Wait a moment, then retry this message.",
             retryable = true,
             actionLabel = ctx?.getString(R.string.error_classify_retry) ?: "Retry",
         )

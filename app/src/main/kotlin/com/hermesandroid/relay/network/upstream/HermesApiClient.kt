@@ -1008,7 +1008,7 @@ class HermesApiClient(
                 return@withContext Result.failure(
                     ApiModelRoutingException(
                         ApiModelRoutingErrorCode.LEGACY_PROVIDER_UNSUPPORTED,
-                        "This Hermes version cannot safely preserve a provider selection on API fallback.",
+                        "This Gary version cannot safely preserve a provider selection on API fallback.",
                     ),
                 )
             }
@@ -1017,7 +1017,7 @@ class HermesApiClient(
                 return@withContext Result.failure(
                     ApiModelRoutingException(
                         ApiModelRoutingErrorCode.MODEL_NOT_AVAILABLE,
-                        "This Hermes version did not advertise the selected model for API fallback.",
+                        "This Gary version did not advertise the selected model for API fallback.",
                     ),
                 )
             }
@@ -1064,7 +1064,7 @@ class HermesApiClient(
                 // config.display.personality for the active persona and often
                 // mirrors the same identity through skin. Accept name-style
                 // aliases too so older or profile-specific configs don't make
-                // Android fall back to the literal "Hermes" label.
+                // Android fall back to the literal "Gary" label.
                 val display = config["display"] as? JsonObject
                 val defaultPersonality = display.stringField("personality")
                 val defaultName = firstNonBlank(
@@ -1988,8 +1988,8 @@ class HermesApiClient(
 
         fun Response.advertisesEventStream(): Boolean {
             val contentType = header("Content-Type").orEmpty()
-            val streamMode = header("X-Hermes-Stream-Mode").orEmpty()
-            val runStreaming = header("X-Hermes-Run-Streaming").orEmpty()
+            val streamMode = header("X-Gary-Stream-Mode").orEmpty()
+            val runStreaming = header("X-Gary-Run-Streaming").orEmpty()
             return contentType.contains("text/event-stream", ignoreCase = true) ||
                 streamMode.equals("sse", ignoreCase = true) ||
                 runStreaming.equals("sse", ignoreCase = true)
@@ -2023,7 +2023,7 @@ class HermesApiClient(
 
     // --- Lifecycle ---
 
-    fun shutdown() = shutdownOffMainThread("HermesApiClient-shutdown") {
+    fun shutdown() = shutdownOffMainThread("GaryApiClient-shutdown") {
         client.dispatcher.executorService.shutdown()
         try {
             if (!client.dispatcher.executorService.awaitTermination(2, TimeUnit.SECONDS)) {

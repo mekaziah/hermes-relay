@@ -367,7 +367,7 @@ private class HermesVoiceInteractionSession(
                 activationId,
                 AssistantSessionSnapshot(
                     phase = AssistantSessionPhase.Error,
-                    error = it.message ?: "Hermes could not open the voice session.",
+                    error = it.message ?: "Gary could not open the voice session.",
                 )
             )
         }
@@ -386,7 +386,7 @@ private class HermesVoiceInteractionSession(
                 activationId,
                 AssistantSessionSnapshot(
                     phase = AssistantSessionPhase.Error,
-                    error = it.message ?: "Hermes could not open full voice.",
+                    error = it.message ?: "Gary could not open full voice.",
                 )
             )
         }

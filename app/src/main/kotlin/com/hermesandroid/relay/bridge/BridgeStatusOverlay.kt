@@ -33,7 +33,7 @@ import java.util.concurrent.ConcurrentHashMap
  * WindowManager-backed overlay host. Serves two jobs in one place so we
  * only ever attach a single `SYSTEM_ALERT_WINDOW` View per process:
  *
- *  1. A small floating status chip ("Hermes is active") shown when the
+ *  1. A small floating status chip ("Gary is active") shown when the
  *     user has opted in via [BridgeSafetySettings.statusOverlayEnabled].
  *  2. A full-width centered destructive-verb confirmation modal that
  *     [BridgeSafetyManager] fires from [BridgeSafetyManager.awaitConfirmation].

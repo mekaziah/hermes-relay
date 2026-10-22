@@ -92,7 +92,7 @@ object FeatureFlags {
 /**
  * Compile-time gating based on the active Gradle product flavor.
  *
- * Phase 3 keeps "Hermes Bridge" as the umbrella, but only the `sideload`
+ * Phase 3 keeps "Gary Bridge" as the umbrella, but only the `sideload`
  * flavor ships AccessibilityService-backed Device Control. The `googlePlay`
  * flavor is Bridge Core: relay pairing, chat, voice, terminal, notification
  * companion, media, and session-grant surfaces without screen reading, taps,

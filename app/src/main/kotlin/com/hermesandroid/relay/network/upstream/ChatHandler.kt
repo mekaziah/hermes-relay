@@ -914,7 +914,7 @@ class ChatHandler {
             "android_call"            -> "Call"
             "android_search_contacts" -> "Search Contacts"
             "android_open_app"        -> "Open App"
-            "android_return_to_hermes" -> "Return to Hermes"
+            "android_return_to_hermes" -> "Return to Gary"
             "android_screenshot"      -> "Screenshot"
             "android_press_key"       -> "Key Press"
             "android_setup"           -> "Bridge Setup"
@@ -1310,7 +1310,7 @@ class ChatHandler {
     /**
      * Repair assistant labels after late-arriving agent config. History can
      * load before GET /api/config returns, leaving default-profile messages
-     * with the generic "Hermes" label. Keep local phone/voice action trace
+     * with the generic "Gary" label. Keep local phone/voice action trace
      * labels intact because those bubbles do not represent the server agent.
      */
     fun relabelGenericAssistantMessages(agentName: String?) {
@@ -3639,7 +3639,7 @@ internal fun formatPhoneActionResult(
     result.errorCode == "bridge_disabled" -> buildString {
         append("**$label — agent control is off**")
         append('\n')
-        append("Enable Agent Control in the Hermes Bridge tab to retry.")
+        append("Enable Agent Control in the Gary Bridge tab to retry.")
     }
     result.errorCode == "permission_denied" -> buildString {
         append("**$label — permission needed**")
@@ -3649,7 +3649,7 @@ internal fun formatPhoneActionResult(
     result.errorCode == "service_unavailable" -> buildString {
         append("**$label — bridge offline**")
         append('\n')
-        append("The accessibility service isn't connected. Enable Hermes accessibility in Settings.")
+        append("The accessibility service isn't connected. Enable Gary accessibility in Settings.")
     }
     result.errorCode == "cancelled" -> buildString {
         append("**$label — cancelled before dispatch**")

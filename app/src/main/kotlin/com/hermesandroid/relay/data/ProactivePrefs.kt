@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
 
 /**
- * "Let Hermes message me" — the off-by-default opt-in that lets the agent
+ * "Let Gary message me" — the off-by-default opt-in that lets the agent
  * proactively push messages to this phone (the `phone` Hermes platform).
  *
  * This is the app half of a two-sided gate: the server-side adapter is gated
@@ -23,7 +23,7 @@ import kotlinx.coroutines.flow.map
  */
 val KEY_PROACTIVE_ENABLED = booleanPreferencesKey("proactive_messages_enabled")
 
-/** Persist the "Let Hermes message me" preference. */
+/** Persist the "Let Gary message me" preference. */
 suspend fun Context.setProactiveEnabled(enabled: Boolean) {
     relayDataStore.edit { it[KEY_PROACTIVE_ENABLED] = enabled }
 }

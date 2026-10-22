@@ -11886,7 +11886,7 @@ class ChatViewModel : ViewModel() {
         var accessibilityGranted = false
         var currentAppPkg: String? = null
         runCatching {
-            val cls = Class.forName("com.hermesandroid.relay.accessibility.HermesAccessibilityService")
+            val cls = Class.forName("com.hermesandroid.relay.accessibility.GaryAccessibilityService")
             val instance: Any? = runCatching {
                 // Shape A: @JvmStatic — static field on the outer class
                 val f = cls.getDeclaredField("instance").apply { isAccessible = true }

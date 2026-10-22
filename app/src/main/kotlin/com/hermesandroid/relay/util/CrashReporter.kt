@@ -94,7 +94,7 @@ object CrashReporter {
                 appendLine(trace)
                 appendLine("```")
                 appendLine()
-                append("<sub>Captured locally by Hermes-Relay · ${report.timeIso}</sub>")
+                append("<sub>Captured locally by GaryAI · ${report.timeIso}</sub>")
             },
             maxLength = 12_000,
         )

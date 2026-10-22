@@ -26,7 +26,7 @@ object IssueReport {
         "https://github.com/Codename-11/hermes-relay/issues/new"
 
     /** Clipboard label used for every report copy in the app. */
-    const val CLIP_LABEL = "Hermes-Relay report"
+    const val CLIP_LABEL = "GaryAI report"
 
     /**
      * Build a pre-filled GitHub "new issue" URL from a generic title/body/labels

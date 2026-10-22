@@ -2713,7 +2713,7 @@ class RelayVoiceClient(
         URLEncoder.encode(value, Charsets.UTF_8.name()).replace("+", "%20")
 
     private fun missingAuthError(): IllegalStateException =
-        IllegalStateException("Voice auth missing — pair with the relay or save a Hermes API key")
+        IllegalStateException("Voice auth missing — pair with the relay or save a Gary API key")
 
     private fun describeHttpError(code: Int, message: String, body: String = ""): String {
         // Voice routes return text/plain on error (see plugin/relay/voice_auth.py).

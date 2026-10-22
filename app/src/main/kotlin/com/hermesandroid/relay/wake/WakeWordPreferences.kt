@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.map
 
-const val DEFAULT_WAKE_PHRASE = "Hey Hermes"
+const val DEFAULT_WAKE_PHRASE = "Hey Gary"
 
 enum class WakeWordProfileRouteMode(val storageValue: String) {
     Active("active"),

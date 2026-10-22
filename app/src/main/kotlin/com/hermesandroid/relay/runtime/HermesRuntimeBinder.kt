@@ -475,7 +475,7 @@ internal class HermesRuntimeBinder(
                     !contextReady &&
                         (readiness as? HermesVoiceActivationReadiness.Ready)?.route !=
                         HermesVoiceActivationRoute.Realtime ->
-                        HermesVoiceActivationReadiness.Waiting("Restoring the Hermes chat context")
+                        HermesVoiceActivationReadiness.Waiting("Restoring the Gary chat context")
                     else -> readiness
                 }
             }.collect { readiness ->
@@ -516,7 +516,7 @@ internal class HermesRuntimeBinder(
         timeoutMs: Long,
         isCurrent: () -> Boolean,
     ) {
-        check(bound) { "Hermes runtime is not initialized" }
+        check(bound) { "Gary runtime is not initialized" }
         val connection = runtime.connectionViewModel
         val chat = runtime.chatViewModel
         val voice = runtime.voiceViewModel
@@ -536,7 +536,7 @@ internal class HermesRuntimeBinder(
 
         currentCoroutineContext().ensureActive()
         check(isCurrent()) { "Assistant activation was superseded" }
-        check(!voice.uiState.value.voiceMode) { "Hermes voice is already active" }
+        check(!voice.uiState.value.voiceMode) { "Gary voice is already active" }
         // Re-apply scope before entry. The readiness collector already observed
         // the scope's resolved settings, so Realtime prewarm cannot use defaults.
         voice.setVoicePrefsConnection(connection.activeConnectionId.value)
@@ -590,7 +590,7 @@ internal class HermesRuntimeBinder(
 
     fun requireRelayVoiceClient(): RelayVoiceClient {
         check(bound && ::relayVoiceClient.isInitialized) {
-            "Call HermesProcessRuntime.ensureInitialized() before using voice clients"
+            "Call GaryProcessRuntime.ensureInitialized() before using voice clients"
         }
         return relayVoiceClient
     }
@@ -673,7 +673,7 @@ internal fun resolveVoiceActivationReadiness(
     profileSettled: Boolean,
 ): HermesVoiceActivationReadiness {
     if (!profileSettled) {
-        return HermesVoiceActivationReadiness.Waiting("Loading the selected Hermes profile")
+        return HermesVoiceActivationReadiness.Waiting("Loading the selected Gary profile")
     }
     val effectiveSettings = voiceSettingsForRelayConfiguration(settings, relayConfigured)
     return when (VoiceEngineMode.fromStorage(effectiveSettings.engineMode)) {
@@ -686,7 +686,7 @@ internal fun resolveVoiceActivationReadiness(
         }
         VoiceEngineMode.HermesVoiceOutput -> {
             if (!chatReady) {
-                return HermesVoiceActivationReadiness.Waiting("Waiting for Hermes chat")
+                return HermesVoiceActivationReadiness.Waiting("Waiting for Gary chat")
             }
             when (VoiceAudioRoute.fromStorage(effectiveSettings.audioRoute)) {
                 VoiceAudioRoute.Relay -> if (relayReady) {
@@ -737,14 +737,14 @@ private fun standardVoiceReadiness(
         HermesVoiceActivationReadiness.Ready(HermesVoiceActivationRoute.Standard)
     StandardVoiceAvailability.SignInRequired ->
         HermesVoiceActivationReadiness.Blocked(
-            "Vanilla Hermes voice needs dashboard sign-in in Manage"
+            "Vanilla Gary voice needs dashboard sign-in in Manage"
         )
     StandardVoiceAvailability.Unsupported ->
         HermesVoiceActivationReadiness.Blocked(
-            "This Hermes dashboard does not expose the upstream audio routes"
+            "This Gary dashboard does not expose the upstream audio routes"
         )
     StandardVoiceAvailability.Unreachable ->
-        HermesVoiceActivationReadiness.Waiting("Waiting for the Hermes dashboard")
+        HermesVoiceActivationReadiness.Waiting("Waiting for the Gary dashboard")
     StandardVoiceAvailability.Unknown ->
-        HermesVoiceActivationReadiness.Waiting("Checking Vanilla Hermes voice")
+        HermesVoiceActivationReadiness.Waiting("Checking Vanilla Gary voice")
 }

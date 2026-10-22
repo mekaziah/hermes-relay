@@ -96,7 +96,7 @@ object DiagnosticIssuePrefill {
             appendLine(whatHappened)
             appendLine()
             appendLine("### Environment")
-            appendLine("- Hermes-Relay version/tag: ${BuildConfig.VERSION_NAME} (code ${BuildConfig.VERSION_CODE})")
+            appendLine("- GaryAI version/tag: ${BuildConfig.VERSION_NAME} (code ${BuildConfig.VERSION_CODE})")
             appendLine("- Install surface: $surface")
             appendLine("- Android: ${Build.VERSION.RELEASE} (API ${Build.VERSION.SDK_INT})")
             appendLine("- Device: ${Build.MANUFACTURER} ${Build.MODEL}")
@@ -122,7 +122,7 @@ object DiagnosticIssuePrefill {
                 appendLine("```")
             }
             appendLine()
-            append("<sub>Captured by the Hermes-Relay in-app diagnostics log</sub>")
+            append("<sub>Captured by the GaryAI in-app diagnostics log</sub>")
         }
         return DiagnosticsLog.redactReportText(body).orEmpty()
             .replace(CONFIGURED_URL_MARKER, configuredUrl.orEmpty())

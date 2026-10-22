@@ -285,9 +285,9 @@ class GatewayKeepAliveService : Service() {
         val (title, body) = when {
             waitingSessions > 0 -> {
                 val title = if (waitingSessions == 1) {
-                    "Hermes is waiting for input"
+                    "Gary is waiting for input"
                 } else {
-                    "$waitingSessions Hermes sessions need input"
+                    "$waitingSessions Gary sessions need input"
                 }
                 title to if (activeTurns > waitingSessions) {
                     "$waitingSessions waiting · ${activeTurns - waitingSessions} still working"
@@ -297,9 +297,9 @@ class GatewayKeepAliveService : Service() {
             }
             activeTurns > 0 -> {
                 val title = if (activeTurns == 1) {
-                    "Hermes is finishing a turn"
+                    "Gary is finishing a turn"
                 } else {
-                    "Hermes is finishing $activeTurns turns"
+                    "Gary is finishing $activeTurns turns"
                 }
                 title to "The connection stays active until this work completes."
             }
@@ -327,7 +327,7 @@ class GatewayKeepAliveService : Service() {
         nm.createNotificationChannel(
             NotificationChannel(CHANNEL_ID, CHANNEL_NAME, NotificationManager.IMPORTANCE_LOW).apply {
                 description =
-                    "Shows while Hermes keeps its connection open in the background so messages and live features stay responsive."
+                    "Shows while Gary keeps its connection open in the background so messages and live features stay responsive."
                 setShowBadge(false)
             },
         )

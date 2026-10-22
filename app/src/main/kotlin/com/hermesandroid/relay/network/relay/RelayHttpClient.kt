@@ -30,7 +30,7 @@ import okhttp3.RequestBody.Companion.toRequestBody
 import java.io.IOException
 import java.io.ByteArrayOutputStream
 
-internal const val RELAY_SESSION_HEADER: String = "X-Hermes-Relay-Session"
+internal const val RELAY_SESSION_HEADER: String = "X-GaryAI-Session"
 
 /** Keep Dashboard outer auth and Relay capability auth in separate headers. */
 internal fun Request.Builder.relaySessionCredential(
@@ -1311,7 +1311,7 @@ class RelayHttpClient(
                         configuredUrl = trimmed,
                         requestUrl = requestUrl,
                         elapsedMs = System.currentTimeMillis() - startedAtMs,
-                        suggestion = "Verify this route points to a Hermes-Relay server and inspect its logs.",
+                        suggestion = "Verify this route points to a GaryAI server and inspect its logs.",
                     )
                     return@withContext Result.failure(
                         IOException("Relay returned an empty response")
@@ -1331,7 +1331,7 @@ class RelayHttpClient(
                         configuredUrl = trimmed,
                         requestUrl = requestUrl,
                         elapsedMs = System.currentTimeMillis() - startedAtMs,
-                        suggestion = "Verify this route points to a Hermes-Relay server rather than another HTTP service.",
+                        suggestion = "Verify this route points to a GaryAI server rather than another HTTP service.",
                     )
                     return@withContext Result.failure(
                         IOException("Relay returned non-JSON: ${e.message ?: "parse error"}")
@@ -1374,7 +1374,7 @@ class RelayHttpClient(
                         configuredUrl = trimmed,
                         requestUrl = requestUrl,
                         elapsedMs = System.currentTimeMillis() - startedAtMs,
-                        suggestion = "Verify this route points to a current Hermes-Relay server.",
+                        suggestion = "Verify this route points to a current GaryAI server.",
                     )
                     return@withContext Result.failure(
                         IOException("Response doesn't look like a hermes-relay — missing 'version' field")

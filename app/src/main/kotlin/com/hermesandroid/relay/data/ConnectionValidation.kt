@@ -82,7 +82,7 @@ object ConnectionValidation {
         relayUrl: String,
     ): String? {
         if (dashboardUrl.isNullOrBlank() && apiServerUrl.isBlank() && relayUrl.isBlank()) {
-            return "Configure at least one Hermes endpoint"
+            return "Configure at least one Gary endpoint"
         }
         return validateDashboardUrl(dashboardUrl.orEmpty())
             ?: validateOptionalApiServerUrl(apiServerUrl)

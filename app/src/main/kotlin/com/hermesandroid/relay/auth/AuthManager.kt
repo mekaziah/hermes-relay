@@ -1387,7 +1387,7 @@ class AuthManager(
             credentialKind = "route",
             token = credential["token"]?.jsonPrimitive?.contentOrNull?.let {
                 runCatching {
-                    normalizeCredentialForHeader(it, "Hermes Reach credential")
+                    normalizeCredentialForHeader(it, "Gary Reach credential")
                 }.getOrElse {
                     Log.w(TAG, "Ignoring malformed Hermes Reach route credential")
                     return

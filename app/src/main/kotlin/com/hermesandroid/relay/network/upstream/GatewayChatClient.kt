@@ -799,7 +799,7 @@ class GatewayChatClient(
                             ?: run {
                                 cleanupStagedAttachments(stagedImagePaths)
                                 throw GatewayAttachmentPreflightException(
-                                    "attachment upload failed: Hermes returned no readable file reference",
+                                    "attachment upload failed: Gary returned no readable file reference",
                                 )
                             }
                     } else {
@@ -877,7 +877,7 @@ class GatewayChatClient(
                         cleanupStagedAttachments(stagedImagePaths)
                         turn.tracer.done("submit-rejected")
                         turn.callbacks.onSubmitRejected(
-                            submitError?.message ?: "Hermes rejected the new session",
+                            submitError?.message ?: "Gary rejected the new session",
                         )
                         return@launch
                     }
@@ -910,7 +910,7 @@ class GatewayChatClient(
                     turn.disarmWatchdog()
                     turn.tracer.done("resume-rejected")
                     turn.callbacks.onResumeFailure(
-                        e.message ?: "Hermes could not resume this session",
+                        e.message ?: "Gary could not resume this session",
                     )
                 }
             } catch (e: GatewayAttachmentPreflightException) {
@@ -2219,7 +2219,7 @@ class GatewayChatClient(
             }
 
             if (hasActiveTurn()) {
-                throw GatewayPreflightException("Wait for the current Hermes turn to finish before creating Bot Chat")
+                throw GatewayPreflightException("Wait for the current Gary turn to finish before creating Bot Chat")
             }
             val created = rpc(
                 "session.create",
@@ -3561,8 +3561,8 @@ class GatewayChatClient(
             ?.takeIf { it.isNotEmpty() }
         val socketConfirmed = actual == null && connectedSocketProfile == expected
         if (actual != expected && !socketConfirmed) {
-            val detail = actual?.let { "Hermes returned profile '$it'" }
-                ?: "Hermes did not confirm profile ownership"
+            val detail = actual?.let { "Gary returned profile '$it'" }
+                ?: "Gary did not confirm profile ownership"
             throw GatewayPreflightException(
                 "$detail; refusing to use it as selected profile '$expected'",
             )
@@ -3692,7 +3692,7 @@ class GatewayChatClient(
                     requireConfirmedSessionProfile(result, requestedProfile)
                 } catch (error: GatewayPreflightException) {
                     throw GatewayAuthoritativeResumeException(
-                        error.message ?: "Hermes resumed this session in a different profile",
+                        error.message ?: "Gary resumed this session in a different profile",
                     )
                 }
                 liveSessionId = live
@@ -3704,7 +3704,7 @@ class GatewayChatClient(
                 return
             }
             throw GatewayAuthoritativeResumeException(
-                resumeError?.message ?: "Hermes could not resume this session",
+                resumeError?.message ?: "Gary could not resume this session",
             )
         }
 
@@ -3767,7 +3767,7 @@ class GatewayChatClient(
             lazyLiveSessions.remove(liveId)
         } catch (error: Exception) {
             throw GatewayPreflightException(
-                error.message ?: "Hermes session initialization timed out",
+                error.message ?: "Gary session initialization timed out",
             )
         } finally {
             if (_preparingSessionId.value == preparingStoredId) _preparingSessionId.value = null
@@ -4071,7 +4071,7 @@ class GatewayChatClient(
                 payload?.stringField("message")?.startsWith("agent init failed:") == true)
         ) {
             val message = payload?.stringField("message")
-                ?: "Hermes session initialization failed"
+                ?: "Gary session initialization failed"
             // A fast deferred build can fail before the lazy RPC acknowledgement.
             // Retain the exact runtime failure so the subsequent readiness wait
             // cannot lose that edge and hang until its deadline.
