@@ -58,7 +58,7 @@ import kotlinx.coroutines.launch
 class HermesAccessibilityService : AccessibilityService() {
 
     companion object {
-        private const val TAG = "HermesA11yService"
+        private const val TAG = "GaryA11yService"
 
         /** Master-enable DataStore key — read + toggled from Settings UI. */
         val KEY_BRIDGE_MASTER_ENABLED = booleanPreferencesKey("bridge_master_enabled_v2")
@@ -150,7 +150,7 @@ class HermesAccessibilityService : AccessibilityService() {
     override fun onServiceConnected() {
         super.onServiceConnected()
         instance = this
-        Log.i(TAG, "HermesAccessibilityService connected")
+        Log.i(TAG, "GaryAccessibilityService connected")
         // Feed the master-toggle cache for the lifetime of this service
         // binding. Re-created on each connect — see [serviceScope] KDoc.
         val scope = CoroutineScope(Dispatchers.Default + SupervisorJob())
@@ -202,7 +202,7 @@ class HermesAccessibilityService : AccessibilityService() {
     }
 
     override fun onUnbind(intent: Intent?): Boolean {
-        Log.i(TAG, "HermesAccessibilityService unbinding")
+        Log.i(TAG, "GaryAccessibilityService unbinding")
         if (instance === this) instance = null
         serviceScope?.cancel()
         serviceScope = null

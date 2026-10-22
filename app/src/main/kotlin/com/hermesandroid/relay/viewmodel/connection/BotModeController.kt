@@ -74,7 +74,7 @@ class BotModeController(
                 loading = fleet.isNotEmpty(),
             )
             if (fleet.isEmpty()) {
-                _state.value = BotModeState(error = "Connect to Hermes to use Bot Mode")
+                _state.value = BotModeState(error = "Connect to Gary to use Bot Mode")
                 return
             }
 

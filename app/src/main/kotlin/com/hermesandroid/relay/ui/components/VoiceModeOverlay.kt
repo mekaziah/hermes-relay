@@ -3,12 +3,8 @@ package com.hermesandroid.relay.ui.components
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.core.Animatable
-import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.infiniteRepeatable
 import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -2253,13 +2249,15 @@ private fun BackgroundRunChip(
         val elapsedSeconds = ((nowMs - display.startedAtMs) / 1000L).coerceAtLeast(0L)
         val elapsedLabel = "%d:%02d".format(elapsedSeconds / 60, elapsedSeconds % 60)
 
-        val pulse by rememberInfiniteTransition(label = "bgRunPulse").animateFloat(
-            initialValue = 0.35f,
-            targetValue = 1f,
-            animationSpec = infiniteRepeatable(tween(900), RepeatMode.Reverse),
-            label = "bgRunPulseAlpha",
-        )
         val done = display.phase == BackgroundRunPhase.DONE
+        // Frame-throttled, and parked once the run settles (see AmbientAnimation.kt):
+        // a DONE chip reads as an outcome, not activity, so nothing should animate.
+        val pulse = rememberAmbientBreathe(
+            minValue = 0.35f,
+            maxValue = 1f,
+            periodMillis = 1_800,
+            running = !done,
+        )
         val dotColor = when (display.phase) {
             BackgroundRunPhase.RECONNECTING -> MaterialTheme.colorScheme.tertiary
             else -> MaterialTheme.colorScheme.primary

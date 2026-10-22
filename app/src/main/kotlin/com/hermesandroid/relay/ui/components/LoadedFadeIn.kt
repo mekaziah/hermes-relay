@@ -7,11 +7,6 @@ import androidx.compose.animation.fadeOut
 import androidx.compose.animation.slideInVertically
 import androidx.compose.animation.slideOutVertically
 import androidx.compose.animation.togetherWith
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
@@ -50,16 +45,7 @@ fun RelaySkeletonLine(
     modifier: Modifier = Modifier,
     height: Dp = 12.dp,
 ) {
-    val transition = rememberInfiniteTransition(label = "relay-skeleton")
-    val alpha by transition.animateFloat(
-        initialValue = 0.18f,
-        targetValue = 0.42f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 980, easing = LinearEasing),
-            repeatMode = RepeatMode.Reverse,
-        ),
-        label = "relay-skeleton-alpha",
-    )
+    val alpha = rememberAmbientBreathe(minValue = 0.18f, maxValue = 0.42f, periodMillis = 1_960)
     Box(
         modifier = modifier
             .width(width)

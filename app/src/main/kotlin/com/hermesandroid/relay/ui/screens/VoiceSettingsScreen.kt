@@ -3343,7 +3343,7 @@ private fun DeliveryModeInfoDialog(onDismiss: () -> Unit) {
             Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
                 DeliveryModeInfoRow(
                     label = "Exact",
-                    body = "Recommended. The realtime voice reads the Hermes answer word for word, falling back to standard TTS only if it goes off-script.",
+                    body = "Recommended. The realtime voice reads the Gary answer word for word, falling back to standard TTS only if it goes off-script.",
                 )
                 DeliveryModeInfoRow(
                     label = "Summary",
@@ -5061,7 +5061,7 @@ private fun VoiceProfileSummaryCard(
                     text = if (currentEngine == VoiceEngineMode.RealtimeAgent) {
                         "Real-time Voice Agent"
                     } else {
-                        "Hermes Chat + Voice Output"
+                        "Gary Chat + Voice Output"
                     },
                     style = MaterialTheme.typography.titleMedium,
                     fontWeight = FontWeight.SemiBold,
@@ -5110,7 +5110,7 @@ private fun VoiceModePickerDialog(
         text = {
             Column(verticalArrangement = Arrangement.spacedBy(8.dp)) {
                 listOf(
-                    VoiceEngineMode.HermesVoiceOutput to ("Hermes Chat + Voice Output" to "Hermes answers with your selected TTS voice"),
+                    VoiceEngineMode.HermesVoiceOutput to ("Gary Chat + Voice Output" to "Gary answers with your selected TTS voice"),
                     VoiceEngineMode.RealtimeAgent to ("Real-time Voice Agent" to "Low-latency provider-native conversation"),
                 ).forEach { (engine, copy) ->
                     val available = engine != VoiceEngineMode.RealtimeAgent || relayVoiceReady

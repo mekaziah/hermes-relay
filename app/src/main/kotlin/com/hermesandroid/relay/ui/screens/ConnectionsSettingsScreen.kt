@@ -616,8 +616,8 @@ internal fun gatewayRegistryRouteLabel(role: String, displayName: String? = null
     "tailscale" -> "Tailscale"
     "public", "https" -> "Public"
     "dashboard", "authenticated_dashboard" -> "Dashboard"
-    "plugin_proxy", "plugin-proxy" -> "Hermes Secure Link"
-    "outbound_broker", "broker", "relay_broker" -> "Hermes Reach"
+    "plugin_proxy", "plugin-proxy" -> "Gary Secure Link"
+    "outbound_broker", "broker", "relay_broker" -> "Gary Reach"
     else -> displayName?.trim()?.takeIf { it.isNotBlank() }
         ?: role.trim().replaceFirstChar { it.uppercase() }
 }
@@ -762,7 +762,7 @@ private fun routeRoleLabel(role: String): String = when (role.trim().lowercase()
     "lan" -> "LAN"
     "tailscale" -> "Tailscale"
     "public", "https" -> "HTTPS"
-    "plugin_proxy", "plugin-proxy" -> "Hermes Secure Link"
+    "plugin_proxy", "plugin-proxy" -> "Gary Secure Link"
     else -> role.trim()
 }
 

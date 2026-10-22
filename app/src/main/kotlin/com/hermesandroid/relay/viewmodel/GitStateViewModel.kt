@@ -208,7 +208,7 @@ class GitStateViewModel(application: Application) : AndroidViewModel(application
                             message.contains("No such API endpoint", ignoreCase = true)
                         ) {
                             GitStateUiState.Unavailable(
-                                "Git isn't available on this Hermes host yet.",
+                                "Git isn't available on this Gary host yet.",
                             )
                         } else {
                             GitStateUiState.Error(message.ifBlank { "Failed to load repositories" })

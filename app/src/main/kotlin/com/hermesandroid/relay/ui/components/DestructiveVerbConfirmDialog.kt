@@ -117,7 +117,7 @@ fun DestructiveVerbConfirmDialog(
                 }
 
                 Text(
-                    text = "The Hermes agent is about to ${verbPhrase(method, verb)}.",
+                    text = "The Gary agent is about to ${verbPhrase(method, verb)}.",
                     style = MaterialTheme.typography.bodyMedium,
                     color = MaterialTheme.colorScheme.onSurface,
                 )
@@ -238,7 +238,7 @@ fun BridgeStatusOverlayChip(unattended: Boolean = false) {
     // v0.4.1: when unattended access is on, the chip uses an amber dot
     // and "Unattended ON" label so the user / a passerby can tell at a
     // glance that the agent is permitted to wake the screen and drive
-    // the device. Default red dot + "Hermes active" preserves the v0.4
+    // the device. Default red dot + "Gary active" preserves the v0.4
     // appearance for the regular bridge-active path.
     val dotColor = if (unattended) Color(0xFFFFA000) else Color(0xFFE53935)
     val label = if (unattended) stringResource(R.string.destructive_chip_unattended) else stringResource(R.string.destructive_chip_active)

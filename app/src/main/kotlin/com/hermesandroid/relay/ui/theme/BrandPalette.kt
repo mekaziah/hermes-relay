@@ -490,7 +490,7 @@ object AppThemes {
 
     val HermesRelay = AppTheme(
         id = DEFAULT_ID,
-        label = "Hermes Relay",
+        label = "GaryAI",
         description = "The signature electric-blue brand — follows light/dark",
         mode = ThemeMode.BOTH,
         darkPalette = BrandPalettes.HermesDark,
@@ -500,8 +500,8 @@ object AppThemes {
 
     val HermesTeal = AppTheme(
         id = "hermes-teal",
-        label = "Hermes Teal",
-        description = "Classic dark teal — the canonical Hermes look",
+        label = "Gary Teal",
+        description = "Classic dark teal — the canonical Gary look",
         mode = ThemeMode.DARK_ONLY,
         darkPalette = BrandPalettes.HermesTeal,
         lightPalette = BrandPalettes.HermesTeal,

@@ -335,7 +335,7 @@ enum class StandardVoiceAvailability {
  * Coarse connection state for the chat empty-state, derived in
  * [ConnectionViewModel.chatConnectState]. Lets the UI hold a neutral
  * "Connecting…" placeholder during cold-start hydration instead of flashing
- * the "Connect to Hermes" CTA before we know whether anything is configured.
+ * the "Connect to Gary" CTA before we know whether anything is configured.
  */
 enum class ChatConnectState {
     /** Store not hydrated yet, or an active connection is still coming up. */
@@ -1052,7 +1052,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
         private val KEY_KEEP_COMPOSER_FOCUSED_ON_SEND =
             booleanPreferencesKey("keep_composer_focused_on_send")
 
-        // Turn-complete notification ("Notify when Hermes finishes")
+        // Turn-complete notification ("Notify when Gary finishes")
         private val KEY_NOTIFY_TURN_COMPLETE = booleanPreferencesKey("notify_turn_complete")
 
         // One-shot "Live voice conversation" hint on the input bar's voice slot
@@ -1459,7 +1459,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
     private var transientReconnectJob: Job? = null
     // True for RELAY_RECONNECT_GRACE_MS right after a foreground resume. The
     // handoff path suppresses its own "Reconnecting" banner on resume, but the
-    // *health*-derived cue ("Connecting to Hermes", active) leaks the bottom-strip
+    // *health*-derived cue ("Connecting to Gary", active) leaks the bottom-strip
     // "Reconnecting…" cue independently — so a benign resume flashed the cue and
     // then cleared with no "Connected" toast (handoff stayed suppressed). The UI
     // gates the bottom-strip cue on this so a benign resume is fully silent; if
@@ -1987,7 +1987,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
 
     /**
      * Three-way gate for the chat empty-state, so a cold start doesn't flash
-     * the loud "Connect to Hermes" CTA while DataStore is still hydrating.
+     * the loud "Connect to Gary" CTA while DataStore is still hydrating.
      *
      * - [ChatConnectState.Ready] — chat client built + server reachable.
      * - [ChatConnectState.Connecting] — either the connection store hasn't
@@ -3391,7 +3391,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
     // `proactive.subscribe`, which we only do when the toggle is on. Off by
     // default.
 
-    /** Persisted "Hermes" inbox of agent-initiated messages (Phase 2a). */
+    /** Persisted "Gary" inbox of agent-initiated messages (Phase 2a). */
     val proactiveInbox = ProactiveInboxRepository(application)
 
     val inboxMessages: StateFlow<List<ProactiveInboxEntry>> =
@@ -3418,7 +3418,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                 proactiveInbox.add(
                     ProactiveInboxEntry(
                         id = msg.messageId ?: java.util.UUID.randomUUID().toString(),
-                        title = msg.title ?: "Hermes",
+                        title = msg.title ?: "Gary",
                         text = msg.text,
                         receivedAt = msg.sentAt ?: System.currentTimeMillis(),
                         chatId = msg.chatId,
@@ -3431,7 +3431,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
         },
     )
 
-    /** "Let Hermes message me" — off by default. */
+    /** "Let Gary message me" — off by default. */
     val proactiveEnabled: StateFlow<Boolean> = application.proactiveEnabledFlow()
         .stateIn(viewModelScope, SharingStarted.Eagerly, false)
 
@@ -3540,7 +3540,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
     }
 
     /**
-     * Flip the "Let Hermes message me" preference. The actual
+     * Flip the "Let Gary message me" preference. The actual
      * subscribe/unsubscribe over the WSS is driven reactively by the
      * [proactiveEnabled] collector in init, so this only persists the flag.
      */
@@ -3998,7 +3998,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
             HealthStatus.Probing -> add(
                 ConnectionHandoffTraceEntry(
                     label = ctx.getString(R.string.conn_label_api),
-                    detail = "Checking Hermes health",
+                    detail = "Checking Gary health",
                     state = ConnectionStepState.Active,
                 )
             )
@@ -4844,7 +4844,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                             // the route changed since we were last connected it's
                             // "Connection changed · LAN → Tailscale" (which itself
                             // implies connected — no redundant "Connected" after);
-                            // otherwise just "Connected to Hermes". This single
+                            // otherwise just "Connected to Gary". This single
                             // point replaces the old three positive branches
                             // ("restored" + "connected" + "route changed") that
                             // fired in pairs on a flap or a swap.
@@ -6579,7 +6579,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                 DashboardSetupResult(
                     ok = false,
                     dashboardUrl = "",
-                    message = "Enter a Hermes address",
+                    message = "Enter a Gary address",
                 ),
             )
             return
@@ -6609,7 +6609,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                     DashboardSetupResult(
                         ok = true,
                         dashboardUrl = dashboardUrl,
-                        message = status.message ?: "Hermes is ready",
+                        message = status.message ?: "Gary is ready",
                         signInRequired = !authenticated,
                         authenticated = authenticated,
                         voiceAvailability = voice,
@@ -6625,7 +6625,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                         dashboardUrl = dashboardUrl,
                         message = if (e is com.hermesandroid.relay.network.upstream.DashboardLocalAuthenticationRequiredException) {
                             getApplication<Application>().getString(R.string.dashboard_local_auth_help)
-                        } else e.message ?: "Hermes was not found at this address",
+                        } else e.message ?: "Gary was not found at this address",
                     ),
                 )
             } finally {
@@ -6646,7 +6646,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
             defaultPort = Connection.DEFAULT_DASHBOARD_PORT,
         )
         if (normalized.isBlank()) {
-            onComplete(Result.failure(IllegalArgumentException("Hermes address is required")))
+            onComplete(Result.failure(IllegalArgumentException("Gary address is required")))
             return
         }
         if (publicDashboardAddressRequiresHttps(null, normalized, setOfNotNull(httpConsentOrigin))) {
@@ -6750,7 +6750,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
             val probe = probeDashboardAddress(normalized)
             val failure = probe.exceptionOrNull()
             if (failure != null) {
-                onResult(failure.message ?: "Hermes was not found at this address")
+                onResult(failure.message ?: "Gary was not found at this address")
                 return@launch
             }
             val originChanged = !sameDashboardBase(current.resolvedDashboardUrl, normalized)
@@ -6839,7 +6839,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                 ?: apiUrl.takeIf(String::isNotBlank)
                 ?.let(Connection::extractDefaultLabel)
                 ?: dashboardUrl?.let(Connection::extractDefaultLabel)
-                ?: "Hermes",
+                ?: "Gary",
             apiServerUrl = apiUrl,
             relayUrl = relayUrl,
             tokenStoreKey = Connection.buildTokenStoreKey(connectionId),
@@ -7174,7 +7174,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                 category = DiagnosticCategory.Api,
                 severity = DiagnosticSeverity.Info,
                 title = ctx.getString(R.string.conn_status_testing_standard),
-                operation = "Hermes API health check",
+                operation = "Gary API health check",
                 configuredUrl = diagnosticApiUrl,
                 requestUrl = "${diagnosticApiUrl.trimEnd('/')}/health",
             )
@@ -7188,7 +7188,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                     severity = DiagnosticSeverity.Error,
                     title = ctx.getString(R.string.conn_status_setup_health_failed),
                     detail = health.message,
-                    operation = "Hermes API health check",
+                    operation = "Gary API health check",
                     configuredUrl = diagnosticApiUrl,
                     requestUrl = "${diagnosticApiUrl.trimEnd('/')}/health",
                 )
@@ -7258,9 +7258,9 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
             val message = when (sessions) {
                 is com.hermesandroid.relay.network.upstream.HealthCheckResult.Healthy -> {
                     if (dashboardSignInRequired) {
-                        "Connected to Hermes API. Dashboard sign-in required for Manage."
+                        "Connected to Gary API. Dashboard sign-in required for Manage."
                     } else {
-                        "Connected to Hermes API and sessions"
+                        "Connected to Gary API and sessions"
                     }
                 }
                 is com.hermesandroid.relay.network.upstream.HealthCheckResult.Unhealthy ->
@@ -7271,7 +7271,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                 severity = if (reachable) DiagnosticSeverity.Info else DiagnosticSeverity.Error,
                 title = if (reachable) ctx.getString(R.string.conn_status_hermes_ok) else ctx.getString(R.string.conn_status_auth_failed),
                 detail = message,
-                operation = "Hermes API sessions authentication check",
+                operation = "Gary API sessions authentication check",
                 configuredUrl = diagnosticApiUrl,
                 requestUrl = "${diagnosticApiUrl.trimEnd('/')}/api/sessions",
             )
@@ -7374,10 +7374,10 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                     IllegalStateException(
                         when (_standardVoiceAvailability.value) {
                             StandardVoiceAvailability.SignInRequired ->
-                                "Vanilla Hermes voice needs dashboard sign-in (Manage tab)"
+                                "Vanilla Gary voice needs dashboard sign-in (Manage tab)"
                             StandardVoiceAvailability.Unsupported ->
-                                "This Hermes build has no dashboard audio routes"
-                            else -> "Vanilla Hermes voice is not available"
+                                "This Gary build has no dashboard audio routes"
+                            else -> "Vanilla Gary voice is not available"
                         },
                     ),
                 )
@@ -7534,7 +7534,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                 category = DiagnosticCategory.Api,
                 severity = DiagnosticSeverity.Info,
                 title = ctx.getString(R.string.conn_status_testing_api),
-                operation = "Hermes API health check",
+                operation = "Gary API health check",
                 configuredUrl = diagnosticApiUrl,
                 requestUrl = "${diagnosticApiUrl.trimEnd('/')}/health",
             )
@@ -7547,7 +7547,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                     severity = DiagnosticSeverity.Error,
                     title = ctx.getString(R.string.conn_status_api_health_failed),
                     detail = health.message,
-                    operation = "Hermes API health check",
+                    operation = "Gary API health check",
                     configuredUrl = diagnosticApiUrl,
                     requestUrl = "${diagnosticApiUrl.trimEnd('/')}/health",
                 )
@@ -7570,7 +7570,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
                 severity = if (reachable) DiagnosticSeverity.Info else DiagnosticSeverity.Error,
                 title = if (reachable) ctx.getString(R.string.conn_status_api_test_ok) else ctx.getString(R.string.conn_status_api_test_failed),
                 detail = message,
-                operation = "Hermes API sessions authentication check",
+                operation = "Gary API sessions authentication check",
                 configuredUrl = diagnosticApiUrl,
                 requestUrl = "${diagnosticApiUrl.trimEnd('/')}/api/sessions",
             )
@@ -7702,7 +7702,7 @@ class ConnectionViewModel(application: Application) : AndroidViewModel(applicati
             .onFailure {
                 android.util.Log.w(
                     "ConnectionVM",
-                    "HermesApiClient.shutdown failed: ${it.message}",
+                    "GaryApiClient.shutdown failed: ${it.message}",
                 )
             }
     }

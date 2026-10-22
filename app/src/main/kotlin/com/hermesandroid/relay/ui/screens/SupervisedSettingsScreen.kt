@@ -180,7 +180,7 @@ fun SupervisedSettingsScreen(
             SupervisedSectionLabel("Help")
             SupervisedNavigationRow(
                 icon = Icons.Filled.Info,
-                title = "About Hermes Relay",
+                title = "About GaryAI",
                 subtitle = "About this supervised client",
                 onClick = { showAbout = true },
                 isDarkTheme = isDarkTheme,
@@ -209,11 +209,11 @@ fun SupervisedSettingsScreen(
     if (showAbout) {
         AlertDialog(
             onDismissRequest = { showAbout = false },
-            title = { Text("Hermes Relay") },
+            title = { Text("GaryAI") },
             text = {
                 Text(
                     "Supervised mode provides a parent-configured, restricted Android chat interface. " +
-                        "The selected Hermes profile owns the agent's tool and content restrictions.",
+                        "The selected Gary profile owns the agent's tool and content restrictions.",
                 )
             },
             confirmButton = {
@@ -438,7 +438,7 @@ fun SupervisedControlsScreen(
             }
 
             Text(
-                "This mode restricts this Android client. The selected Hermes profile remains responsible for agent tools and content policy.",
+                "This mode restricts this Android client. The selected Gary profile remains responsible for agent tools and content policy.",
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.onSurfaceVariant,
             )
@@ -508,7 +508,7 @@ fun SupervisedControlsScreen(
                     onPolicyChange(policy.copy(capabilities = policy.capabilities.copy(attachments = it)))
                 }
                 HorizontalDivider()
-                SupervisedSwitchRow("Voice", "Allow standard Hermes voice", policy.capabilities.voice) {
+                SupervisedSwitchRow("Voice", "Allow standard Gary voice", policy.capabilities.voice) {
                     onPolicyChange(policy.copy(capabilities = policy.capabilities.copy(voice = it)))
                 }
                 HorizontalDivider()
@@ -852,7 +852,7 @@ fun SupervisedControlsScreen(
                         }
                     }
                     if (profiles.isEmpty()) {
-                        Text("Profiles are not available yet. Connect to Hermes and try again.")
+                        Text("Profiles are not available yet. Connect to Gary and try again.")
                     }
                 }
             },
@@ -958,7 +958,7 @@ internal fun RemoveParentCredentialDialog(
             Text(
                 "This disables Supervised Mode on every connection and removes the app-wide " +
                     "PIN or password and recovery phrase. Your supervised settings and toggles are kept. " +
-                    "Hermes sessions and server history are not deleted.",
+                    "Gary sessions and server history are not deleted.",
             )
         },
         confirmButton = {

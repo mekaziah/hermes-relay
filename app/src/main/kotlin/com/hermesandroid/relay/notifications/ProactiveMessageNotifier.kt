@@ -59,7 +59,7 @@ object ProactiveMessageNotifier {
     /**
      * Post (or replace) a proactive-message notification.
      *
-     * @param title Display title; blank falls back to "Hermes".
+     * @param title Display title; blank falls back to "Gary".
      * @param text The agent's message body.
      * @param messageId Server-assigned id; used to derive a stable slot so a
      *   re-delivery replaces rather than stacks. Blank → a fresh slot. Also
@@ -93,7 +93,7 @@ object ProactiveMessageNotifier {
         val tapPending =
             PendingIntent.getActivity(context, notificationId, tapIntent, pendingFlags)
 
-        val resolvedTitle = title?.takeIf { it.isNotBlank() } ?: "Hermes"
+        val resolvedTitle = title?.takeIf { it.isNotBlank() } ?: "Gary"
         val collapsed = text.take(120)
         val expanded = text.take(1000)
 
@@ -133,7 +133,7 @@ object ProactiveMessageNotifier {
         chatId: String?,
     ): NotificationCompat.Action {
         val remoteInput = RemoteInput.Builder(ProactiveReplyReceiver.KEY_REPLY_TEXT)
-            .setLabel("Reply to Hermes")
+            .setLabel("Reply to Gary")
             .build()
 
         val replyIntent = Intent(context, ProactiveReplyReceiver::class.java).apply {
@@ -188,7 +188,7 @@ object ProactiveMessageNotifier {
         ensureChannel(context)
         if (!hasPostNotificationsPermission(context)) return
 
-        val resolvedTitle = title?.takeIf { it.isNotBlank() } ?: "Hermes"
+        val resolvedTitle = title?.takeIf { it.isNotBlank() } ?: "Gary"
         val line = if (delivered) {
             "You: ${replyText.take(1000)}"
         } else {
@@ -232,7 +232,7 @@ object ProactiveMessageNotifier {
             CHANNEL_NAME,
             NotificationManager.IMPORTANCE_HIGH,
         ).apply {
-            description = "Messages your Hermes agent sends to you on its own."
+            description = "Messages your Gary agent sends to you on its own."
             setShowBadge(true)
         }
         nm.createNotificationChannel(channel)

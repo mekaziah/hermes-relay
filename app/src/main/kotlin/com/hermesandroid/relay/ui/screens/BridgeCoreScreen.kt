@@ -60,7 +60,7 @@ import com.hermesandroid.relay.viewmodel.statusText
 /**
  * Google Play Bridge Core surface.
  *
- * The Play build still presents "Hermes Bridge" as the umbrella for relay
+ * The Play build still presents "Gary Bridge" as the umbrella for relay
  * integrations, but it deliberately excludes AccessibilityService-backed
  * Device Control. The sideload flavor keeps using [BridgeScreen].
  */

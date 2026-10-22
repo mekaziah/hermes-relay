@@ -6,10 +6,6 @@ import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.animation.core.LinearOutSlowInEasing
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.Image
@@ -1225,35 +1221,14 @@ fun StreamingDots(
         Text(text = "• • •", fontSize = 14.sp, color = color, modifier = modifier)
         return
     }
-    val transition = rememberInfiniteTransition(label = "streaming")
-
-    val dot1Alpha by transition.animateFloat(
-        initialValue = 0.2f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 600),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "dot1"
-    )
-    val dot2Alpha by transition.animateFloat(
-        initialValue = 0.2f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 600, delayMillis = 200),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "dot2"
-    )
-    val dot3Alpha by transition.animateFloat(
-        initialValue = 0.2f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 600, delayMillis = 400),
-            repeatMode = RepeatMode.Reverse
-        ),
-        label = "dot3"
-    )
+    // One frame-throttled phase drives all three dots (see AmbientAnimation.kt):
+    // a streaming bubble can be on screen for an entire reply, so this must not be
+    // an infinite transition pinning the window at the display refresh rate.
+    // Cycle 1_200 ms; the original's 200/400 ms delays become 1/6 and 1/3 offsets.
+    val phase = rememberAmbientPhase(periodMillis = 1_200)
+    val dot1Alpha = 0.2f + 0.8f * ambientTriangle(phase)
+    val dot2Alpha = 0.2f + 0.8f * ambientTriangle(phase, offset = 1f / 6f)
+    val dot3Alpha = 0.2f + 0.8f * ambientTriangle(phase, offset = 1f / 3f)
 
     Row(
         modifier = modifier,

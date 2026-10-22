@@ -14,11 +14,7 @@ import android.webkit.WebViewClient
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.animation.AnimatedContent
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.Crossfade
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.fadeIn
 import androidx.compose.animation.fadeOut
@@ -129,6 +125,7 @@ import com.hermesandroid.relay.ui.components.RelayMetricCard
 import com.hermesandroid.relay.ui.components.RelayNavTile
 import com.hermesandroid.relay.ui.components.RelayReturnStrip
 import com.hermesandroid.relay.ui.components.RelaySectionCaption
+import com.hermesandroid.relay.ui.components.rememberAmbientBreathe
 import com.hermesandroid.relay.ui.theme.RelayRefresh
 import com.hermesandroid.relay.ui.theme.relayGridTexture
 import com.hermesandroid.relay.ui.theme.relayMetadataStyle
@@ -2593,16 +2590,7 @@ internal suspend fun prewarmDashboardManage(
  */
 @Composable
 private fun LoadingBody(sectionLabel: String) {
-    val pulse = rememberInfiniteTransition(label = "manage-skeleton-pulse")
-    val ghostAlpha by pulse.animateFloat(
-        initialValue = 0.45f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 700),
-            repeatMode = RepeatMode.Reverse,
-        ),
-        label = "manage-skeleton-alpha",
-    )
+    val ghostAlpha = rememberAmbientBreathe(minValue = 0.45f, maxValue = 1f, periodMillis = 1_400)
     Column(
         modifier = Modifier
             .fillMaxSize()

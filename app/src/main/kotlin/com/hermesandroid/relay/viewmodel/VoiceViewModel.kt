@@ -618,10 +618,10 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
         private const val MAX_BROKERED_TOOL_STATUS_PER_MESSAGE = 2
         private const val ASSISTANT_CONTEXT_SETTLE_MS = 75L
         private const val STABLE_VOICE_INTERFACE_CONTEXT =
-            "Hermes Android voice interface context for this turn:\n" +
+            "Gary Android voice interface context for this turn:\n" +
                 "- Active voice engine: Hermes chat + voice output (hermes_voice_output).\n" +
-                "- Active route: Android mic -> selected Hermes STT route -> " +
-                "normal Hermes chat stream -> selected Hermes TTS route playback.\n" +
+                "- Active route: Android mic -> selected Gary STT route -> " +
+                "normal Gary chat stream -> selected Gary TTS route playback.\n" +
                 "- This is not Realtime Agent mode. If the user asks which " +
                 "interface, path, or mode is active, answer from this context.\n" +
                 "- Your reply will be spoken aloud by text-to-speech, so format " +
@@ -1636,7 +1636,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
             category = DiagnosticCategory.Voice,
             severity = DiagnosticSeverity.Info,
             title = getApplication<Application>().getString(R.string.voice_status_standard_tts),
-            detail = "Standard voice is routed through Hermes profile \"$profile\" " +
+            detail = "Standard voice is routed through Gary profile \"$profile\" " +
                 "for speech, transcription, streaming playback, and voice catalogs.",
         )
     }
@@ -1990,7 +1990,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
                 }
                 chatNoticeSink?.invoke(
                     "🕐 Background voice task still running$queuedSuffix — " +
-                        "Hermes will report back when it finishes.",
+                        "Gary will report back when it finishes.",
                 )
             }
         }
@@ -2672,7 +2672,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
     // Keyed progress feedback is cleared before an outcome replaces it.
     // Classified failures retain their existing error event/overlay flow.
     fun testVoice(
-        sample: String = "Hello, this is Hermes. Voice mode is working.",
+        sample: String = "Hello, this is Gary. Voice mode is working.",
         onResult: (Result<Unit>) -> Unit = {},
     ) {
         val audioClient = voiceAudioClient
@@ -2752,7 +2752,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
         voice: String,
         sampleRate: Int,
         language: String,
-        sample: String = "Hello, this is Hermes. This is how this voice sounds.",
+        sample: String = "Hello, this is Gary. This is how this voice sounds.",
         onResult: (Result<Unit>) -> Unit = {},
     ) {
         if (_voicePreviewState.value.isActive &&
@@ -2953,7 +2953,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
     }
 
     fun testRealtimeAgent(
-        sample: String = "Say a short confirmation that Hermes Realtime Agent is working.",
+        sample: String = "Say a short confirmation that Gary Realtime Agent is working.",
         onResult: (Result<Unit>) -> Unit = {},
     ) {
         val client = voiceClient
@@ -3240,7 +3240,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
             supervisedModePolicy.enabled &&
             audioClient.effectiveRoute != VoiceAudioRoute.Standard
         ) {
-            setError("Supervised voice requires the Standard Hermes voice route")
+            setError("Supervised voice requires the Standard Gary voice route")
             return
         }
         currentTurnPcm = inputPcm
@@ -3316,12 +3316,12 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
             return
         }
 
-        Log.i(TAG, "Voice input routed to Hermes voice output")
+        Log.i(TAG, "Voice input routed to Gary voice output")
         DiagnosticsLog.record(
             category = DiagnosticCategory.Voice,
             severity = DiagnosticSeverity.Info,
             title = getApplication<Application>().getString(R.string.voice_status_turn_started),
-            detail = "Hermes voice output (${audioClient.route.storageValue})",
+            detail = "Gary voice output (${audioClient.route.storageValue})",
         )
 
         // Transcribe
@@ -3931,7 +3931,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
                     if (event.type == "hermes.run.started") {
                         Log.i(
                             TAG,
-                            "Realtime Hermes run started run=${event.runId ?: "?"} " +
+                            "Realtime Gary run started run=${event.runId ?: "?"} " +
                                 "session=${event.chatSessionId ?: "?"}",
                         )
                     }
@@ -4059,7 +4059,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
                     val line = realtimeHermesProgressLine(event.message)
                     Log.i(
                         TAG,
-                        "Realtime Hermes progress tier=${event.tier ?: "?"} " +
+                        "Realtime Gary progress tier=${event.tier ?: "?"} " +
                             "floor=${event.floor ?: "?"} status=${event.statusKey ?: "?"} " +
                             "shouldSpeak=${event.shouldSpeak} run=${event.runId ?: "?"}",
                     )
@@ -4194,7 +4194,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
                             it.copy(
                                 hermesConfirmation = HermesConfirmationState(
                                     confirmationId = confirmationId,
-                                    message = event.message ?: "Hermes is waiting for confirmation.",
+                                    message = event.message ?: "Gary is waiting for confirmation.",
                                 )
                             )
                         }
@@ -4245,7 +4245,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
                         it.copy(
                             state = if (audioSeen.get()) VoiceState.Speaking else VoiceState.Thinking,
                             responseText = responseText.toString().ifBlank {
-                                if (reason == "pre_hermes_ack") "Checking Hermes..." else "Finishing tool response..."
+                                if (reason == "pre_hermes_ack") "Checking Gary..." else "Finishing tool response..."
                             },
                         )
                     }
@@ -4279,7 +4279,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
                     }
                 }
                 "hermes.run.cancelled" -> {
-                    Log.i(TAG, "Realtime Hermes run cancelled run=${event.runId ?: "?"}")
+                    Log.i(TAG, "Realtime Gary run cancelled run=${event.runId ?: "?"}")
                     retireBackgroundCancelWatchdogLocked()
                     realtimeAgentControl = null
                     realtimeConfirmationControl = null
@@ -4577,10 +4577,10 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
             "android" in normalized -> "Checking phone."
             "browser" in normalized || "web" in normalized -> "Searching web."
             "terminal" in normalized || "shell" in normalized -> "Running command."
-            "skill" in normalized -> "Checking Hermes skill."
+            "skill" in normalized -> "Checking Gary skill."
             "memory" in normalized -> "Checking memory."
             "file" in normalized || "read" in normalized || "write" in normalized -> "Checking files."
-            else -> "Checking Hermes."
+            else -> "Checking Gary."
         }
     }
 
@@ -5867,9 +5867,9 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
             ?.replace(Regex("\\s+"), " ")
             ?.trim()
             ?.takeIf { it.isNotBlank() }
-            ?: "Waiting for Hermes response."
-        return if (line.equals("Hermes is still working.", ignoreCase = true)) {
-            "Waiting for Hermes response."
+            ?: "Waiting for Gary response."
+        return if (line.equals("Gary is still working.", ignoreCase = true)) {
+            "Waiting for Gary response."
         } else {
             line
         }
@@ -7109,7 +7109,7 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
                     errorCode == "service_missing" -> buildString {
                         append("**Open App — bridge offline**")
                         append('\n')
-                        append("Enable Hermes accessibility in Settings to open apps by voice.")
+                        append("Enable Gary accessibility in Settings to open apps by voice.")
                     }
                     errorCode == "other_error" -> buildString {
                         append("**Open App — error**")
@@ -7141,19 +7141,19 @@ class VoiceViewModel(application: Application) : AndroidViewModel(application) {
                     errorCode == "permission_missing_sms" -> buildString {
                         append("**Send SMS — permission needed**")
                         append('\n')
-                        append("Grant SMS permission in Settings › Apps › Hermes-Relay › Permissions.")
+                        append("Grant SMS permission in Settings › Apps › GaryAI › Permissions.")
                     }
                     errorCode == "permission_missing_contacts" -> buildString {
                         append("**Send SMS — permission needed**")
                         append('\n')
                         append("Grant Contacts permission to look up '")
                         append(contact ?: "?")
-                        append("' in Settings › Apps › Hermes-Relay › Permissions.")
+                        append("' in Settings › Apps › GaryAI › Permissions.")
                     }
                     errorCode == "service_missing" -> buildString {
                         append("**Send SMS — bridge offline**")
                         append('\n')
-                        append("Enable Hermes accessibility in Settings first.")
+                        append("Enable Gary accessibility in Settings first.")
                     }
                     errorCode == "contact_not_found" -> buildString {
                         append("**Send SMS**")

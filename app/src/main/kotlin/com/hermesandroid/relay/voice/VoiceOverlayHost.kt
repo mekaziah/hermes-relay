@@ -1168,7 +1168,7 @@ fun openHermesFromOverlay(context: Context): Boolean {
         .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
         .addFlags(Intent.FLAG_ACTIVITY_SINGLE_TOP)
     return runCatching { appContext.startActivity(launchIntent) }
-        .onFailure { Log.w("VoiceOverlayHost", "return to Hermes failed", it) }
+        .onFailure { Log.w("VoiceOverlayHost", "return to Gary failed", it) }
         .isSuccess
 }
 

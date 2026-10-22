@@ -424,7 +424,7 @@ class ScreenCapture(
             runCatching { cachedReader?.close() }
             runCatching { cachedThread?.quitSafely() }
 
-            val thread = HandlerThread("HermesScreenCapture").apply { start() }
+            val thread = HandlerThread("GaryScreenCapture").apply { start() }
             val handler = Handler(thread.looper)
             val reader = createImageReader(width, height, handler)
 

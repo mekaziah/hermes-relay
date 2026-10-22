@@ -305,7 +305,7 @@ internal fun recordChatFailureDiagnostic(
     DiagnosticsLog.record(
         category = DiagnosticCategory.Session,
         severity = DiagnosticSeverity.Error,
-        title = "Hermes chat response failed",
+        title = "Gary chat response failed",
         detail = detail,
         operation = "chat response",
         endpointRole = when (failure.route) {
@@ -313,7 +313,7 @@ internal fun recordChatFailureDiagnostic(
             ChatFailureRoute.API_FALLBACK -> "api fallback"
             null -> "chat"
         },
-        suggestion = "Compare the same stored session in another Hermes client.",
+        suggestion = "Compare the same stored session in another Gary client.",
     )
 }
 
@@ -408,7 +408,7 @@ internal fun voiceTurnTransportRejection(
     activeSessionSource: String?,
     hasIsolatedContext: Boolean,
 ): String? = if (hasIsolatedContext && (pendingPhoneThread || activeSessionSource == "phone")) {
-    "Voice screen context cannot be sent to a phone thread. Open a Hermes chat and try again."
+    "Voice screen context cannot be sent to a phone thread. Open a Gary chat and try again."
 } else {
     null
 }
@@ -767,7 +767,7 @@ class ChatViewModel : ViewModel() {
         // `send()` below for the construction site.
         // === END PHASE3-status ===
         const val MEDIA_TAP_TO_DOWNLOAD = "Tap to download"
-        const val MEDIA_HOST_ONLY = "File is on your Hermes host"
+        const val MEDIA_HOST_ONLY = "File is on your Gary host"
         private const val MEDIA_FETCH_TIMEOUT_MS = 120_000L
         private val WINDOWS_ABSOLUTE_MEDIA_PATH_REGEX = Regex("""^[A-Za-z]:[\\/].+""")
 
@@ -790,7 +790,7 @@ class ChatViewModel : ViewModel() {
 
         /** Upstream-first file/media capability for SSE fallback turns. */
         const val UPSTREAM_MEDIA_HINT =
-            "Media display: this client supports standard upstream Hermes file delivery. " +
+            "Media display: this client supports standard upstream Gary file delivery. " +
                 "To show a host-local image, audio, video, or file, put its absolute path " +
                 "on its own line as `MEDIA:/absolute/path`. The client fetches it through " +
                 "the authenticated upstream Dashboard file routes and renders it inline."
@@ -1864,7 +1864,7 @@ class ChatViewModel : ViewModel() {
                         transitionReasoningEffortIdentity()
                         _transientNotice.tryEmit(
                             result.stringValue("confirm_message")
-                                ?: "Hermes did not accept the model confirmation.",
+                                ?: "Gary did not accept the model confirmation.",
                         )
                         refreshActiveAgentName()
                         return@fold
@@ -3083,7 +3083,7 @@ class ChatViewModel : ViewModel() {
                 val receipt = recordUnreadCompletion(target, checkpoint.user.id)
                 if (notifyOnTurnComplete && !AppForegroundTracker.isForeground.value) {
                     postCompletedConversation(target, checkpoint.user.id, checkpoint.assistant.agentName,
-                        completion.expectedAssistantText.orEmpty().ifBlank { "Hermes finished responding." },
+                        completion.expectedAssistantText.orEmpty().ifBlank { "Gary finished responding." },
                         checkpoint.replyIdentity, receipt = receipt)
                 }
             }
@@ -4590,7 +4590,7 @@ class ChatViewModel : ViewModel() {
         DiagnosticsLog.record(
             category = DiagnosticCategory.Session,
             severity = DiagnosticSeverity.Error,
-            title = "Hermes chat history failed",
+            title = "Gary chat history failed",
             detail = "stored_session=$sessionId; error=$rawError",
             operation = "load chat history",
             endpointRole = "gateway",
@@ -6077,7 +6077,7 @@ class ChatViewModel : ViewModel() {
      * as [pendingThread]. The first message the user sends opens the conversation
      * on that `chat_id` (the gateway creates the `source=phone` session keyed by
      * it), after which [switchToCreatedThread] swaps the draft for the real
-     * session. Gated on relay pairing + "Let Hermes message me" by the caller.
+     * session. Gated on relay pairing + "Let Gary message me" by the caller.
      */
     fun startNewThread(name: String) {
         val handler = chatHandler ?: return
@@ -6126,7 +6126,7 @@ class ChatViewModel : ViewModel() {
         historyLoadGeneration.incrementAndGet()
         pendingThread = PendingThread(
             chatId = normalizedChatId,
-            name = ordered.last().title.ifBlank { "Hermes" },
+            name = ordered.last().title.ifBlank { "Gary" },
         )
         gatewayClient?.clearSession()
         handler.setSessionId(null)
@@ -6592,7 +6592,7 @@ class ChatViewModel : ViewModel() {
             (streamingEndpoint == "gateway" && gatewayClient == null)
         ) {
             val message = if (streamingEndpoint == "gateway") {
-                "This chat belongs to the Hermes Dashboard. Sign in or reconnect, then retry."
+                "This chat belongs to the Gary Dashboard. Sign in or reconnect, then retry."
             } else {
                 "API fallback is not configured for this connection."
             }
@@ -6701,14 +6701,14 @@ class ChatViewModel : ViewModel() {
             return VoiceMessageSubmissionResult.Rejected("Voice sending is unavailable in demo mode.")
         }
         val handler = chatHandler
-            ?: return VoiceMessageSubmissionResult.Rejected("Hermes chat is not ready.")
+            ?: return VoiceMessageSubmissionResult.Rejected("Gary chat is not ready.")
         val client = apiClient
         if ((streamingEndpoint != "gateway" && client == null) ||
             (streamingEndpoint == "gateway" && gatewayClient == null)
         ) {
             return VoiceMessageSubmissionResult.Rejected(
                 if (streamingEndpoint == "gateway") {
-                    "This chat needs the Hermes Dashboard. Sign in or reconnect, then retry."
+                    "This chat needs the Gary Dashboard. Sign in or reconnect, then retry."
                 } else {
                     "The direct API connection is unavailable."
                 },
@@ -6716,7 +6716,7 @@ class ChatViewModel : ViewModel() {
         }
         if (activeStream != null || streamRecovery != null || handler.isStreaming.value) {
             return VoiceMessageSubmissionResult.Rejected(
-                "Hermes is still handling another turn. Your screen context was kept; try again.",
+                "Gary is still handling another turn. Your screen context was kept; try again.",
             )
         }
         if (maybeHandleServerSlashCommand(text.trim())) {
@@ -6749,7 +6749,7 @@ class ChatViewModel : ViewModel() {
         val userUiKey = messages.value.lastOrNull {
             it.role == MessageRole.USER && it.uiKey !in existingUserKeys
         }?.uiKey ?: return VoiceMessageSubmissionResult.Rejected(
-            "Hermes could not create the voice turn. Your screen context was kept.",
+            "Gary could not create the voice turn. Your screen context was kept.",
         )
         return VoiceMessageSubmissionResult.Submitted(userUiKey)
     }
@@ -6943,7 +6943,7 @@ class ChatViewModel : ViewModel() {
 
             GatewayAsk.Kind.CLARIFY -> HermesCard(
                 type = HermesCard.BuiltInTypes.ASK_CLARIFY,
-                title = (appContext?.getString(R.string.chat_approval_clarify_title) ?: "Hermes needs clarification"),
+                title = (appContext?.getString(R.string.chat_approval_clarify_title) ?: "Gary needs clarification"),
                 body = ask.text,
                 accent = HermesCard.Accents.INFO,
                 id = cardKey,
@@ -7042,7 +7042,7 @@ class ChatViewModel : ViewModel() {
             pending.messageId,
             HermesCard(
                 type = HermesCard.BuiltInTypes.ASK_CLARIFY,
-                title = appContext?.getString(R.string.chat_approval_clarify_title) ?: "Hermes needs clarification",
+                title = appContext?.getString(R.string.chat_approval_clarify_title) ?: "Gary needs clarification",
                 accent = HermesCard.Accents.INFO,
                 id = pending.cardKey,
                 clarifyBatch = HermesCardClarifyBatch(
@@ -7317,7 +7317,7 @@ class ChatViewModel : ViewModel() {
         if (ordinal < 0) return false
         if (!handler.hasSafeGatewayRewindAddress(userMessageId)) {
             handler.addSystemNotice(
-                "Refresh this conversation before editing so Hermes can verify the exact message.",
+                "Refresh this conversation before editing so Gary can verify the exact message.",
             )
             return false
         }
@@ -7381,13 +7381,13 @@ class ChatViewModel : ViewModel() {
         }
 
         if (streamingEndpoint != "gateway") {
-            handler.addSystemNotice("Slash commands are available when chat is using the Hermes gateway route.")
+            handler.addSystemNotice("Slash commands are available when chat is using the Gary gateway route.")
             return true
         }
 
         val gateway = gatewayClient
         if (gateway == null) {
-            handler.addSystemNotice("Slash commands need the Hermes gateway connection. Check Manage sign-in and connection status.")
+            handler.addSystemNotice("Slash commands need the Gary gateway connection. Check Manage sign-in and connection status.")
             return true
         }
 
@@ -7418,7 +7418,7 @@ class ChatViewModel : ViewModel() {
                 normalizeSlashCommandName(it.command.removePrefix("/").substringBefore(' ')) == normalizedName
             }
             if (!known) {
-                handler.addSystemNotice("/$rawName is not available on this Hermes gateway. Use /commands to browse supported commands.")
+                handler.addSystemNotice("/$rawName is not available on this Gary gateway. Use /commands to browse supported commands.")
                 return@launch
             }
             runServerSlashCommand(gateway, handler, text, depth = 0)
@@ -7709,7 +7709,7 @@ class ChatViewModel : ViewModel() {
         val toolCount = msg?.toolCalls?.size ?: 0
         val durationSeconds = msg?.let { ((System.currentTimeMillis() - it.timestamp) / 1_000L).takeIf { seconds -> seconds > 0 } }
         postCompletedConversation(target, turnId, handler.activeAgentName,
-            msg?.content.orEmpty().trim().ifBlank { "Hermes finished responding." },
+            msg?.content.orEmpty().trim().ifBlank { "Gary finished responding." },
             identity, toolCount, durationSeconds, receipt)
     }
 
@@ -8323,10 +8323,10 @@ class ChatViewModel : ViewModel() {
                         if (recovery.autoContinue != null) {
                             "Resuming interrupted turn…"
                         } else if (recovery.queued != null) {
-                            "Reconnected — Hermes is working · queued: “${queuedPromptPreview(recovery.queued.user)}”"
+                            "Reconnected — Gary is working · queued: “${queuedPromptPreview(recovery.queued.user)}”"
                         } else {
                             checkpoint.turnStatus?.takeIf { it.isNotBlank() }
-                                ?: "Reconnected — Hermes is still working…"
+                                ?: "Reconnected — Gary is still working…"
                         },
                     )
                     restorePendingAsk(handler, checkpoint)
@@ -9462,7 +9462,7 @@ class ChatViewModel : ViewModel() {
             realtimeAgentProviderBadges[assistantMessageId] = it
         }
         add("Realtime Agent")
-        if (hasHermes) add("Hermes")
+        if (hasHermes) add("Gary")
         if (hasTool) add("Tool")
         realtimeAgentProviderBadges[assistantMessageId]?.let { add(it) }
     }
@@ -9648,7 +9648,7 @@ class ChatViewModel : ViewModel() {
                             toolCallId = callId,
                             toolName = name,
                             runId = event.runId,
-                            provenance = "Hermes tool result summarized by provider voice",
+                            provenance = "Gary tool result summarized by provider voice",
                         )
                     }
                 }
@@ -9736,7 +9736,7 @@ class ChatViewModel : ViewModel() {
                     toolCallId = callId,
                     toolName = name,
                     runId = event.runId,
-                    provenance = "Hermes tool result summarized by provider voice",
+                    provenance = "Gary tool result summarized by provider voice",
                 )
             }
             "hermes.tool.completed" -> {
@@ -9754,7 +9754,7 @@ class ChatViewModel : ViewModel() {
                         toolCallId = callId,
                         toolName = name,
                         runId = event.runId,
-                        provenance = "Hermes tool result summarized by provider voice",
+                        provenance = "Gary tool result summarized by provider voice",
                     )
                 }
                 handler.onToolCallComplete(
@@ -9763,7 +9763,7 @@ class ChatViewModel : ViewModel() {
                     resultPreview = event.resultPreview
                         ?.let(::compactRealtimeToolResultPreview)
                         ?.takeIf { showDetailedTrace },
-                    provenance = "Provider-generated spoken summary after Hermes result",
+                    provenance = "Provider-generated spoken summary after Gary result",
                 )
             }
             "hermes.tool.failed" -> {
@@ -9781,7 +9781,7 @@ class ChatViewModel : ViewModel() {
                         toolCallId = callId,
                         toolName = name,
                         runId = event.runId,
-                        provenance = "Hermes tool result summarized by provider voice",
+                        provenance = "Gary tool result summarized by provider voice",
                     )
                 }
                 handler.onToolCallFailed(assistantMessageId, callId, event.message ?: event.resultPreview)
@@ -10959,7 +10959,7 @@ class ChatViewModel : ViewModel() {
             // the local transcript/draft and exposes Retry; it never dispatches
             // the turn into the API server's different session database.
             gateway == null -> {
-                onErrorCb("This chat belongs to the Hermes Dashboard. Sign in or reconnect, then retry.")
+                onErrorCb("This chat belongs to the Gary Dashboard. Sign in or reconnect, then retry.")
                 null
             }
 
@@ -12324,8 +12324,8 @@ private fun realtimeProgressThinkingLine(event: RealtimeVoiceEvent): String? {
         ?.takeIf { it.isNotBlank() }
         ?: return null
     if (looksLikeRawRealtimeToolOutput(message)) return null
-    return if (message.equals("Hermes is still working.", ignoreCase = true)) {
-        "Waiting for Hermes response."
+    return if (message.equals("Gary is still working.", ignoreCase = true)) {
+        "Waiting for Gary response."
     } else {
         message.take(180)
     }

@@ -26,7 +26,7 @@ fun ProfileController.HermesPetPresentation.toAvatar(): PetAvatar? {
         PetSpec(
             id = "hermes:$slug",
             label = displayName,
-            description = "Profile-scoped Hermes animated pet",
+            description = "Profile-scoped Gary animated pet",
             reactive = PetReactiveSpec(voice = false, tools = true, intensity = true),
             states = clips,
         ).toAvatar(sheet.parentFile ?: return null)

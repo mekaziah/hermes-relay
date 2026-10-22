@@ -251,7 +251,7 @@ fun GitStateScreen(
                 is GitStateUiState.Unavailable -> UnavailableState(Modifier.weight(1f), state.message, viewModel::loadRepos)
                 is GitStateUiState.Error -> UnavailableState(Modifier.weight(1f), state.message, viewModel::loadRepos)
                 is GitStateUiState.Ready -> when {
-                    state.repos.isEmpty() -> FullState(Modifier.weight(1f), false, "No current-session Git repository", "Open a Hermes coding session with repository context, or enable host repository discovery above.")
+                    state.repos.isEmpty() -> FullState(Modifier.weight(1f), false, "No current-session Git repository", "Open a Gary coding session with repository context, or enable host repository discovery above.")
                     selectedRepo == null -> RepositoryPrompt(Modifier.weight(1f), state.repos, viewModel::selectRepo)
                     else -> WorkspaceBody(
                             modifier = Modifier.weight(1f),

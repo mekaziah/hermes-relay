@@ -649,7 +649,7 @@ private fun mapBoxToViewport(
  * Full-screen QR code scanner overlay.
  *
  * Layout:
- *  - Header bar with a Close button + "Scan Hermes QR" title
+ *  - Header bar with a Close button + "Scan Gary QR" title
  *  - Square camera viewport at 50% of the screen width, with rounded corners
  *  - Sci-fi L-bracket overlay drawn on top of the viewport. When no QR is
  *    in frame the brackets sit at a centered "ready" position with a slow

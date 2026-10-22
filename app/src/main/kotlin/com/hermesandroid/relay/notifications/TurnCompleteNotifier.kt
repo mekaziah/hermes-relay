@@ -21,7 +21,7 @@ object TurnCompleteNotifier {
 
     private const val TAG = "TurnCompleteNotifier"
     private const val CHANNEL_ID = "chat_turn_complete"
-    private const val CHANNEL_NAME = "Hermes replies"
+    private const val CHANNEL_NAME = "Gary replies"
     const val NOTIFICATION_ID = 3822
 
     private const val EXTRA_TURN = "chat_notification_turn"
@@ -63,7 +63,7 @@ object TurnCompleteNotifier {
 
         val agent = identity?.displayName?.takeIf { it.isNotBlank() }
             ?: identity?.profileName?.takeIf { it.isNotBlank() }
-            ?: agentName?.takeIf { it.isNotBlank() } ?: "Hermes"
+            ?: agentName?.takeIf { it.isNotBlank() } ?: "Gary"
         val conversation = identity?.conversationTitle?.takeIf { it.isNotBlank() }
             ?: "…${target.sessionId.takeLast(12)}"
         val title = "$agent · ${conversation.take(100)}"
@@ -72,8 +72,8 @@ object TurnCompleteNotifier {
 
         val publicVersion = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.mipmap.ic_launcher)
-            .setContentTitle("Hermes replied")
-            .setContentText("Open Hermes to view the reply.")
+            .setContentTitle("Gary replied")
+            .setContentText("Open Gary to view the reply.")
             .build()
         val builder = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.mipmap.ic_launcher)
@@ -127,7 +127,7 @@ object TurnCompleteNotifier {
             CHANNEL_NAME,
             NotificationManager.IMPORTANCE_DEFAULT,
         ).apply {
-            description = "Notifies when Hermes finishes responding while the app is in the background."
+            description = "Notifies when Gary finishes responding while the app is in the background."
             // Unlike bridge_auto_disable, a reply badge is desirable.
             setShowBadge(true)
         }

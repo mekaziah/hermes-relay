@@ -857,7 +857,7 @@ internal fun routeSurfaceSecurityPresentation(
     val role = candidate.role.trim().lowercase()
     return when (securityVerdict.kind) {
         SurfaceSecurityKind.Tls -> when (securityVerdict.mechanism) {
-            "Hermes Secure Link", "Hermes Reach" -> RouteSurfaceSecurityPresentation.SecureLink
+            "Gary Secure Link", "Gary Reach" -> RouteSurfaceSecurityPresentation.SecureLink
             else -> RouteSurfaceSecurityPresentation.ApplicationTls
         }
         SurfaceSecurityKind.Overlay -> when (securityVerdict.mechanism) {

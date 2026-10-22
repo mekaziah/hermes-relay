@@ -396,7 +396,7 @@ class BridgeViewModel(application: Application) : AndroidViewModel(application) 
         val instance = HermesAccessibilityService.instance
         val msg = when {
             instance == null -> {
-                "Not bound. Enable Hermes-Relay Bridge in Android Settings → " +
+                "Not bound. Enable GaryAI Bridge in Android Settings → " +
                     "Accessibility → Installed services."
             }
             instance.rootInActiveWindow == null -> {
@@ -471,7 +471,7 @@ class BridgeViewModel(application: Application) : AndroidViewModel(application) 
         val msg = if (dispatched) {
             "Asking for screen-capture consent…"
         } else {
-            "Open the Hermes app to your foreground to grant screen capture."
+            "Open the Gary app to your foreground to grant screen capture."
         }
         viewModelScope.launch { _testEvents.emit("Screen capture · $msg") }
     }
@@ -505,7 +505,7 @@ class BridgeViewModel(application: Application) : AndroidViewModel(application) 
         val ctx = getApplication<Application>()
         val granted = AppPermissionStatusProbe.snapshot(ctx).notificationListenerPermitted
         val msg = if (granted) {
-            "OK — Hermes can read posted notifications."
+            "OK — Gary can read posted notifications."
         } else {
             "Not granted. Tap the row to open Android's Notification access page."
         }

@@ -194,7 +194,7 @@ class HermesNotificationCompanion : NotificationListenerService() {
     }
 
     companion object {
-        private const val TAG = "HermesNotifCompanion"
+        private const val TAG = "GaryNotifCompanion"
         private const val MAX_PENDING = 50
 
         private val JSON = Json {

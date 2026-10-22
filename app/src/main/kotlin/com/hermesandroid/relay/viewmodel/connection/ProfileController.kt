@@ -625,7 +625,7 @@ class ProfileController(
                 _hermesPetState.value = if (presentation == null) {
                     HermesPetState(
                         supported = true,
-                        error = "Hermes returned an animated pet that this phone could not cache",
+                        error = "Gary returned an animated pet that this phone could not cache",
                     )
                 } else {
                     _hermesPetState.value.copy(
@@ -643,7 +643,7 @@ class ProfileController(
                 } else {
                     _hermesPetState.value.copy(
                         loading = false,
-                        error = failure.message ?: "Could not load the Hermes animated pet",
+                        error = failure.message ?: "Could not load the Gary animated pet",
                     )
                 }
             },
@@ -672,7 +672,7 @@ class ProfileController(
                     if (!isCurrentPetGallery(connectionId, profileName, generation)) return@fold
                     _hermesPetState.value = _hermesPetState.value.copy(
                         galleryLoading = false,
-                        error = failure.message ?: "Could not load the Hermes pet gallery",
+                        error = failure.message ?: "Could not load the Gary pet gallery",
                     )
                 },
             )
@@ -730,7 +730,7 @@ class ProfileController(
                 onFailure = { failure ->
                     _hermesPetState.value = _hermesPetState.value.copy(
                         loading = false,
-                        error = failure.message ?: "Could not update the Hermes animated pet",
+                        error = failure.message ?: "Could not update the Gary animated pet",
                     )
                 },
             )
@@ -1062,7 +1062,7 @@ class ProfileController(
         val profileName = resolveSharedAssetProfileName()
         val gateway = gatewayClientProvider()
         if (profileName.isNullOrBlank() || gateway == null) {
-            _sharedAvatarState.value = SharedAvatarState(error = "Shared avatars require a current Hermes Gateway")
+            _sharedAvatarState.value = SharedAvatarState(error = "Shared avatars require a current Gary Gateway")
             return
         }
         scope.launch {
@@ -1071,7 +1071,7 @@ class ProfileController(
                 prepareProfileAvatar(context, uri, GatewayChatClient.PROFILE_AVATAR_MAX_BYTES)
             }
             if (bytes == null) {
-                _sharedAvatarState.value = SharedAvatarState(error = "That image could not be prepared for Hermes")
+                _sharedAvatarState.value = SharedAvatarState(error = "That image could not be prepared for Gary")
                 return@launch
             }
             gateway.setProfileAvatar(profileName, bytes).fold(
@@ -1093,12 +1093,12 @@ class ProfileController(
         val connectionId = activeConnectionId.value ?: return
         val profileName = resolveSharedAssetProfileName()
         if (profileName.isNullOrBlank()) {
-            _sharedAvatarState.value = SharedAvatarState(error = "Hermes profile identity is not available")
+            _sharedAvatarState.value = SharedAvatarState(error = "Gary profile identity is not available")
             return
         }
         val gateway = gatewayClientProvider()
         if (gateway == null) {
-            _sharedAvatarState.value = SharedAvatarState(error = "Shared avatars require a current Hermes Gateway")
+            _sharedAvatarState.value = SharedAvatarState(error = "Shared avatars require a current Gary Gateway")
             return
         }
         scope.launch {
@@ -1137,7 +1137,7 @@ class ProfileController(
         val profileName = resolveSharedAssetProfileName()
         val gateway = gatewayClientProvider()
         if (profileName.isNullOrBlank() || gateway == null) {
-            _sharedAvatarState.value = SharedAvatarState(error = "Shared avatars require a current Hermes Gateway")
+            _sharedAvatarState.value = SharedAvatarState(error = "Shared avatars require a current Gary Gateway")
             return
         }
         scope.launch {

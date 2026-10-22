@@ -1322,7 +1322,7 @@ class ChatHandler {
                     !message.id.startsWith("voice-intent-") &&
                     message.agentName != "Voice action" &&
                     message.agentName != "Phone action" &&
-                    (message.agentName.isNullOrBlank() || message.agentName == "Hermes")
+                    (message.agentName.isNullOrBlank() || message.agentName == "Hermes" || message.agentName == "Gary")
                 ) {
                     message.copy(agentName = trimmed)
                 } else {

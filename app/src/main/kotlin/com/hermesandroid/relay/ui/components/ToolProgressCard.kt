@@ -2,11 +2,6 @@ package com.hermesandroid.relay.ui.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.animation.Crossfade
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
 import androidx.compose.animation.expandVertically
 import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.clickable
@@ -138,15 +133,12 @@ fun ToolProgressCard(
     }
 
     // Slow alpha breathe on the tool icon while preparing — an indeterminate
-    // bar promises imminent work; a breathe says "being written".
+    // bar promises imminent work; a breathe says "being written". Frame-throttled
+    // (see AmbientAnimation.kt): a tool card can sit in this state for the whole of
+    // a long turn, and an infinite transition would pin the window at the panel's
+    // refresh rate for that entire time.
     val toolIconAlpha = if (isPreparing) {
-        val breathe = rememberInfiniteTransition(label = "toolGenerating")
-        breathe.animateFloat(
-            initialValue = 0.35f,
-            targetValue = 0.9f,
-            animationSpec = infiniteRepeatable(tween(900), repeatMode = RepeatMode.Reverse),
-            label = "toolGeneratingAlpha",
-        ).value
+        rememberAmbientBreathe(minValue = 0.35f, maxValue = 0.9f, periodMillis = 1_800)
     } else 1f
 
     val duration = if (toolCall.completedAt != null && toolCall.completedAt >= toolCall.startedAt) {

@@ -856,7 +856,7 @@ class ActionExecutor(private val service: HermesAccessibilityService) {
      * whatever dispatcher the command handler coroutine happens to be on.
      *
      * Android 12+ privacy note: reading the clipboard from a background app
-     * on API 31+ shows a system toast "Hermes-Relay pasted from your
+     * on API 31+ shows a system toast "GaryAI pasted from your
      * clipboard". We can't suppress that — it's a system-level privacy
      * feature and it's the right call. Document this in the tool description
      * so the LLM knows to expect it.
@@ -892,7 +892,7 @@ class ActionExecutor(private val service: HermesAccessibilityService) {
      * some OEM Android builds when called off-main, and hopping is cheap.
      *
      * Android 12+ privacy note: on API 31+, writing to the clipboard shows a
-     * system toast like "Hermes-Relay copied". This is a system-level
+     * system toast like "GaryAI copied". This is a system-level
      * privacy feature we can't suppress and shouldn't try to. Document this
      * in the tool description.
      */
@@ -1163,7 +1163,7 @@ class ActionExecutor(private val service: HermesAccessibilityService) {
             != PackageManager.PERMISSION_GRANTED
         ) {
             return ActionResult.failure(
-                "Grant location permission in Settings > Apps > Hermes-Relay > Permissions"
+                "Grant location permission in Settings > Apps > GaryAI > Permissions"
             )
         }
 
@@ -1265,7 +1265,7 @@ class ActionExecutor(private val service: HermesAccessibilityService) {
             != PackageManager.PERMISSION_GRANTED
         ) {
             return ActionResult.failure(
-                "Grant contacts permission in Settings > Apps > Hermes-Relay > Permissions"
+                "Grant contacts permission in Settings > Apps > GaryAI > Permissions"
             )
         }
         val clampedLimit = limit.coerceIn(1, 100)
@@ -1648,7 +1648,7 @@ class ActionExecutor(private val service: HermesAccessibilityService) {
             != PackageManager.PERMISSION_GRANTED
         ) {
             return ActionResult.failure(
-                "Grant SMS permission in Settings > Apps > Hermes-Relay > Permissions",
+                "Grant SMS permission in Settings > Apps > GaryAI > Permissions",
                 mapOf(
                     "status" to "blocked",
                     "reason" to "permission_denied",

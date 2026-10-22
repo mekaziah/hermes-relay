@@ -33,7 +33,7 @@ fun AgentAvatarFace(name: String, letterStyle: TextStyle, modifier: Modifier = M
             contentScale = ContentScale.Crop,
             modifier = modifier.fillMaxSize(),
         )
-    } else if (name.equals("Hermes", ignoreCase = true)) {
+    } else if (name.equals("Gary", ignoreCase = true) || name.equals("Hermes", ignoreCase = true)) {
         Image(
             painter = painterResource(R.drawable.splash_icon),
             contentDescription = null,

@@ -4,13 +4,9 @@ import android.graphics.RenderEffect
 import android.graphics.RuntimeShader
 import android.os.Build
 import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.RepeatMode
 import androidx.compose.animation.core.FastOutSlowInEasing
 import androidx.compose.animation.core.Animatable
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.Canvas
 import androidx.compose.foundation.background
@@ -186,18 +182,10 @@ fun ImageGenerationPlaceholder(
     elapsedOverrideMillis: Long? = null,
 ) {
     val description = stringResource(R.string.image_generation_rendering)
-    val transition = rememberInfiniteTransition(label = "imageGenerationDiffusion")
-    val animatedPhase by transition.animateFloat(
-        initialValue = 0f,
-        targetValue = 1f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(
-                durationMillis = animationDurationMillis.coerceAtLeast(800),
-                easing = LinearEasing,
-            ),
-            repeatMode = RepeatMode.Restart,
-        ),
-        label = "imageGenerationDiffusionPhase",
+    // Frame-throttled sawtooth (see AmbientAnimation.kt) — image generation can hold
+    // this placeholder on screen for a long time.
+    val animatedPhase = rememberAmbientPhase(
+        periodMillis = animationDurationMillis.coerceAtLeast(800),
     )
     val phase = phaseOverride?.let { it - floor(it) } ?: animatedPhase
     var liveElapsedMillis by remember(startedAtMillis) {

@@ -1351,7 +1351,7 @@ private fun AccentCustomizer(
                     Text(
                         stringResource(
                             R.string.appearance_customize_theme,
-                            selectedTheme.label.removePrefix("Hermes "),
+                            selectedTheme.label.removePrefix("Gary "),
                         ),
                         style = MaterialTheme.typography.titleSmall,
                         modifier = Modifier.padding(start = 12.dp),
@@ -1867,7 +1867,7 @@ internal fun ThemeSwatchChip(
             }
         }
         Text(
-            text = appTheme.label.removePrefix("Hermes "),
+            text = appTheme.label.removePrefix("Gary "),
             style = MaterialTheme.typography.labelSmall,
             color = MaterialTheme.colorScheme.onSurface,
             maxLines = 1,

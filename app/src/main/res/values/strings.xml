@@ -20,7 +20,7 @@
     <string name="chat_debug_socket_waiting" translatable="false">Waiting for the Gateway to become ready…</string>
     <string name="chat_debug_socket_idle" translatable="false">No live Gateway connection.</string>
     <string name="chat_debug_session" translatable="false">Conversation session</string>
-    <string name="chat_debug_preparing_detail" translatable="false">Hermes is initializing this session. The message has not been sent yet.</string>
+    <string name="chat_debug_preparing_detail" translatable="false">Gary is initializing this session. The message has not been sent yet.</string>
     <string name="chat_debug_history_loading" translatable="false">Loading saved messages…</string>
     <string name="chat_debug_history_failed" translatable="false">Saved conversations could not be refreshed.</string>
     <string name="chat_debug_session_selected" translatable="false">Session selected.</string>
@@ -30,16 +30,16 @@
     <string name="chat_debug_response_waiting" translatable="false">Waiting for session initialization.</string>
     <string name="chat_debug_response_active" translatable="false">Waiting for the current reply to finish.</string>
     <string name="chat_debug_response_idle" translatable="false">No reply is currently in progress.</string>
-    <string name="chat_debug_init_recovery" translatable="false">Hermes could not initialize the agent. Check the server runtime and logs before retrying; signing in again may not resolve this.</string>
+    <string name="chat_debug_init_recovery" translatable="false">Gary could not initialize the agent. Check the server runtime and logs before retrying; signing in again may not resolve this.</string>
     <string name="chat_debug_session_id" translatable="false">Session · %1$s</string>
     <string name="chat_debug_connections" translatable="false">Connection settings</string>
-    <string name="app_name">Hermes-Relay</string>
-    <string name="app_title">Hermes-Relay</string>
+    <string name="app_name">GaryAI</string>
+    <string name="app_title">GaryAI</string>
     <string name="agent_interface">agent interface</string>
-    <string name="notification_companion_label">Hermes-Relay notification companion</string>
+    <string name="notification_companion_label">GaryAI notification companion</string>
 
     <string name="onboarding_skip_setup_title">Skip setup?</string>
-    <string name="onboarding_skip_setup_text">No problem — you can explore the demo to see how Hermes-Relay works, and add your own Hermes Gateway anytime from Settings → Gateways. Relay pairing for power tools can be added later too.</string>
+    <string name="onboarding_skip_setup_text">No problem — you can explore the demo to see how GaryAI works, and add your own Gary Gateway anytime from Settings → Gateways. Relay pairing for power tools can be added later too.</string>
     <string name="onboarding_skip_for_now">Skip for now</string>
     <string name="onboarding_go_back">Go back</string>
     <string name="onboarding_skip">Skip</string>
@@ -49,30 +49,30 @@
     <string name="onboarding_get_started">Get started</string>
     <string name="onboarding_step_count">Step %1$d of %2$d</string>
 
-    <string name="onboarding_welcome_title">Hermes,\nin your pocket</string>
-    <string name="onboarding_welcome_description">Chat, manage, and use voice\nwith your own Hermes.</string>
+    <string name="onboarding_welcome_title">Gary,\nin your pocket</string>
+    <string name="onboarding_welcome_description">Chat, manage, and use voice\nwith your own Gary.</string>
     <string name="onboarding_welcome_badge">Welcome</string>
-    <string name="onboarding_hermes_logo">Hermes logo</string>
+    <string name="onboarding_hermes_logo">Gary logo</string>
     <string name="onboarding_chat_manage_label">Dashboard first</string>
     <string name="onboarding_chat_manage_description">No Relay required</string>
     <string name="onboarding_power_tools_label">Power tools later</string>
     <string name="onboarding_power_tools_description">Pair Relay when you need\nTerminal or Bridge</string>
-    <string name="onboarding_setup_guide_hint">The setup guide has copy/paste commands when you need to start Hermes on a computer or server.</string>
+    <string name="onboarding_setup_guide_hint">The setup guide has copy/paste commands when you need to start Gary on a computer or server.</string>
     <string name="onboarding_setup_guide">Setup Guide</string>
-    <string name="onboarding_hermes_docs">Hermes Docs</string>
-    <string name="onboarding_api_server_docs">Hermes API server docs</string>
+    <string name="onboarding_hermes_docs">Gary Docs</string>
+    <string name="onboarding_api_server_docs">Gary API server docs</string>
 
     <string name="onboarding_chat_title">Chat</string>
-    <string name="onboarding_chat_description">Your Hermes agent, streaming in real time.</string>
+    <string name="onboarding_chat_description">Your Gary agent, streaming in real time.</string>
     <string name="onboarding_streaming_label">Streaming</string>
     <string name="onboarding_streaming_description">Live responses with tool progress, markdown, and rich cards as the agent works.</string>
     <string name="onboarding_profiles_label">Profiles</string>
     <string name="onboarding_profiles_description">Switch agent profiles mid-flow — each keeps its own sessions, model, and persona.</string>
     <string name="onboarding_voice_label">Voice</string>
-    <string name="onboarding_voice_description">Tap the mic to talk. Speech runs through your Hermes server — no extra install.</string>
+    <string name="onboarding_voice_description">Tap the mic to talk. Speech runs through your Gary server — no extra install.</string>
 
     <string name="onboarding_manage_title">Manage</string>
-    <string name="onboarding_manage_description">Your Hermes dashboard, pocket-sized.</string>
+    <string name="onboarding_manage_description">Your Gary dashboard, pocket-sized.</string>
     <string name="onboarding_control_label">Control</string>
     <string name="onboarding_control_description">Profiles, skills, automations, MCP servers, models, and provider keys.</string>
     <string name="onboarding_skills_hub_label">Skills hub</string>
@@ -90,7 +90,7 @@
     <string name="onboarding_realtime_description">Provider-native realtime voice agent and profile-aware voice providers.</string>
     <string name="onboarding_review_permissions">Review permissions</string>
     <string name="onboarding_finish_setup_title">Finish setup</string>
-    <string name="onboarding_finish_setup_description">Your Hermes connection is ready. Choose what this phone can do now, or change it later in Settings.</string>
+    <string name="onboarding_finish_setup_description">Your Gary connection is ready. Choose what this phone can do now, or change it later in Settings.</string>
     <string name="onboarding_chat_manage_ready">Ready — no phone permission needed.</string>
     <string name="onboarding_chat_alerts">Chat alerts</string>
     <string name="onboarding_chat_alerts_description">Allow Android notifications so enabled alerts can reach you in the background.</string>
@@ -131,7 +131,7 @@
     <string name="power_gate_terminal_title">Terminal</string>
     <string name="power_gate_terminal_summary">Open a server shell through your paired relay session.</string>
     <string name="power_gate_bridge_title">Bridge</string>
-    <string name="power_gate_bridge_summary">Let Hermes send approved bridge commands to this phone.</string>
+    <string name="power_gate_bridge_summary">Let Gary send approved bridge commands to this phone.</string>
 
     <!-- Status strip placeholders -->
     <string name="status_no_route">no route</string>
@@ -151,14 +151,14 @@
     <string name="chat_placeholder_message">Message…</string>
     <string name="chat_edit_busy_snackbar">Can\'t edit right now — wait for the current turn to finish</string>
     <string name="chat_select_reasoning_effort">Select reasoning effort</string>
-    <string name="reasoning_effort_standard_levels_notice">Hermes doesn\'t advertise exact effort levels for this model, so standard options are shown.</string>
-    <string name="reasoning_effort_current_outside_supported">Current session: %1$s (reported by Hermes). New selections for this model are limited to %2$s.</string>
+    <string name="reasoning_effort_standard_levels_notice">Gary doesn\'t advertise exact effort levels for this model, so standard options are shown.</string>
+    <string name="reasoning_effort_current_outside_supported">Current session: %1$s (reported by Gary). New selections for this model are limited to %2$s.</string>
 
     <!-- Voice toasts -->
     <string name="voice_toast_signin_route">Voice needs a one-time sign-in on the %1$s route — open Manage</string>
     <string name="voice_toast_signin_default">Voice needs dashboard sign-in — open Manage to sign in</string>
-    <string name="voice_toast_unsupported">This Hermes build has no voice routes — update hermes-agent or pair Relay</string>
-    <string name="voice_toast_unreachable">Voice needs a reachable Hermes dashboard or Relay voice route</string>
+    <string name="voice_toast_unsupported">This Gary build has no voice routes — update hermes-agent or pair Relay</string>
+    <string name="voice_toast_unreachable">Voice needs a reachable Gary dashboard or Relay voice route</string>
 
     <!-- Misc chat screen -->
     <string name="chat_stopped_snackbar">Stopped</string>
@@ -172,19 +172,19 @@
     <string name="chat_search_result_count">%1$d of %2$d</string>
     <string name="chat_retry">Retry</string>
     <string name="chat_dismiss">Dismiss</string>
-    <string name="chat_failure_title">Hermes couldn’t complete this response</string>
+    <string name="chat_failure_title">Gary couldn’t complete this response</string>
     <string name="chat_failure_inference_unavailable">Inference unavailable</string>
     <string name="chat_failure_details">Details</string>
     <string name="chat_failure_details_title">Response failure</string>
-    <string name="chat_failure_details_guidance">Hermes reported this error. The app won’t switch routes or models automatically.</string>
+    <string name="chat_failure_details_guidance">Gary reported this error. The app won’t switch routes or models automatically.</string>
     <string name="chat_failure_copy_details">Copy details</string>
     <string name="chat_failure_route_gateway">Gateway</string>
     <string name="chat_failure_route_api">Direct API</string>
     <string name="chat_open_settings">Open Settings</string>
-    <string name="chat_connect_hermes">Connect Hermes</string>
+    <string name="chat_connect_hermes">Connect Gary</string>
     <string name="chat_try_demo">Try the demo</string>
     <string name="chat_loading_messages">Loading messages…</string>
-    <string name="chat_empty_state_body">Connect your Hermes server to start chatting — or explore a quick demo first. You can connect anytime.</string>
+    <string name="chat_empty_state_body">Connect your Gary server to start chatting — or explore a quick demo first. You can connect anytime.</string>
     <string name="chat_editing_notice">Editing — will rewind the conversation</string>
     <string name="chat_mic_perm_needed">Microphone permission needed</string>
     <string name="chat_mic_perm_body">Tap Open Settings and grant Microphone access to use voice mode.</string>
@@ -210,23 +210,23 @@
     <string name="chat_camera_perm_needed">Camera permission needed to take a photo</string>
 
     <!-- ConnectionViewModel status -->
-    <string name="conn_status_no_hermes">No Hermes connection</string>
+    <string name="conn_status_no_hermes">No Gary connection</string>
     <string name="conn_status_no_internet">No internet connection</string>
-    <string name="conn_status_api_unreachable">Hermes API unreachable</string>
-    <string name="conn_status_connecting">Connecting to Hermes</string>
-    <string name="conn_status_checking">Checking Hermes connection</string>
+    <string name="conn_status_api_unreachable">Gary API unreachable</string>
+    <string name="conn_status_connecting">Connecting to Gary</string>
+    <string name="conn_status_checking">Checking Gary connection</string>
     <string name="conn_status_relay_unreachable">Relay unreachable</string>
     <string name="conn_status_relay_stale">Relay stale</string>
     <string name="conn_status_reconnecting">Reconnecting</string>
     <string name="conn_status_connection_changed">Connection changed</string>
-    <string name="conn_status_connected">Connected to Hermes</string>
+    <string name="conn_status_connected">Connected to Gary</string>
     <string name="conn_status_interrupted">Connection interrupted</string>
-    <string name="conn_status_voice_signin">Vanilla Hermes voice needs dashboard sign-in</string>
+    <string name="conn_status_voice_signin">Vanilla Gary voice needs dashboard sign-in</string>
     <string name="conn_status_voice_blocked">Voice blocked</string>
     <string name="conn_status_checking_relay_voice">Checking relay for voice</string>
-    <string name="conn_status_setup_skipped">Vanilla Hermes setup skipped</string>
-    <string name="conn_status_testing_standard">Testing standard Hermes connection</string>
-    <string name="conn_status_setup_health_failed">Vanilla Hermes setup health failed</string>
+    <string name="conn_status_setup_skipped">Vanilla Gary setup skipped</string>
+    <string name="conn_status_testing_standard">Testing standard Gary connection</string>
+    <string name="conn_status_setup_health_failed">Vanilla Gary setup health failed</string>
     <string name="conn_status_api_test_skipped">API test skipped</string>
     <string name="conn_status_api_test_ok">API connection ok</string>
     <string name="conn_status_api_test_failed">API auth failed</string>
@@ -236,8 +236,8 @@
     <string name="conn_status_relay_connect_requested">Relay connect requested</string>
     <string name="conn_status_relay_disconnect_requested">Relay disconnect requested</string>
     <string name="conn_status_route_recheck_failed">Route re-check failed</string>
-    <string name="conn_status_hermes_ok">Vanilla Hermes connection ok</string>
-    <string name="conn_status_auth_failed">Vanilla Hermes auth failed</string>
+    <string name="conn_status_hermes_ok">Vanilla Gary connection ok</string>
+    <string name="conn_status_auth_failed">Vanilla Gary auth failed</string>
 
     <!-- ConnectionViewModel labels and details -->
     <string name="conn_label_setup">Setup</string>
@@ -252,12 +252,12 @@
     <string name="dashboard_component_server_errors_5m">server errors / 5m</string>
     <string name="conn_label_connect">Connect</string>
     <string name="conn_label_connections">Gateways</string>
-    <string name="conn_detail_add_connection">Add a Vanilla Hermes API/dashboard connection</string>
+    <string name="conn_detail_add_connection">Add a Vanilla Gary API/dashboard connection</string>
     <string name="conn_detail_waiting_network">Waiting for Android to report an internet route</string>
     <string name="conn_detail_chat_unavailable">Chat and profile calls may not be available</string>
     <string name="conn_detail_health_check_failed">Health check failed</string>
     <string name="conn_detail_ready">Ready</string>
-    <string name="conn_detail_checking_health">Checking Hermes health</string>
+    <string name="conn_detail_checking_health">Checking Gary health</string>
     <string name="conn_detail_checking_relay">Checking relay health</string>
     <string name="conn_detail_opening_socket">Opening relay socket</string>
     <string name="conn_detail_relay_path_ready">Relay path ready</string>
@@ -267,7 +267,7 @@
 
     <!-- VoiceViewModel status -->
     <string name="voice_status_mode_switched">Voice mode switched</string>
-    <string name="voice_status_standard_tts">Vanilla Hermes voice uses the host\'s global TTS</string>
+    <string name="voice_status_standard_tts">Vanilla Gary voice uses the host\'s global TTS</string>
     <string name="voice_status_capture_ignored">Voice capture ignored</string>
     <string name="voice_status_no_speech">No speech detected</string>
     <string name="voice_status_test_started">Realtime Agent test started</string>
@@ -293,7 +293,7 @@
     <string name="chat_approval_deny">Deny</string>
     <string name="chat_approval_smart_denied_title">Smart DENY — owner override</string>
     <string name="chat_approval_smart_denied_body">The smart safety review denied this operation. You may override it once.</string>
-    <string name="chat_approval_clarify_title">Hermes needs clarification</string>
+    <string name="chat_approval_clarify_title">Gary needs clarification</string>
     <string name="chat_approval_sudo_title">Elevated permission requested</string>
     <string name="chat_approval_secret_title">Secret requested</string>
     <string name="chat_approval_skip">Skip</string>
@@ -313,7 +313,7 @@
     <string name="error_classify_media_fetch">Couldn\'t fetch attachment</string>
     <string name="error_classify_send_message">Couldn\'t send message</string>
     <string name="error_classify_generic">Something went wrong</string>
-    <string name="error_classify_relay_auth">Relay Hermes auth failed</string>
+    <string name="error_classify_relay_auth">Relay Gary auth failed</string>
     <string name="error_classify_realtime_auth">Realtime provider auth unavailable</string>
     <string name="error_classify_api_key">API key rejected</string>
     <string name="error_classify_session_expired">Session expired</string>
@@ -338,20 +338,20 @@
 
     <!-- Connection wizard — Connect page essentials -->
     <string name="cw_connect_to_hermes">Add gateway</string>
-    <string name="cw_nearby_description">We’ll look for Hermes on this network. Dashboard and Gateway provide the standard Chat, Manage, and Voice connection.</string>
-    <string name="cw_connection_chooser_description">A gateway is one Hermes installation. Choose how this phone can reach it.</string>
-    <string name="cw_scan_setup_qr_title">Scan Hermes setup QR</string>
+    <string name="cw_nearby_description">We’ll look for Gary on this network. Dashboard and Gateway provide the standard Chat, Manage, and Voice connection.</string>
+    <string name="cw_connection_chooser_description">A gateway is one Gary installation. Choose how this phone can reach it.</string>
+    <string name="cw_scan_setup_qr_title">Scan Gary setup QR</string>
     <string name="cw_scan_setup_qr_subtitle">Configure local, remote, and available Relay routes</string>
     <string name="cw_recommended">Recommended</string>
     <string name="cw_other_ways_to_connect">Choose a gateway</string>
     <string name="cw_advanced">Advanced</string>
-    <string name="cw_cloud_title">Nous-hosted Hermes</string>
+    <string name="cw_cloud_title">Nous-hosted Gary</string>
     <string name="cw_cloud_subtitle">Connect to your hosted agent</string>
     <string name="cw_server_vps_title">Remote gateway</string>
     <string name="cw_server_vps_subtitle">Enter its Dashboard address</string>
     <string name="cw_relay_optional_note">HTTPS is recommended. Other HTTP addresses need explicit risk acknowledgement. The app does not enforce VPN protection. Relay and Direct API are optional.</string>
-    <string name="cw_cloud_entry_title">Connect to Nous-hosted Hermes</string>
-    <string name="cw_cloud_entry_description">Enter the agent address shown in Nous Portal. You’ll sign in securely after Hermes is found.</string>
+    <string name="cw_cloud_entry_title">Connect to Nous-hosted Gary</string>
+    <string name="cw_cloud_entry_description">Enter the agent address shown in Nous Portal. You’ll sign in securely after Gary is found.</string>
     <string name="cw_cloud_agent_name">Agent address</string>
     <string name="cw_cloud_slug_placeholder">your-agent</string>
     <string name="cw_cloud_slug_hint">We’ll connect to your-agent.agents.nousresearch.com.</string>
@@ -361,59 +361,59 @@
     <string name="cw_cloud_use_custom_address">Use custom URL</string>
     <string name="cw_cloud_use_nous_address">Use Nous-hosted address</string>
     <string name="cw_before_connecting">Before you connect</string>
-    <string name="cw_connect_step_server_title">Start Hermes on your computer</string>
-    <string name="cw_connect_step_server_body">Start the Dashboard on the Hermes computer. For first-time LAN access, use Setup Guide below to make it phone-reachable and enable sign-in.</string>
+    <string name="cw_connect_step_server_title">Start Gary on your computer</string>
+    <string name="cw_connect_step_server_body">Start the Dashboard on the Gary computer. For first-time LAN access, use Setup Guide below to make it phone-reachable and enable sign-in.</string>
     <string name="cw_connect_step_network_title">Make the server reachable</string>
     <string name="cw_connect_step_network_body">Use the same Wi-Fi, or connect both devices to Tailscale.</string>
     <string name="cw_connect_step_phone_title">Connect from this phone</string>
     <string name="cw_connect_step_phone_body">Search below or enter the Dashboard address, such as 192.168.1.10:9119. Sign in if prompted—no API key is needed.</string>
     <string name="cw_nearby_searching">Searching nearby…</string>
-    <string name="cw_nearby_searching_hint">Keep your phone on the same network as your Hermes server.</string>
-    <string name="cw_nearby_heading">Hermes nearby</string>
-    <string name="cw_nearby_empty">No Hermes servers found</string>
+    <string name="cw_nearby_searching_hint">Keep your phone on the same network as your Gary server.</string>
+    <string name="cw_nearby_heading">Gary nearby</string>
+    <string name="cw_nearby_empty">No Gary servers found</string>
     <string name="cw_nearby_failed">Couldn’t search this network</string>
-    <string name="cw_nearby_empty_hint">Check that Hermes is running, then search again or enter its address.</string>
+    <string name="cw_nearby_empty_hint">Check that Gary is running, then search again or enter its address.</string>
     <string name="cw_nearby_search_again">Search again</string>
     <string name="cw_nearby_enter_address">Enter address or custom port</string>
     <string name="cw_preparing_connection">Preparing connection…</string>
     <string name="cw_preparing_connection_hint">Setting up secure local storage. This should only take a moment.</string>
     <string name="cw_other_connection_methods">Advanced connection options</string>
-    <string name="cw_relay_entry_title">Hermes Relay</string>
+    <string name="cw_relay_entry_title">GaryAI</string>
     <string name="cw_relay_entry_desc">Pair Relay to add Terminal, Bridge, device tools, Relay sessions, and grants.</string>
-    <string name="cw_relay_pair_qr">Pair Hermes Relay</string>
+    <string name="cw_relay_pair_qr">Pair GaryAI</string>
     <string name="cw_relay_pair_qr_desc">Scan a Relay setup QR</string>
     <string name="cw_relay_enter_code">Enter a Relay pairing code</string>
     <string name="cw_manual_hermes_title">Enter gateway address</string>
     <string name="cw_manual_hermes_description">Enter the Dashboard address you can open on this phone. For LAN or VPN access, the host needs a reachable Dashboard and authentication. See the Setup Guide if the browser cannot connect.</string>
-    <string name="cw_hermes_address">Hermes address</string>
+    <string name="cw_hermes_address">Gary address</string>
     <string name="cw_hermes_address_placeholder">192.168.1.10:9119</string>
     <string name="cw_hermes_address_hint">Examples: 192.168.1.10:9119 or https://hermes.example.com:10443. If omitted, private hosts use port 9119 and HTTPS uses port 443. No API key is needed.</string>
-    <string name="cw_find_hermes">Find Hermes</string>
-    <string name="cw_hermes_found">Hermes found</string>
+    <string name="cw_find_hermes">Find Gary</string>
+    <string name="cw_hermes_found">Gary found</string>
     <string name="cw_ready_to_connect">Ready to connect</string>
     <string name="cw_ready">Ready</string>
     <string name="cw_available_after_signin">Available after sign-in</string>
     <string name="cw_unavailable_server">Unavailable on this server</string>
     <string name="cw_could_not_verify">Couldn’t verify</string>
     <string name="cw_choose_another">Choose another</string>
-    <string name="cw_sign_in_to_hermes">Sign in to Hermes</string>
+    <string name="cw_sign_in_to_hermes">Sign in to Gary</string>
     <string name="cw_dashboard_connected_title">Dashboard access verified</string>
     <string name="cw_dashboard_connected_body">Continue to Chat. The Gateway connection and voice availability are checked separately.</string>
     <string name="cw_continue">Continue</string>
-    <string name="cw_timeline_discovered">Hermes discovered</string>
+    <string name="cw_timeline_discovered">Gary discovered</string>
     <string name="cw_timeline_discovered_detail">Dashboard status retrieved</string>
     <string name="cw_timeline_access">Dashboard access</string>
     <string name="cw_timeline_access_ready">No additional sign-in required</string>
     <string name="cw_timeline_authenticated">Authentication verified</string>
     <string name="cw_timeline_ready">Ready to continue</string>
     <string name="cw_timeline_ready_detail">Chat connects when opened; voice availability is checked separately</string>
-    <string name="cw_semantics_hermes_available">Hermes available</string>
+    <string name="cw_semantics_hermes_available">Gary available</string>
     <string name="cw_semantics_capability">%1$s: %2$s</string>
     <string name="cw_connect_description">Use these options for API-only compatibility, custom setup, or alternate Relay pairing.</string>
     <string name="cw_try_demo">Try the demo</string>
     <string name="cw_try_demo_subtitle">Explore offline — no server needed.</string>
     <string name="cw_setup_guide">Setup Guide</string>
-    <string name="cw_hermes_api">Hermes API</string>
+    <string name="cw_hermes_api">Gary API</string>
     <string name="cw_advanced_relay_pairing">Relay pairing options</string>
     <string name="cw_advanced_relay_pairing_desc">Terminal, Bridge, Relay sessions, and grants require the Relay plugin.</string>
     <string name="cw_relay_docs">Relay docs</string>
@@ -443,7 +443,7 @@
     <string name="cw_method_hermes_title">API-only connection</string>
     <string name="cw_method_hermes_subtitle">Explicit API-server chat for headless or compatibility setups</string>
     <string name="cw_method_scan_title">Scan setup QR</string>
-    <string name="cw_method_scan_subtitle">Scan a QR with API URL/key for Hermes; Relay QR details require the Relay plugin</string>
+    <string name="cw_method_scan_subtitle">Scan a QR with API URL/key for Gary; Relay QR details require the Relay plugin</string>
     <string name="cw_method_pair_code_title">Pair Relay by code</string>
     <string name="cw_method_pair_code_subtitle">Pair with a code created by your Relay server</string>
     <string name="cw_method_show_code_title">Show Relay code</string>
@@ -452,11 +452,11 @@
     <!-- Standard connect form -->
     <string name="cw_api_url_placeholder">192.168.1.10 or http://your-server:8642</string>
     <string name="cw_api_url_supporting">API-server address for Direct API chat. Bare hosts use HTTP and port 8642.</string>
-    <string name="cw_scan_message">Scanning this LAN for Hermes dashboard/API…</string>
+    <string name="cw_scan_message">Scanning this LAN for Gary dashboard/API…</string>
     <string name="cw_dashboard_signin_hint">Sign in via the dashboard to unlock Manage and voice — the API key is only for optional Direct API compatibility.</string>
     <string name="cw_pair_relay_section">Pair Relay (optional)</string>
     <string name="cw_pair_relay_for">Pair Relay with %1$s</string>
-    <string name="cw_pair_relay_scoped_desc">Add the optional Relay extension to this saved Hermes connection. This does not add or replace a server.</string>
+    <string name="cw_pair_relay_scoped_desc">Add the optional Relay extension to this saved Gary connection. This does not add or replace a server.</string>
     <string name="cw_current_connection">Current connection</string>
     <string name="cw_current_hermes_connection">CURRENT HERMES CONNECTION</string>
     <string name="cw_existing_connection_unchanged">Chat, Manage, Voice, and your saved routes stay unchanged.</string>
@@ -479,24 +479,24 @@
     <string name="cw_pair_code_subtitle">Use this only after the host has registered a Relay pairing code. Standard Chat and Manage do not require this.</string>
     <string name="cw_api_url_label_field">API server URL</string>
     <string name="cw_api_url_field_placeholder">http://your-server:8642</string>
-    <string name="cw_api_url_field_supporting">Hermes API — chat and sessions (default port 8642)</string>
+    <string name="cw_api_url_field_supporting">Gary API — chat and sessions (default port 8642)</string>
     <string name="cw_relay_url_label">Relay URL</string>
     <string name="cw_relay_url_placeholder">wss://your-server:8767</string>
-    <string name="cw_relay_url_supporting">Hermes-Relay — Terminal, Bridge, relay sessions, and grants</string>
+    <string name="cw_relay_url_supporting">GaryAI — Terminal, Bridge, relay sessions, and grants</string>
     <string name="cw_pairing_code_label">Pairing code</string>
     <string name="cw_pairing_code_placeholder">e.g. ABC123</string>
     <string name="cw_pair_button">Pair</string>
-    <string name="cw_show_code_subtitle">Use this when you can\'t scan a Relay pairing QR. Set your URLs, then register the code below on the host running Hermes-Relay.</string>
+    <string name="cw_show_code_subtitle">Use this when you can\'t scan a Relay pairing QR. Set your URLs, then register the code below on the host running GaryAI.</string>
     <string name="cw_step_copy_code">1. Copy this code</string>
     <string name="cw_copy_pairing_code">Copy pairing code</string>
     <string name="cw_generate_new_code">Generate new code</string>
-    <string name="cw_step_register_code">2. On the host running Hermes-Relay, run:</string>
+    <string name="cw_step_register_code">2. On the host running GaryAI, run:</string>
     <string name="cw_copy_command">Copy command</string>
     <string name="cw_step_connect">3. Then come back and tap Connect</string>
     <string name="cw_routes_count">Routes (%1$d)</string>
     <string name="cw_routes_desc">Your phone tries these routes in order and uses the first one it can reach. It switches automatically as you change networks.</string>
-    <string name="secure_link_title">Hermes Secure Link</string>
-    <string name="hermes_reach_title">Hermes Reach · Experimental</string>
+    <string name="secure_link_title">Gary Secure Link</string>
+    <string name="hermes_reach_title">Gary Reach · Experimental</string>
     <string name="hermes_reach_summary">Experimental broker route for networks where direct access and Tailscale are unavailable. It is not recommended for normal setup yet; Secure Link TLS remains end to end.</string>
     <string name="secure_link_pinned_tls">Pinned TLS · identity verified from this pairing</string>
     <string name="secure_link_pinned_tls_short">Secure Link · pinned TLS</string>
@@ -507,7 +507,7 @@
     <string name="secure_link_no_services">No protected services were advertised. Secure Link will not be used.</string>
     <string name="secure_link_partial_warning">Partial protection: services not listed here use their own configured route and security.</string>
     <string name="secure_link_partial_short">Secure Link · partial</string>
-    <string name="secure_link_fallback_ready">If Secure Link is unavailable, Hermes can try the approved fallback routes below.</string>
+    <string name="secure_link_fallback_ready">If Secure Link is unavailable, Gary can try the approved fallback routes below.</string>
     <string name="secure_link_no_fallback">No fallback route is included. Protected services will remain offline if Secure Link is unavailable.</string>
     <string name="secure_link_auth_note">Transport protection does not bypass authentication. Relay pairing, API credentials, and Dashboard sign-in are still enforced per service.</string>
     <string name="cw_prefer_label">Prefer:</string>
@@ -522,7 +522,7 @@
     <string name="cw_mixed_route_plain">%1$s uses plain HTTP/WS. Use it only on a trusted private network or through a VPN you control.</string>
     <string name="cw_mixed_route_secure">%1$s uses HTTPS/WSS with transport encryption.</string>
     <string name="cw_mixed_safe">The app probes these routes and selects an available one. You can change the preferred route later.</string>
-    <string name="cw_connecting_to_hermes">Connecting to Hermes</string>
+    <string name="cw_connecting_to_hermes">Connecting to Gary</string>
     <string name="cw_connecting_detail">Checking the API server, saved key, and dashboard.</string>
     <string name="cw_pairing_title">Pairing…</string>
     <string name="cw_pair_in_progress">Working…</string>
@@ -533,7 +533,7 @@
     <string name="cw_negotiating_relay">Negotiating with the relay…</string>
     <string name="cw_paired_opening_chat">Paired — opening chat…</string>
     <string name="cw_connecting_to_relay">Connecting to the relay…</string>
-    <string name="cw_hermes_connected">Hermes connected</string>
+    <string name="cw_hermes_connected">Gary connected</string>
     <string name="cw_chat">Chat</string>
     <string name="cw_api_server_ready">API server ready</string>
     <string name="cw_api_server_not_reachable">API server not reachable</string>
@@ -544,9 +544,9 @@
     <string name="cw_dashboard_not_reachable">Dashboard not reachable yet</string>
     <string name="cw_dashboard_will_check">Dashboard will be checked in Manage</string>
     <string name="cw_voice">Voice</string>
-    <string name="cw_voice_ready">Speech ready via your Hermes server</string>
+    <string name="cw_voice_ready">Speech ready via your Gary server</string>
     <string name="cw_voice_sign_in_to_unlock">Unlocks with dashboard sign-in</string>
-    <string name="cw_voice_no_routes">Hermes build has no voice routes — update or pair Relay</string>
+    <string name="cw_voice_no_routes">Gary build has no voice routes — update or pair Relay</string>
     <string name="cw_voice_after_dashboard">Checked once the dashboard is reachable</string>
     <string name="cw_voice_after_connect">Checked after connecting</string>
     <string name="cw_remote">Remote</string>
@@ -558,8 +558,8 @@
     <string name="cw_cancel_button">Cancel</string>
     <string name="cw_retry">Retry</string>
     <string name="cw_pairing_did_not_complete">Pairing did not complete</string>
-    <string name="cw_timeout_entercode_showcode">The host hasn\'t accepted this pairing code yet. Run the pairing command on your Hermes host (or re-check the code), then tap Retry.</string>
-    <string name="cw_timeout_scan">Timed out before the relay confirmed pairing. Check the relay is running and reachable on this network, then Retry. If pairing seems to succeed but Hermes still can\'t be reached, the API server may be behind a login gateway.</string>
+    <string name="cw_timeout_entercode_showcode">The host hasn\'t accepted this pairing code yet. Run the pairing command on your Gary host (or re-check the code), then tap Retry.</string>
+    <string name="cw_timeout_scan">Timed out before the relay confirmed pairing. Check the relay is running and reachable on this network, then Retry. If pairing seems to succeed but Gary still can\'t be reached, the API server may be behind a login gateway.</string>
     <string name="cw_timeout_other">Timed out waiting for the relay. Check that the relay is running and the URL is correct.</string>
     <string name="cw_camera_denied">Camera permission denied. Choose Remote gateway to enter the Dashboard address. Relay pairing codes are available under Advanced.</string>
 
@@ -579,7 +579,7 @@
     <string name="endpoints_security_application_tls">Application TLS</string>
     <string name="endpoints_security_tailscale_overlay">Encrypted by Tailscale · no application TLS</string>
     <string name="endpoints_security_wireguard_overlay">Encrypted by WireGuard · no application TLS</string>
-    <string name="endpoints_security_secure_link">Encrypted by Hermes Secure Link</string>
+    <string name="endpoints_security_secure_link">Encrypted by Gary Secure Link</string>
     <string name="endpoints_security_private_plain">Private network · no application TLS</string>
     <string name="endpoints_security_public_plain">Public route is not encrypted</string>
     <string name="endpoints_cancel_manual_switch">Cancel manual switch — back to %1$s</string>
@@ -620,9 +620,9 @@
     <string name="dashboard_address_editor_body">Set the Dashboard and Gateway address for this connection. Include :port when needed, for example 192.168.1.10:9119 or https://hermes.example.com:10443. HTTPS is recommended. Other HTTP addresses need your explicit risk acknowledgement.</string>
     <string name="dashboard_address_label">Dashboard &amp; Gateway address</string>
     <string name="dashboard_address_placeholder">192.168.1.10:9119</string>
-    <string name="dashboard_address_required">Enter your Hermes Gateway address</string>
+    <string name="dashboard_address_required">Enter your Gary Gateway address</string>
     <string name="dashboard_address_preview">Will use: %1$s</string>
-    <string name="dashboard_address_oidc_hint">Changing the address preserves this gateway and its history references, but a different origin requires sign-in again. OIDC callbacks are configured on Hermes.</string>
+    <string name="dashboard_address_oidc_hint">Changing the address preserves this gateway and its history references, but a different origin requires sign-in again. OIDC callbacks are configured on Gary.</string>
 
     <!-- BridgeMasterToggle -->
     <string name="bmt_agent_control">Agent Control</string>
@@ -637,9 +637,9 @@
     <string name="bmt_screen">Screen</string>
     <string name="bmt_current_app">Current app</string>
     <string name="bmt_about_title">About Agent Control</string>
-    <string name="bmt_about_body1">Agent Control lets your Hermes agent read what\'s on your screen and interact with apps on your behalf (tap, type, scroll, screenshot).</string>
+    <string name="bmt_about_body1">Agent Control lets your Gary agent read what\'s on your screen and interact with apps on your behalf (tap, type, scroll, screenshot).</string>
     <string name="bmt_about_body2">This uses Android\'s Accessibility Service API, which is the same permission screen readers use. You must enable it in Android Settings before this switch works.</string>
-    <string name="bmt_about_body3">While this is on, a \'Hermes has device control\' notification stays in your notification shade — that\'s tied to this master switch, not to any sub-feature (like Unattended Access), and goes away the moment you turn this off.</string>
+    <string name="bmt_about_body3">While this is on, a \'Gary has device control\' notification stays in your notification shade — that\'s tied to this master switch, not to any sub-feature (like Unattended Access), and goes away the moment you turn this off.</string>
     <string name="bmt_about_body4">You can turn Agent Control off at any time from this screen or by disabling the service in Android Settings. All bridge commands are logged in the Activity Log below.</string>
     <string name="bmt_got_it">Got it</string>
     <string name="bmt_master">MASTER</string>
@@ -651,7 +651,7 @@
     <string name="bssc_blocked_apps">Apps the agent can\'t touch</string>
     <string name="bssc_destructive_verbs">Words that always ask first</string>
     <string name="bssc_auto_disable">Timed screen access</string>
-    <string name="bssc_guardrails_hint">These guardrails keep Hermes in bounds. Tap to adjust.</string>
+    <string name="bssc_guardrails_hint">These guardrails keep Gary in bounds. Tap to adjust.</string>
     <string name="bssc_manage">Manage</string>
 
     <!-- BridgeActivityLog -->
@@ -676,11 +676,11 @@
     <!-- DemoModeBanner -->
     <string name="dmb_demo_mode">Demo mode — sample data, not connected. Connect →</string>
     <string name="dmb_this_is_demo">This is a demo</string>
-    <string name="dmb_connect_feature">Connect your Hermes server to use %1$s.</string>
+    <string name="dmb_connect_feature">Connect your Gary server to use %1$s.</string>
     <string name="dmb_connect">Connect</string>
 
     <!-- PairScreen -->
-    <string name="pair_connect_to_hermes">Connect to Hermes</string>
+    <string name="pair_connect_to_hermes">Connect to Gary</string>
     <string name="pair_close">Close</string>
     <string name="pair_connection_updated">Connection updated</string>
 
@@ -734,7 +734,7 @@
     <string name="ncs_status">Status</string>
     <string name="ncs_access_granted">Access granted</string>
     <string name="ncs_access_not_granted">Access not granted</string>
-    <string name="ncs_can_read_notifications">Hermes-Relay can read posted notifications</string>
+    <string name="ncs_can_read_notifications">GaryAI can read posted notifications</string>
     <string name="ncs_tap_to_enable">Tap below to enable in Android Settings</string>
     <string name="ncs_refresh_status">Refresh status</string>
     <string name="ncs_manage_in_settings">Manage in Android Settings</string>
@@ -743,7 +743,7 @@
     <string name="ncs_test">Test</string>
     <string name="ncs_fetch_recent">Fetch recent</string>
     <string name="ncs_no_title">(no title)</string>
-    <string name="ncs_about_body1">Lets your Hermes assistant help you triage notifications. When enabled, your phone forwards each notification\'s app, title, and text to your paired Hermes server through the Relay pairing used by phone tools.</string>
+    <string name="ncs_about_body1">Lets your Gary assistant help you triage notifications. When enabled, your phone forwards each notification\'s app, title, and text to your paired Gary server through the Relay pairing used by phone tools.</string>
     <string name="ncs_about_body2">Requires Android\'s notification access permission. You can grant or revoke it at any time in Android Settings. This is the same permission Wear OS, Android Auto, and Tasker use.</string>
     <string name="ncs_test_desc">Tap below to fetch the last few notifications the listener has captured this session. Helpful for verifying the connection is working end-to-end.</string>
     <string name="ncs_listener_not_bound">Listener has not bound yet. Try posting a test notification (any message) and re-tap.</string>
@@ -780,9 +780,9 @@
     <string name="settings_no_connection">No connection</string>
     <string name="settings_server_default">Server default</string>
     <string name="settings_connections">Gateways</string>
-    <string name="settings_connections_desc">Hermes installations, routes, sign-in, and extensions</string>
-    <string name="settings_hermes">Hermes</string>
-    <string name="settings_hermes_management">Hermes management</string>
+    <string name="settings_connections_desc">Gary installations, routes, sign-in, and extensions</string>
+    <string name="settings_hermes">Gary</string>
+    <string name="settings_hermes_management">Gary management</string>
     <string name="settings_hermes_management_desc">Dashboard features: skills, cron, MCP, profiles, models</string>
     <string name="settings_chat">Chat</string>
     <string name="settings_chat_desc">Chat behavior, Gateway, Direct API, tool display, message length</string>
@@ -836,7 +836,7 @@
     <string name="settings_persistent_connection_desc">Stay connected even when no chat is running</string>
     <string name="settings_connect_on_demand">Active chats stay connected automatically · idle connection closes to save battery</string>
     <string name="settings_turn_complete_alerts">Chat alerts</string>
-    <string name="settings_turn_complete_alerts_desc">Notify when Hermes needs input or finishes while the app is in the background</string>
+    <string name="settings_turn_complete_alerts_desc">Notify when Gary needs input or finishes while the app is in the background</string>
     <string name="settings_turn_complete_alerts_off">No alerts for background chat activity</string>
     <string name="settings_keep_connected_deep_sleep">Keep it connected in deep sleep</string>
     <string name="settings_keep_connected_battery_desc">Android can still pause the connection once the screen\'s been off a while (Doze). Allow unrestricted battery so Persistent connection keeps working in the background.</string>
@@ -854,7 +854,7 @@
     <string name="chat_settings_smooth_auto_scroll">Smooth auto-scroll</string>
     <string name="chat_settings_smooth_auto_scroll_desc">Follow new messages while streaming. Scroll up to pause; tap the arrow or scroll back to the bottom to resume.</string>
     <string name="chat_settings_thinking_indicator">Thinking indicator</string>
-    <string name="chat_settings_thinking_indicator_desc">The animation shown in a reply bubble while Hermes is working.</string>
+    <string name="chat_settings_thinking_indicator_desc">The animation shown in a reply bubble while Gary is working.</string>
     <string name="chat_settings_dots">Dots</string>
     <string name="chat_settings_matrix">Matrix</string>
     <string name="chat_settings_pattern">Pattern</string>
@@ -885,7 +885,7 @@
     <string name="chat_settings_physical_keyboard_enter_desc">Choose whether Enter sends or inserts a new line. Ctrl+Enter always sends.</string>
     <string name="chat_settings_insert_newline">Insert new line</string>
     <string name="chat_settings_notify_when_finishes">Background chat alerts</string>
-    <string name="chat_settings_notify_when_finishes_desc">Notify when Hermes needs input or finishes while the app is in the background</string>
+    <string name="chat_settings_notify_when_finishes_desc">Notify when Gary needs input or finishes while the app is in the background</string>
     <string name="chat_settings_share_phone_status">Share phone status with agent</string>
     <string name="chat_settings_share_phone_status_desc">Include app and phone context in API-only chats. Not sent in standard Gateway chats.</string>
     <string name="chat_settings_bridge_permissions">Bridge + permissions</string>
@@ -911,7 +911,7 @@
     <string name="chat_settings_chat_completions_suffix"> (chat via /v1/chat/completions)</string>
     <string name="chat_settings_runs_suffix"> (chat via explicitly streamed /v1/runs)</string>
     <string name="chat_settings_gateway_desc">Gateway: live thinking + rich tool events over the dashboard WebSocket (/api/ws) — what the desktop app uses. Requires Manage sign-in; when unavailable, this chat stays on Gateway and offers sign-in or retry.</string>
-    <string name="chat_settings_sessions_desc">Sessions: Hermes-native /api/sessions/{id}/chat/stream.</string>
+    <string name="chat_settings_sessions_desc">Sessions: Gary-native /api/sessions/{id}/chat/stream.</string>
     <string name="chat_settings_chat_desc">Chat: OpenAI-compatible SSE via /v1/chat/completions.</string>
     <string name="chat_settings_runs_desc">Runs: use only when your server streams /v1/runs directly.</string>
     <string name="chat_settings_auto">Auto</string>
@@ -929,7 +929,7 @@
     <string name="chat_settings_8k">8K</string>
     <string name="chat_settings_16k">16K</string>
     <string name="chat_settings_gateway_needs_signin">Gateway needs Manage sign-in</string>
-    <string name="chat_settings_gateway_needs_signin_desc">Sign in once to unlock Chat, sessions, Manage, and standard voice for this Hermes connection.</string>
+    <string name="chat_settings_gateway_needs_signin_desc">Sign in once to unlock Chat, sessions, Manage, and standard voice for this Gary connection.</string>
     <string name="chat_settings_completions">Completions</string>
     <string name="chat_settings_offline">offline</string>
 
@@ -938,7 +938,7 @@
     <string name="conn_title">Gateways</string>
     <string name="conn_add_connection">Add gateway</string>
     <string name="conn_no_connections">No gateways yet</string>
-    <string name="conn_no_connections_desc">Tap Add gateway to connect to Hermes.</string>
+    <string name="conn_no_connections_desc">Tap Add gateway to connect to Gary.</string>
     <string name="gateways_title">Gateways</string>
     <plurals name="gateway_count">
         <item quantity="one">%d gateway</item>
@@ -946,7 +946,7 @@
     </plurals>
     <string name="gateway_add">Add gateway</string>
     <string name="gateways_empty_title">No gateways yet</string>
-    <string name="gateways_empty_body">Add a gateway to connect this phone to Hermes.</string>
+    <string name="gateways_empty_body">Add a gateway to connect this phone to Gary.</string>
     <string name="gateway_route_not_configured">No route configured</string>
     <string name="gateway_status_online">Gateway online</string>
     <string name="gateway_status_sign_in_required">Sign-in required</string>
@@ -1014,9 +1014,9 @@
     <string name="detail_rename">Rename</string>
     <string name="detail_pair_relay">Pair Relay</string>
     <string name="detail_dashboard_primary">Dashboard primary</string>
-    <string name="detail_core_ready">Core Hermes ready</string>
-    <string name="detail_core_configured">Core Hermes configured</string>
-    <string name="detail_overview_summary">Chat, Manage, and Voice use standard Hermes. Relay is an optional extension for advanced device features.</string>
+    <string name="detail_core_ready">Core Gary ready</string>
+    <string name="detail_core_configured">Core Gary configured</string>
+    <string name="detail_overview_summary">Chat, Manage, and Voice use standard Gary. Relay is an optional extension for advanced device features.</string>
     <string name="detail_repair">Re-pair</string>
     <string name="detail_revoke">Revoke</string>
     <string name="detail_remove">Remove</string>
@@ -1027,7 +1027,7 @@
     <string name="detail_remove_title">Remove this connection?</string>
     <string name="detail_remove_body">The connection will be deleted from this device along with its saved session token. This cannot be undone.</string>
     <string name="detail_standard_prefix">Standard · </string>
-    <string name="detail_routes_help">What this connection can do. Routes only choose how the phone reaches Hermes.</string>
+    <string name="detail_routes_help">What this connection can do. Routes only choose how the phone reaches Gary.</string>
     <string name="detail_reconnect">Reconnect</string>
     <string name="detail_paired_relay_configured">Paired · relay configured</string>
     <string name="detail_standard_not_paired">Standard · relay not paired</string>
@@ -1066,15 +1066,15 @@
     <string name="active_section_available_fallback">Available fallback</string>
     <string name="dashboard_gateway_configured">Configured address</string>
     <string name="dashboard_gateway_secure_origin">Authenticated Dashboard address</string>
-    <string name="dashboard_gateway_oidc_explainer">The configured route may be LAN, Tailscale, or public. Hermes owns the OIDC callback; Android does not require a second sign-in address.</string>
+    <string name="dashboard_gateway_oidc_explainer">The configured route may be LAN, Tailscale, or public. Gary owns the OIDC callback; Android does not require a second sign-in address.</string>
     <string name="network_routes_title">Network routes</string>
     <string name="network_routes_summary">LAN, Tailscale, and public routes are ways to reach this Gateway. Direct API and Relay extensions are optional.</string>
     <string name="network_routes_empty">No additional network routes</string>
-    <string name="network_routes_empty_desc">Add a LAN, Tailscale, public, API, or Relay address when this phone needs another path to Hermes.</string>
+    <string name="network_routes_empty_desc">Add a LAN, Tailscale, public, API, or Relay address when this phone needs another path to Gary.</string>
     <string name="active_section_using_now">Using now</string>
     <string name="active_section_fallbacks">Fallbacks</string>
     <string name="active_section_configured_not_probed">Network routes are configured; Routes shows their latest reachability.</string>
-    <string name="active_section_relay_ownership">Relay owns extension tools only; standard Hermes stays independent.</string>
+    <string name="active_section_relay_ownership">Relay owns extension tools only; standard Gary stays independent.</string>
     <string name="active_section_no_sign_in_required">No sign-in required</string>
     <string name="active_section_use_selected_route">Use selected route</string>
     <string name="active_section_use_selected_route_failed">Couldn’t switch Dashboard sign-in back to the selected route.</string>
@@ -1104,16 +1104,16 @@
     <string name="active_section_automatic">Automatic</string>
     <string name="active_section_api_access">API access</string>
     <string name="active_section_optional_api_fallback">Optional Direct API</string>
-    <string name="active_section_api_not_required">Not required when this connection uses the Hermes Dashboard.</string>
+    <string name="active_section_api_not_required">Not required when this connection uses the Gary Dashboard.</string>
     <string name="active_section_where_api_key">Where do I get this?</string>
-    <string name="active_section_api_key_explainer">API_SERVER_KEY is created on your Hermes server; it is not supplied by this app. Configure it only when you enable the optional API server, which requires a usable key, then enter the same value here.</string>
-    <string name="active_section_core_hermes">Core Hermes</string>
+    <string name="active_section_api_key_explainer">API_SERVER_KEY is created on your Gary server; it is not supplied by this app. Configure it only when you enable the optional API server, which requires a usable key, then enter the same value here.</string>
+    <string name="active_section_core_hermes">Core Gary</string>
     <string name="active_section_optional_relay">Optional Relay</string>
     <string name="active_section_extend_connection">Extend this connection</string>
     <string name="active_section_relay_connected_features">Relay extensions</string>
     <string name="active_section_relay_optional_summary">Add Terminal, Bridge, device tools, Relay sessions, and secure remote routes.</string>
     <string name="active_section_view_relay_details">View Relay details</string>
-    <string name="active_section_core_unchanged">Your current Hermes connection stays unchanged.</string>
+    <string name="active_section_core_unchanged">Your current Gary connection stays unchanged.</string>
     <string name="active_section_api_optional_direct">Optional for direct chat and integrations</string>
     <string name="active_section_configure_test">Configure &amp; test</string>
     <string name="active_section_relay_optional_bridge">Optional bridge features and remote access</string>
@@ -1170,7 +1170,7 @@
     <string name="bot_mode_empty">No Bots or group rooms yet</string>
     <string name="bot_mode_group_title">Group room</string>
     <string name="bot_mode_group_missing">This group room is no longer available.</string>
-    <string name="bot_mode_group_read_only_help">This is the bounded read-only room history shared by Hermes Desktop. Continue with an individual Bot for now.</string>
+    <string name="bot_mode_group_read_only_help">This is the bounded read-only room history shared by Gary Desktop. Continue with an individual Bot for now.</string>
     <string name="bot_mode_bot_name">Profile name</string>
     <string name="bot_mode_bot_title">Bot name</string>
     <string name="bot_mode_bot_description">Role and description</string>
@@ -1267,11 +1267,11 @@
     <string name="bridge_core_paired_title">Phone bridge is paired</string>
     <string name="bridge_core_waiting_title">Bridge Core is waiting</string>
     <string name="bridge_core_paired_subtitle">Terminal, voice, notification, media, and relay-session controls share this grant.</string>
-    <string name="bridge_core_waiting_subtitle">Pair Relay to use Terminal and phone bridge tools. Chat and Manage continue over standard Hermes API.</string>
+    <string name="bridge_core_waiting_subtitle">Pair Relay to use Terminal and phone bridge tools. Chat and Manage continue over standard Gary API.</string>
     <string name="bridge_core_connected_label">connected</string>
     <string name="bridge_core_safety_on">safety on</string>
-    <string name="bridge_core_hermes_title">Hermes Bridge Core</string>
-    <string name="bridge_core_hermes_body">Relay features for your self-hosted Hermes server: chat, voice, terminal, notifications, media, and session grants.</string>
+    <string name="bridge_core_hermes_title">Gary Bridge Core</string>
+    <string name="bridge_core_hermes_body">Relay features for your self-hosted Gary server: chat, voice, terminal, notifications, media, and session grants.</string>
     <string name="bridge_core_no_access_body">This build does not include AccessibilityService, screen reading, taps, typing, screenshots, SMS, calls, or unattended phone control.</string>
     <string name="bridge_core_relay_title">Relay</string>
     <string name="bridge_core_connected_label2">Connected</string>
@@ -1281,7 +1281,7 @@
     <string name="bridge_core_connections">Gateways</string>
     <string name="bridge_core_connections_sub">Pair Relay, switch gateways, and verify routes</string>
     <string name="bridge_core_terminal_tile">Terminal</string>
-    <string name="bridge_core_terminal_sub">Attach to your Hermes relay terminal</string>
+    <string name="bridge_core_terminal_sub">Attach to your Gary relay terminal</string>
     <string name="bridge_core_voice">Voice</string>
     <string name="bridge_core_voice_sub">Provider, model, output voice</string>
     <string name="bridge_core_notifications">Notifications</string>
@@ -1387,8 +1387,8 @@
     <string name="about_title">About</string>
     <string name="about_back">Back</string>
     <string name="about_section_title">About</string>
-    <string name="about_app_name">Hermes-Relay</string>
-    <string name="about_app_tagline">Native Android client for Hermes Agent</string>
+    <string name="about_app_name">GaryAI</string>
+    <string name="about_app_tagline">Native Android client for Gary Agent</string>
     <string name="about_em_dash">—</string>
     <string name="about_dev_options_unlocked">Developer options unlocked</string>
     <string name="about_taps_to_unlock">%1$d taps to unlock developer options</string>
@@ -1400,7 +1400,7 @@
     <string name="about_connected">Connected</string>
     <string name="about_update_copied">Update command copied</string>
     <string name="about_copy_fix">Copy fix</string>
-    <string name="about_update_command_body">Run on your Hermes host, then restart the gateway:\n%1$s</string>
+    <string name="about_update_command_body">Run on your Gary host, then restart the gateway:\n%1$s</string>
     <string name="about_updates">Updates</string>
     <string name="about_updates_tap">Tap to check GitHub for a new release</string>
     <string name="about_updates_checking">Checking…</string>
@@ -1411,15 +1411,15 @@
     <string name="about_check">Check</string>
     <string name="about_github">GitHub</string>
     <string name="about_app_docs">App Docs</string>
-    <string name="about_hermes_docs">Hermes Docs</string>
+    <string name="about_hermes_docs">Gary Docs</string>
     <string name="about_privacy_policy">Privacy Policy</string>
     <string name="about_whats_new">What\'s New in This Version</string>
-    <string name="about_credits">Axiom Labs ❤️ Hermes Agent · Nous Research</string>
+    <string name="about_credits">Axiom Labs ❤️ Gary Agent · Nous Research</string>
 
     <!-- P1: MediaSettingsScreen -->
     <string name="media_title">Media</string>
     <string name="media_back">Back</string>
-    <string name="media_intro_1">Controls how the app downloads, protects, and caches files Hermes sends in chat.</string>
+    <string name="media_intro_1">Controls how the app downloads, protects, and caches files Gary sends in chat.</string>
     <string name="media_intro_2">Standard Dashboard media is preferred. When paired, Relay can add compatibility delivery and sensitivity metadata.</string>
     <string name="media_max_inbound">Max inbound attachment size</string>
     <string name="media_max_inbound_value">%1$d MB</string>
@@ -1456,7 +1456,7 @@
     <string name="appearance_preset_gallery">Preset gallery</string>
     <string name="appearance_preview_relay">Preview · Relay</string>
     <string name="appearance_preview_user_message">Give me three quick tips for a focused morning.</string>
-    <string name="appearance_preview_agent">Hermes</string>
+    <string name="appearance_preview_agent">Gary</string>
     <string name="appearance_preview_agent_message">1. Pick one real win before checking feeds.\n2. Block the first 45–90 minutes.\n3. Start with a setup ritual, not “motivation.”</string>
     <string name="appearance_preview_time">7:00 PM</string>
     <string name="appearance_preview_voice">Voice</string>
@@ -1472,7 +1472,7 @@
     <string name="appearance_theme">Theme</string>
     <string name="appearance_theme_desc">Pick a look. The brand chrome, accents, and chat background all follow your choice.</string>
     <string name="appearance_language">Language</string>
-    <string name="appearance_language_desc">Choose the language used by Hermes-Relay. System default follows your device setting.</string>
+    <string name="appearance_language_desc">Choose the language used by GaryAI. System default follows your device setting.</string>
     <string name="appearance_language_system">System default</string>
     <string name="appearance_language_english">English</string>
     <string name="appearance_language_german">Deutsch</string>
@@ -1509,7 +1509,7 @@
     <string name="appearance_reset">Reset theme</string>
     <string name="appearance_apply">Apply</string>
     <string name="appearance_fixed_light">%1$s is a fixed light theme.</string>
-    <string name="appearance_fixed_dark">%1$s is a fixed dark theme. Switch to Hermes Relay for light/dark control.</string>
+    <string name="appearance_fixed_dark">%1$s is a fixed dark theme. Switch to GaryAI for light/dark control.</string>
     <string name="custom_theme_title">Custom</string>
     <string name="custom_theme_entry_summary">Create and save your own themes</string>
     <string name="custom_theme_your_presets">Your presets</string>
@@ -1653,7 +1653,7 @@
     <string name="dev_settings_import_failed">Import failed — invalid file</string>
     <string name="dev_settings_reset_failed">Reset failed</string>
     <string name="dev_settings_export_sensitive_backup_title">Export sensitive backup?</string>
-    <string name="dev_settings_export_sensitive_backup_body">This backup includes saved connections, API keys, relay session tokens, device IDs, and dashboard cookies. Anyone with the file may be able to access your Hermes server.</string>
+    <string name="dev_settings_export_sensitive_backup_body">This backup includes saved connections, API keys, relay session tokens, device IDs, and dashboard cookies. Anyone with the file may be able to access your Gary server.</string>
     <string name="dev_settings_export_action">Export</string>
     <string name="dev_settings_cancel">Cancel</string>
     <string name="dev_settings_import_backup_title">Import backup?</string>
@@ -1670,8 +1670,8 @@
     <string name="perms_refresh_status_cd">Refresh status</string>
     <string name="perms_intro_title">Permissions and capabilities</string>
     <string name="perms_intro_desc">Grant only the features you use. Standard Chat and Manage do not need phone-control permissions.</string>
-    <string name="perms_section_hermes">Hermes</string>
-    <string name="perms_section_hermes_desc">Chat and Manage use your configured Hermes API/dashboard connection.</string>
+    <string name="perms_section_hermes">Gary</string>
+    <string name="perms_section_hermes_desc">Chat and Manage use your configured Gary API/dashboard connection.</string>
     <string name="perms_chat_and_manage">Chat and Manage</string>
     <string name="perms_chat_and_manage_desc">No Android runtime permission needed. API/dashboard auth is configured separately.</string>
     <string name="perms_badge_included">Included</string>
@@ -1682,7 +1682,7 @@
     <string name="perms_camera_desc">Scan setup QR codes or attach photos taken in-app.</string>
     <string name="perms_badge_optional">Optional</string>
     <string name="perms_microphone">Microphone</string>
-    <string name="perms_microphone_desc">Talk to Hermes in voice mode.</string>
+    <string name="perms_microphone_desc">Talk to Gary in voice mode.</string>
     <string name="perms_app_notifications">App notifications</string>
     <string name="perms_app_notifications_desc">Turn-complete alerts and foreground-service indicators.</string>
     <string name="perms_app_notifications_legacy_desc">This Android version does not require a runtime notification grant.</string>
@@ -1717,7 +1717,7 @@
     <!-- ProactiveSettingsScreen -->
     <string name="proactive_title">Threads</string>
     <string name="proactive_back">Back</string>
-    <string name="proactive_let_hermes_message_me">Let Hermes message me</string>
+    <string name="proactive_let_hermes_message_me">Let Gary message me</string>
     <string name="proactive_allow_proactive_messages">Allow proactive messages</string>
     <string name="proactive_allow_proactive_messages_desc">Your agent can reach out on its own — reminders, finished jobs, alerts. Its messages appear as Threads in Chat, where you can reply.</string>
     <string name="proactive_not_paired_warning">Not paired yet — pair Relay under Settings → Gateways to start receiving messages.</string>
@@ -1808,7 +1808,7 @@
     <string name="paired_devices_channel_revoked">%1$s access revoked</string>
     <string name="paired_devices_channel_revoke_failed">Failed to revoke %1$s access</string>
     <string name="paired_devices_load_error">Couldn\'t load relay sessions</string>
-    <string name="paired_devices_invalid_session_help">If this phone\'s Relay session is no longer valid, remove stale devices from Dashboard → Relay or run /relay revoke &lt;token-prefix&gt; on the Hermes host. Pair again only if you use Relay extensions.</string>
+    <string name="paired_devices_invalid_session_help">If this phone\'s Relay session is no longer valid, remove stale devices from Dashboard → Relay or run /relay revoke &lt;token-prefix&gt; on the Gary host. Pair again only if you use Relay extensions.</string>
     <string name="paired_devices_try_again">Try again</string>
     <string name="paired_devices_manage_sessions">Open Dashboard</string>
     <string name="paired_devices_repair_this_phone">Re-pair this phone</string>
@@ -1880,7 +1880,7 @@
     <string name="voice_test_auth_xai_env">xAI env</string>
     <string name="voice_test_auth_not_detected">not detected</string>
     <string name="voice_test_prompt_label">Text demo prompt (spoken back via provider)</string>
-    <string name="voice_test_prompt_hint">Mic demo speaks to the agent: it transcribes what you say, Hermes responds, and the reply is spoken back. Text demo just synthesizes the prompt above (no mic, no agent).</string>
+    <string name="voice_test_prompt_hint">Mic demo speaks to the agent: it transcribes what you say, Gary responds, and the reply is spoken back. Text demo just synthesizes the prompt above (no mic, no agent).</string>
     <string name="voice_test_stop_send">Stop &amp; send</string>
     <string name="voice_test_mic_demo">Mic demo</string>
     <string name="voice_test_text_demo">Text demo</string>
@@ -1898,43 +1898,43 @@
     <string name="voice_settings_back">Back</string>
     <string name="voice_settings_scope_label">Voice scope</string>
     <string name="voice_settings_global_voice">Global voice</string>
-    <string name="voice_settings_standard_scope_body">Standard voice follows this Hermes host\'s existing TTS, STT, and voice configuration. These settings are shared across profiles; Relay can add profile-specific voice choices without replacing the host setup.</string>
+    <string name="voice_settings_standard_scope_body">Standard voice follows this Gary host\'s existing TTS, STT, and voice configuration. These settings are shared across profiles; Relay can add profile-specific voice choices without replacing the host setup.</string>
     <string name="voice_settings_scope_resolving">Resolving the active profile\'s voice scope…</string>
     <string name="voice_settings_label_profile">Profile</string>
     <string name="voice_settings_label_scope">Scope</string>
-    <string name="voice_settings_relay_scope_footer">Relay voice choices below override the host defaults for this profile only. Clear an override to follow the Hermes host again.</string>
+    <string name="voice_settings_relay_scope_footer">Relay voice choices below override the host defaults for this profile only. Clear an override to follow the Gary host again.</string>
     <string name="voice_settings_for_profile_title">Voice for this profile</string>
     <string name="voice_settings_engine_label">Voice engine</string>
-    <string name="voice_settings_engine_hermes">Hermes Chat + Voice Output</string>
-    <string name="voice_settings_engine_hermes_desc">Hermes handles chat, tools, and memory. Speech uses the host\'s Standard configuration unless this profile selects a Relay voice override.</string>
+    <string name="voice_settings_engine_hermes">Gary Chat + Voice Output</string>
+    <string name="voice_settings_engine_hermes_desc">Gary handles chat, tools, and memory. Speech uses the host\'s Standard configuration unless this profile selects a Relay voice override.</string>
     <string name="voice_settings_engine_realtime">Realtime Agent</string>
-    <string name="voice_settings_engine_realtime_desc">A live provider session handles listening and speaking with its own voice model and voice. Hermes still handles tools, memory, and confirmations. Requires a paired Relay.</string>
+    <string name="voice_settings_engine_realtime_desc">A live provider session handles listening and speaking with its own voice model and voice. Gary still handles tools, memory, and confirmations. Requires a paired Relay.</string>
     <string name="voice_settings_experimental">Experimental</string>
-    <string name="voice_settings_realtime_no_relay">No Relay is configured for this gateway, so the Realtime Agent can\'t start. Pair Relay in Settings → Gateways, or switch back to Hermes Chat + Voice Output.</string>
+    <string name="voice_settings_realtime_no_relay">No Relay is configured for this gateway, so the Realtime Agent can\'t start. Pair Relay in Settings → Gateways, or switch back to Gary Chat + Voice Output.</string>
     <string name="voice_settings_route_label">STT/TTS route</string>
     <string name="voice_settings_status_ready">Ready</string>
     <string name="voice_settings_status_sign_in_required">Dashboard sign-in required</string>
     <string name="voice_settings_status_dashboard_unreachable">Dashboard unreachable</string>
-    <string name="voice_settings_status_unsupported_build">Not available on this Hermes build</string>
+    <string name="voice_settings_status_unsupported_build">Not available on this Gary build</string>
     <string name="voice_settings_status_checking">Checking...</string>
     <string name="voice_settings_relay_not_configured">Relay not configured</string>
     <string name="voice_settings_status_auto_relay">Ready — using Relay</string>
-    <string name="voice_settings_status_auto_hermes">Ready — using Hermes</string>
+    <string name="voice_settings_status_auto_hermes">Ready — using Gary</string>
     <string name="voice_settings_status_no_route">No route available yet</string>
     <string name="voice_settings_route_auto">Auto</string>
-    <string name="voice_settings_route_auto_desc">Use this profile\'s Relay voice when available, then fall back to the Hermes host. Recommended.</string>
-    <string name="voice_settings_route_hermes">Hermes</string>
-    <string name="voice_settings_route_hermes_desc">The dashboard audio path Hermes Desktop uses — works on a Hermes install, no Relay plugin required.</string>
+    <string name="voice_settings_route_auto_desc">Use this profile\'s Relay voice when available, then fall back to the Gary host. Recommended.</string>
+    <string name="voice_settings_route_hermes">Gary</string>
+    <string name="voice_settings_route_hermes_desc">The dashboard audio path Gary Desktop uses — works on a Gary install, no Relay plugin required.</string>
     <string name="voice_settings_route_relay">Relay</string>
     <string name="voice_settings_route_relay_desc">Use the provider, model, and voice saved for this profile through Relay.</string>
     <string name="voice_settings_optional">Optional</string>
     <string name="voice_settings_signin_route_hint">The saved dashboard session could not be reused on the %1$s route. Open Manage to sign in again and unlock voice.</string>
-    <string name="voice_settings_signin_default_hint">Your Hermes dashboard requires sign-in before standard voice can transcribe or speak. Signing in once in Manage unlocks it for this connection.</string>
+    <string name="voice_settings_signin_default_hint">Your Gary dashboard requires sign-in before standard voice can transcribe or speak. Signing in once in Manage unlocks it for this connection.</string>
     <string name="voice_settings_sign_in_via_manage">Sign in via Manage</string>
-    <string name="voice_settings_unsupported_build_body">This Hermes server build doesn\'t expose the dashboard audio routes yet. Update hermes-agent on the server, or pair Relay to use Relay voice.</string>
+    <string name="voice_settings_unsupported_build_body">This Gary server build doesn\'t expose the dashboard audio routes yet. Update hermes-agent on the server, or pair Relay to use Relay voice.</string>
     <string name="voice_settings_tts_title">Text-to-Speech</string>
     <string name="voice_settings_streaming_output_label">Streaming output (/voice/output)</string>
-    <string name="voice_settings_streaming_output_desc">Streams spoken replies with the provider, model, and voice saved for this profile. It does not change the Hermes chat model.</string>
+    <string name="voice_settings_streaming_output_desc">Streams spoken replies with the provider, model, and voice saved for this profile. It does not change the Gary chat model.</string>
     <string name="voice_settings_basic_synthesize_label">Basic synthesize fallback (/voice/synthesize)</string>
     <string name="voice_settings_basic_synthesize_desc">Always available as the stable speech safety net when provider-native voice is unavailable.</string>
     <string name="voice_settings_provider_unavailable">unavailable</string>
@@ -1942,7 +1942,7 @@
     <string name="voice_settings_yes">yes</string>
     <string name="voice_settings_no">no</string>
     <string name="voice_settings_label_provider">Provider</string>
-    <string name="voice_settings_provider_desc">Where speech is generated. Available choices come from this Hermes host and its installed providers.</string>
+    <string name="voice_settings_provider_desc">Where speech is generated. Available choices come from this Gary host and its installed providers.</string>
     <string name="voice_settings_label_enabled">Enabled</string>
     <string name="voice_settings_label_model">Model</string>
     <string name="voice_settings_model_desc">Latest follows provider upgrades. Choose a versioned model to keep voice behavior pinned.</string>
@@ -1983,11 +1983,11 @@
     <string name="voice_settings_model_id">Model ID</string>
     <string name="voice_settings_voice_id">Voice ID</string>
     <string name="voice_settings_streaming_latency">Streaming latency: %1$d</string>
-    <string name="voice_settings_fallback_desc">If Relay streaming cannot start, speak through the Hermes host\'s Standard voice.</string>
+    <string name="voice_settings_fallback_desc">If Relay streaming cannot start, speak through the Gary host\'s Standard voice.</string>
     <string name="voice_settings_provider_options_title">Voice options</string>
     <string name="voice_settings_provider_options_desc">Only settings supported by the selected provider are shown.</string>
     <string name="voice_settings_auto_speak">Read replies aloud</string>
-    <string name="voice_settings_auto_speak_desc">Automatically speak assistant replies on Hermes surfaces that honor this host setting.</string>
+    <string name="voice_settings_auto_speak_desc">Automatically speak assistant replies on Gary surfaces that honor this host setting.</string>
     <string name="voice_settings_expressive_tags">Expressive speech tags</string>
     <string name="voice_settings_expressive_tags_desc">Let xAI add tone cues (whisper, laugh, sigh, pitch shifts) to streamed speech.</string>
     <string name="voice_settings_saving">Saving...</string>
@@ -1995,15 +1995,15 @@
     <string name="voice_settings_save_and_test">Save &amp; test</string>
     <string name="voice_settings_sample_rate_must_be_number">Sample rate must be a number</string>
     <string name="voice_settings_realtime_agent_title">Realtime Agent</string>
-    <string name="voice_settings_realtime_agent_desc">Realtime uses its own provider model and voice for a live speech session. It does not replace the Hermes chat model; Hermes still owns tools and confirmations.</string>
-    <string name="voice_settings_realtime_model_desc">Controls the live speech session, not the Hermes chat model. Latest follows provider upgrades; a versioned model stays pinned.</string>
+    <string name="voice_settings_realtime_agent_desc">Realtime uses its own provider model and voice for a live speech session. It does not replace the Gary chat model; Gary still owns tools and confirmations.</string>
+    <string name="voice_settings_realtime_model_desc">Controls the live speech session, not the Gary chat model. Latest follows provider upgrades; a versioned model stays pinned.</string>
     <string name="voice_settings_realtime_voice_desc">The voice used inside the live session. Built-in and custom voices appear when the provider advertises them.</string>
     <string name="voice_settings_detailed_trace">Detailed trace</string>
-    <string name="voice_settings_detailed_trace_desc">Show compact Hermes status and result provenance in the timeline</string>
+    <string name="voice_settings_detailed_trace_desc">Show compact Gary status and result provenance in the timeline</string>
     <string name="voice_settings_persistent_session">Persistent session</string>
     <string name="voice_settings_persistent_session_desc">Keep one provider conversation open across turns. Turn off to fall back to a fresh session per utterance.</string>
     <string name="voice_settings_background_tasks">Background tasks</string>
-    <string name="voice_settings_background_tasks_desc">Long Hermes tasks keep running in the background so the conversation stays responsive; the answer is spoken when it\'s ready.</string>
+    <string name="voice_settings_background_tasks_desc">Long Gary tasks keep running in the background so the conversation stays responsive; the answer is spoken when it\'s ready.</string>
     <string name="voice_settings_promote_long_tasks">Promote long tasks</string>
     <string name="voice_settings_promote_long_tasks_desc">Detach a slow run after %1$d ms instead of waiting silently</string>
     <string name="voice_settings_spoken_handoff">Spoken handoff</string>
@@ -2012,7 +2012,7 @@
     <string name="voice_settings_delivery_speak">Speak</string>
     <string name="voice_settings_delivery_notify">Notify</string>
     <string name="voice_settings_delivery_show_only">Show only</string>
-    <string name="voice_settings_realtime_defaults_desc">Realtime provider, model, and voice saved for this profile. These choices are separate from Standard Hermes voice.</string>
+    <string name="voice_settings_realtime_defaults_desc">Realtime provider, model, and voice saved for this profile. These choices are separate from Standard Gary voice.</string>
     <string name="voice_settings_save_realtime_agent">Save realtime agent</string>
     <string name="voice_settings_global_controls_title">Global Voice Controls</string>
     <string name="voice_settings_global_controls_desc">These settings apply to both voice engines, on every profile.</string>
@@ -2037,7 +2037,7 @@
     <string name="voice_settings_resume_after_interruption">Resume after interruption</string>
     <string name="voice_settings_resume_after_interruption_desc">Continue from the next sentence if you don\'t keep talking</string>
     <string name="voice_settings_stt_title">Speech-to-Text</string>
-    <string name="voice_settings_stt_standard_desc">Transcription runs on your Hermes server with its configured STT provider.</string>
+    <string name="voice_settings_stt_standard_desc">Transcription runs on your Gary server with its configured STT provider.</string>
     <string name="voice_settings_test_engine_title">Test Current Engine</string>
     <string name="voice_settings_playing_output_sample">Playing Voice Output sample...</string>
     <string name="voice_settings_output_test_success">Voice Output test successful.</string>
@@ -2062,7 +2062,7 @@
     <string name="voice_settings_signin_required">Sign in required.</string>
     <string name="voice_settings_server_config_title">Server voice config</string>
     <string name="voice_settings_standard_badge">Standard</string>
-    <string name="voice_settings_server_config_desc">Edit this host\'s Standard Hermes voice settings (config.yaml tts.*, stt.*, and voice.*), matching the dashboard\'s Audio configuration. Changes are host-wide and apply to new voice turns.</string>
+    <string name="voice_settings_server_config_desc">Edit this host\'s Standard Gary voice settings (config.yaml tts.*, stt.*, and voice.*), matching the dashboard\'s Audio configuration. Changes are host-wide and apply to new voice turns.</string>
     <string name="voice_settings_no_elevenlabs_key">No ElevenLabs API key on the server — set ELEVENLABS_API_KEY in Manage → Keys to pick a voice from a list.</string>
     <string name="voice_settings_saving_ellipsis">Saving…</string>
     <string name="voice_settings_discard">Discard</string>
@@ -2074,7 +2074,7 @@
     <string name="voice_settings_no_matches">No matches</string>
     <string name="voice_settings_none">none</string>
     <string name="voice_settings_auth_not_reported">not reported</string>
-    <string name="voice_settings_auth_hermes_xai_oauth">Hermes xAI OAuth</string>
+    <string name="voice_settings_auth_hermes_xai_oauth">Gary xAI OAuth</string>
     <string name="voice_settings_auth_xai_oauth">xAI OAuth</string>
     <string name="voice_settings_auth_xai_env">xAI env</string>
     <string name="voice_settings_auth_openai_env">OpenAI env</string>
@@ -2083,7 +2083,7 @@
     <string name="voice_settings_profile_label_pending">%1$s (pending)</string>
     <string name="voice_settings_scope_profile_config">profile config</string>
     <string name="voice_settings_scope_relay_config">relay config</string>
-    <string name="voice_settings_scope_global_config">global Hermes config</string>
+    <string name="voice_settings_scope_global_config">global Gary config</string>
     <string name="voice_settings_scope_with_fallback">%1$s fallback</string>
     <string name="voice_settings_voice_not_advertised">Voice is not advertised for the selected model</string>
     <string name="voice_settings_provider_not_valid">Provider selection is not valid</string>
@@ -2094,7 +2094,7 @@
     <string name="voice_settings_loading_output">loading voice output...</string>
     <string name="voice_settings_summary_realtime">realtime ...</string>
     <string name="voice_settings_loading_realtime">realtime loading...</string>
-    <string name="voice_settings_summary_hermes_engine">Hermes Chat + Voice Output - %1$s</string>
+    <string name="voice_settings_summary_hermes_engine">Gary Chat + Voice Output - %1$s</string>
     <string name="voice_settings_summary_realtime_engine">Realtime Agent - %1$s</string>
     <string name="voice_settings_voices_fallback">Voices</string>
     <string name="voice_settings_recommended">recommended</string>
@@ -2191,7 +2191,7 @@
 
     <!-- Sign-in card -->
     <string name="dashboard_signin_required_title">Dashboard sign-in required</string>
-    <string name="dashboard_signin_required_body">Sign in to Hermes at %1$s for Chat, sessions, Manage, and standard voice.</string>
+    <string name="dashboard_signin_required_body">Sign in to Gary at %1$s for Chat, sessions, Manage, and standard voice.</string>
     <string name="dashboard_signin_route_hint">The saved dashboard session could not be reused on the %1$s route. Sign in again to refresh it across this connection\'s trusted routes.</string>
     <string name="dashboard_signin_with_provider">Sign in with %1$s</string>
     <string name="dashboard_username_password">Username &amp; Password</string>
@@ -2204,11 +2204,11 @@
 
     <!-- OAuth sign-in dialog -->
     <string name="dashboard_oauth_initial_status">Complete sign-in in the secure dashboard page.</string>
-    <string name="dashboard_oauth_canonical_origin">Hermes is signing in through %1$s. You’ll review this address before it is saved.</string>
+    <string name="dashboard_oauth_canonical_origin">Gary is signing in through %1$s. You’ll review this address before it is saved.</string>
     <string name="dashboard_oauth_origin_confirm_title">Use this sign-in address?</string>
-    <string name="dashboard_oauth_origin_confirm_body">The identity provider returned to a different Hermes Dashboard address. Review it before Android uses it for Dashboard and Gateway.</string>
-    <string name="dashboard_oauth_origin_identity_missing">This Hermes version does not expose an installation ID, so Android cannot automatically prove that both addresses reach the same installation.</string>
-    <string name="dashboard_oauth_origin_install_mismatch">The sign-in address belongs to a different Hermes installation and was not saved.</string>
+    <string name="dashboard_oauth_origin_confirm_body">The identity provider returned to a different Gary Dashboard address. Review it before Android uses it for Dashboard and Gateway.</string>
+    <string name="dashboard_oauth_origin_identity_missing">This Gary version does not expose an installation ID, so Android cannot automatically prove that both addresses reach the same installation.</string>
+    <string name="dashboard_oauth_origin_install_mismatch">The sign-in address belongs to a different Gary installation and was not saved.</string>
     <string name="dashboard_oauth_origin_use_button">Use address</string>
     <string name="dashboard_oauth_verifying">Verifying dashboard session…</string>
     <string name="dashboard_oauth_not_accepted">Sign-in was not accepted yet. Finish the dashboard flow to continue.</string>
@@ -2218,16 +2218,16 @@
     <string name="dashboard_native_signin_cancelled">Browser sign-in cancelled.</string>
     <string name="dashboard_native_signin_requires_https">Secure browser sign-in requires an HTTPS dashboard address.</string>
     <string name="dashboard_native_signin_unavailable">Secure browser sign-in is unavailable for this connection. Refresh the connection and try again.</string>
-    <string name="dashboard_native_signin_embedded_fallback">Secure browser sign-in was unavailable, so Hermes opened its compatible in-app sign-in.</string>
+    <string name="dashboard_native_signin_embedded_fallback">Secure browser sign-in was unavailable, so Gary opened its compatible in-app sign-in.</string>
     <string name="dashboard_native_signin_transport_retry">The secure connection was interrupted. Tap the sign-in button to try again.</string>
     <string name="dashboard_native_signin_callback_rejected">The provider did not approve this sign-in. If you cancelled, no action is needed; otherwise start a fresh sign-in attempt.</string>
-    <string name="dashboard_native_signin_code_rejected">Browser sign-in finished, but Hermes rejected the one-time callback code before it could create a session. Start a fresh sign-in attempt.</string>
-    <string name="dashboard_native_signin_gateway_rejected">Hermes refused the session exchange. Check that the Dashboard is current, then start sign-in again.</string>
-    <string name="dashboard_native_signin_rate_limited">Hermes received too many sign-in attempts. Wait a moment, then try again.</string>
-    <string name="dashboard_native_signin_gateway_unavailable">Browser sign-in finished, but the Hermes sign-in service is unavailable. Wait a moment, then try again.</string>
-    <string name="dashboard_native_signin_response_unsupported">Hermes returned a sign-in response this app could not use. Check for app and Dashboard updates.</string>
+    <string name="dashboard_native_signin_code_rejected">Browser sign-in finished, but Gary rejected the one-time callback code before it could create a session. Start a fresh sign-in attempt.</string>
+    <string name="dashboard_native_signin_gateway_rejected">Gary refused the session exchange. Check that the Dashboard is current, then start sign-in again.</string>
+    <string name="dashboard_native_signin_rate_limited">Gary received too many sign-in attempts. Wait a moment, then try again.</string>
+    <string name="dashboard_native_signin_gateway_unavailable">Browser sign-in finished, but the Gary sign-in service is unavailable. Wait a moment, then try again.</string>
+    <string name="dashboard_native_signin_response_unsupported">Gary returned a sign-in response this app could not use. Check for app and Dashboard updates.</string>
     <string name="dashboard_native_signin_attempt_inactive">This sign-in attempt was cancelled or replaced. Close the old browser tab and start again.</string>
-    <string name="dashboard_native_signin_storage_failed">Browser sign-in finished, but Android could not securely save the Hermes session. Try again; if it repeats, open Diagnostics for the failure stage.</string>
+    <string name="dashboard_native_signin_storage_failed">Browser sign-in finished, but Android could not securely save the Gary session. Try again; if it repeats, open Diagnostics for the failure stage.</string>
     <string name="dashboard_close_signin">Close sign-in</string>
 
     <!-- Error body -->
@@ -2251,7 +2251,7 @@
     <string name="dashboard_cron_prompt">Task instructions</string>
     <string name="dashboard_cron_repeat">Stop after this many runs (optional)</string>
     <string name="dashboard_cron_repeat_help">Leave blank to keep the schedule’s normal behavior. Finite schedules accept 1–999 runs.</string>
-    <string name="dashboard_cron_gateway_required">Schedule creation requires a current Hermes Gateway connection.</string>
+    <string name="dashboard_cron_gateway_required">Schedule creation requires a current Gary Gateway connection.</string>
     <string name="dashboard_cron_created">Created schedule “%1$s”</string>
     <string name="dashboard_cron_create_failed">Couldn’t create schedule</string>
     <string name="dashboard_section_action_browse_hub">Browse hub</string>
@@ -2263,9 +2263,9 @@
     <string name="dashboard_backup_download_failed">Backup could not be downloaded.</string>
     <string name="dashboard_backup_saved">Backup saved as %1$s.</string>
     <string name="dashboard_import_title">Import server backup?</string>
-    <string name="dashboard_import_warning">This uploads the selected zip to Hermes and starts its authenticated server import. It can replace configuration and data. Create and save a current backup first.</string>
+    <string name="dashboard_import_warning">This uploads the selected zip to Gary and starts its authenticated server import. It can replace configuration and data. Create and save a current backup first.</string>
     <string name="dashboard_import_confirm">Import</string>
-    <string name="dashboard_import_started">Server import started. Watch Operations for completion before restarting Hermes.</string>
+    <string name="dashboard_import_started">Server import started. Watch Operations for completion before restarting Gary.</string>
     <string name="dashboard_import_failed">Server import could not be started.</string>
     <string name="dashboard_profile_mcp_servers_optional">MCP servers (optional)</string>
     <string name="dashboard_profile_mcp_servers_help">Comma or line-separated server names. Credentials remain server-owned.</string>
@@ -2304,12 +2304,12 @@
     <string name="dashboard_action_setup">Setup</string>
     <string name="dashboard_action_setup_whatsapp">Set up WhatsApp</string>
     <string name="dashboard_learning_edit_title">Edit %1$s</string>
-    <string name="dashboard_learning_edit_warning">Edits replace the node’s complete content. Skills deleted from the graph are archived by Hermes and can be restored from the archive; memory-node deletion is permanent, so export a backup first.</string>
+    <string name="dashboard_learning_edit_warning">Edits replace the node’s complete content. Skills deleted from the graph are archived by Gary and can be restored from the archive; memory-node deletion is permanent, so export a backup first.</string>
     <string name="dashboard_learning_saved">Learning node saved.</string>
     <string name="dashboard_learning_save_failed">Learning node could not be saved.</string>
-    <string name="dashboard_learning_delete_warning">Hermes archives learned skills so they can be restored from the server archive. Memory-node deletion is permanent. Save a server backup first if this content may be needed later.</string>
+    <string name="dashboard_learning_delete_warning">Gary archives learned skills so they can be restored from the server archive. Memory-node deletion is permanent. Save a server backup first if this content may be needed later.</string>
     <string name="dashboard_memory_config_title">Configure %1$s</string>
-    <string name="dashboard_memory_config_help">Values stay on the selected Hermes profile. Secret fields are accepted by the server and are never returned after saving. Required fields are marked with *.</string>
+    <string name="dashboard_memory_config_help">Values stay on the selected Gary profile. Secret fields are accepted by the server and are never returned after saving. Required fields are marked with *.</string>
     <string name="dashboard_memory_values_json">Provider values (JSON)</string>
     <string name="dashboard_memory_run_setup">Run setup</string>
     <string name="dashboard_memory_invalid_json">Provider values must be a JSON object.</string>
@@ -2317,19 +2317,19 @@
     <string name="dashboard_memory_saved">Memory provider configured and activated.</string>
     <string name="dashboard_memory_save_failed">Memory provider configuration could not be saved.</string>
     <string name="dashboard_whatsapp_title">Set up WhatsApp</string>
-    <string name="dashboard_whatsapp_help">Hermes starts a ten-minute, profile-scoped pairing session. Choose bot mode for a dedicated account or self-chat to message your own linked account.</string>
+    <string name="dashboard_whatsapp_help">Gary starts a ten-minute, profile-scoped pairing session. Choose bot mode for a dedicated account or self-chat to message your own linked account.</string>
     <string name="dashboard_whatsapp_bot">Bot account</string>
     <string name="dashboard_whatsapp_self_chat">Self-chat</string>
     <string name="dashboard_whatsapp_allowed_users">Allowed phone numbers (optional)</string>
     <string name="dashboard_whatsapp_start">Start pairing</string>
-    <string name="dashboard_whatsapp_scan">Scan this code from WhatsApp’s Linked devices screen. Keep this dialog open while Hermes confirms the account.</string>
+    <string name="dashboard_whatsapp_scan">Scan this code from WhatsApp’s Linked devices screen. Keep this dialog open while Gary confirms the account.</string>
     <string name="dashboard_whatsapp_qr">WhatsApp linked-device QR code</string>
     <string name="dashboard_whatsapp_apply">Enable WhatsApp</string>
     <string name="dashboard_whatsapp_start_failed">WhatsApp pairing could not be started.</string>
     <string name="dashboard_whatsapp_apply_failed">WhatsApp configuration could not be saved.</string>
-    <string name="dashboard_whatsapp_saved">WhatsApp enabled; Hermes started a gateway restart.</string>
+    <string name="dashboard_whatsapp_saved">WhatsApp enabled; Gary started a gateway restart.</string>
     <string name="dashboard_mcp_oauth_title">Authenticate %1$s</string>
-    <string name="dashboard_mcp_oauth_body">Hermes will open the provider in your browser. Return here after approving access; credentials stay on the Hermes server.</string>
+    <string name="dashboard_mcp_oauth_body">Gary will open the provider in your browser. Return here after approving access; credentials stay on the Gary server.</string>
     <string name="dashboard_mcp_oauth_approved">MCP authentication approved</string>
     <string name="dashboard_mcp_oauth_failed">MCP authentication failed</string>
     <string name="dashboard_mcp_oauth_no_browser">No browser is available to complete MCP authentication.</string>
@@ -2339,7 +2339,7 @@
     <string name="dashboard_custom_endpoint_url">Base URL</string>
     <string name="dashboard_custom_endpoint_model">Default model</string>
     <string name="dashboard_custom_endpoint_key">API key (optional)</string>
-    <string name="dashboard_custom_endpoint_key_help">Leave blank to preserve an existing key when saving. Validation uses only a key entered here; Hermes does not expose or clear saved keys.</string>
+    <string name="dashboard_custom_endpoint_key_help">Leave blank to preserve an existing key when saving. Validation uses only a key entered here; Gary does not expose or clear saved keys.</string>
     <string name="dashboard_custom_endpoint_context">Context length (optional)</string>
     <string name="dashboard_custom_endpoint_discover">Discover models from /models</string>
     <string name="dashboard_custom_endpoint_valid">Endpoint reachable · %1$d model(s)</string>
@@ -2378,7 +2378,7 @@
     <string name="dashboard_expensive_model_default_warning">This model can be expensive to run.</string>
     <string name="dashboard_use_anyway">Use anyway</string>
     <string name="dashboard_clear_session_title">Clear dashboard session?</string>
-    <string name="dashboard_clear_session_body">This signs this connection out of the Hermes dashboard on this device. Your API key, saved connection, and Relay pairing stay unchanged.</string>
+    <string name="dashboard_clear_session_body">This signs this connection out of the Gary dashboard on this device. Your API key, saved connection, and Relay pairing stay unchanged.</string>
     <string name="dashboard_clear_session_button">Clear session</string>
     <string name="dashboard_session_cleared">Dashboard session cleared</string>
 
@@ -2460,7 +2460,7 @@
     <string name="dashboard_profile_auth_shared">Share sign-in (recommended) — one refreshable token pool</string>
     <string name="dashboard_profile_auth_copied">Copy current credentials — separate snapshot that can drift</string>
     <string name="dashboard_profile_auth_isolated">Isolated — copy no credentials or provider defaults</string>
-    <string name="dashboard_profile_auth_help">Hermes applies this choice on the server. Passwords and tokens are never returned to Android.</string>
+    <string name="dashboard_profile_auth_help">Gary applies this choice on the server. Passwords and tokens are never returned to Android.</string>
     <string name="dashboard_profile_allow_legacy">If Gateway create is unavailable, allow the older Dashboard route. Credential behavior depends on that host and must be reviewed.</string>
     <string name="dashboard_profile_mcp_partial">MCP server selection was not applied</string>
     <string name="dashboard_profile_create_failed">Profile create failed</string>
@@ -2549,11 +2549,11 @@
     <string name="session_path_signin_for_gateway">Sign in under Manage for the live-thinking gateway.</string>
     <string name="session_path_gateway_api_server">Available on the gateway transport — this session streams over the API server.</string>
     <string name="session_path_relay_not_connected">Relay paired but not connected.</string>
-    <string name="session_path_pair_relay_media">Pair Relay for media compatibility on older Hermes hosts.</string>
-    <string name="session_path_media_not_ready">Update Hermes for standard media delivery, or pair Relay for compatibility.</string>
+    <string name="session_path_pair_relay_media">Pair Relay for media compatibility on older Gary hosts.</string>
+    <string name="session_path_media_not_ready">Update Gary for standard media delivery, or pair Relay for compatibility.</string>
     <string name="session_path_pair_relay_terminal">Pair the relay for terminal access.</string>
     <string name="session_path_voice_not_ready">Voice not ready on this connection.</string>
-    <string name="session_path_threads_pair_relay">Pair the relay and turn on "Let Hermes message me" so the agent can open Threads.</string>
+    <string name="session_path_threads_pair_relay">Pair the relay and turn on "Let Gary message me" so the agent can open Threads.</string>
     <string name="session_path_details">Session details</string>
     <string name="session_path_hide_details">Hide session details</string>
     <string name="session_path_show_details_cd">Show session details</string>
@@ -2613,12 +2613,12 @@
     <string name="unattended_keyguard_detected">Keyguard detected</string>
     <string name="unattended_keyguard_body">The screen will wake but stop at the lock screen. Android won\'t let third-party apps dismiss PIN / pattern / biometric locks. Set your lock to None or Swipe in Settings > Security to let the agent reach apps.</string>
     <string name="unattended_dialog_title">Enable Unattended Access?</string>
-    <string name="unattended_dialog_intro">Unattended access lets your Hermes agent wake the screen and drive your phone while you\'re not watching it. This is a powerful capability with real risk — make sure you understand it before enabling.</string>
+    <string name="unattended_dialog_intro">Unattended access lets your Gary agent wake the screen and drive your phone while you\'re not watching it. This is a powerful capability with real risk — make sure you understand it before enabling.</string>
     <string name="unattended_dialog_what_it_does">What it does:</string>
-    <string name="unattended_dialog_what_it_does_body">• Each incoming bridge command holds a screen-bright wake lock so taps and gestures land on a lit display.\n• On lock screens with no credential set (None or Swipe), the system is asked to dismiss the keyguard so the agent can reach app UIs.\n• The \'Hermes has device control\' notification — posted by the master Agent Control switch, not this toggle — stays visible so you can see the bridge is running.</string>
+    <string name="unattended_dialog_what_it_does_body">• Each incoming bridge command holds a screen-bright wake lock so taps and gestures land on a lit display.\n• On lock screens with no credential set (None or Swipe), the system is asked to dismiss the keyguard so the agent can reach app UIs.\n• The \'Gary has device control\' notification — posted by the master Agent Control switch, not this toggle — stays visible so you can see the bridge is running.</string>
     <string name="unattended_dialog_limitation">Limitation: credential locks cannot be dismissed.</string>
     <string name="unattended_dialog_limitation_lock_detected">Your device currently has a PIN, pattern, or biometric lock set. Android does not let third-party apps dismiss these — the screen will wake, but stop at the lock screen. To let the agent reach apps, change your lock to None or Swipe in Settings > Security.</string>
-    <string name="unattended_dialog_limitation_no_lock">If you later set a PIN, pattern, or biometric lock, Android will not let Hermes dismiss it. The screen will wake, but stop at the lock screen, and the bridge will report a \'keyguard_blocked\' error to the agent.</string>
+    <string name="unattended_dialog_limitation_no_lock">If you later set a PIN, pattern, or biometric lock, Android will not let Gary dismiss it. The screen will wake, but stop at the lock screen, and the bridge will report a \'keyguard_blocked\' error to the agent.</string>
     <string name="unattended_dialog_how_to_disable">How to disable:</string>
     <string name="unattended_dialog_how_to_disable_body">• Flip this same toggle off at any time.\n• With an idle limit, active screen commands refresh the timer; inactivity ends Screen access and turns Unattended off.\n• With Until turned off, use End now or disable Master to revoke access.\n• Disconnecting from the relay drops the current wake lock immediately.</string>
     <string name="unattended_dialog_confirm">I understand — enable</string>
@@ -2668,13 +2668,13 @@
 
     <!-- ActiveConnectionSections -->
     <string name="active_section_active_sessions_on_server">%1$d active on server</string>
-    <string name="active_section_add_server_tailscale_url">Add the server\'s Tailscale URL as a route so Hermes can reach it directly.</string>
+    <string name="active_section_add_server_tailscale_url">Add the server\'s Tailscale URL as a route so Gary can reach it directly.</string>
     <string name="active_section_add_tailscale_route">Add Tailscale route</string>
     <string name="active_section_advanced">Advanced</string>
     <string name="active_section_allow_plain_connections">Allow plain connections</string>
-    <string name="active_section_api_hermes_voice_reachable">API reachable — Hermes voice is configured</string>
+    <string name="active_section_api_hermes_voice_reachable">API reachable — Gary voice is configured</string>
     <string name="active_section_api_key_already_set">API key is already set</string>
-    <string name="active_section_api_key_needed_hint">Use the API_SERVER_KEY created on your Hermes server. The app does not issue this key.</string>
+    <string name="active_section_api_key_needed_hint">Use the API_SERVER_KEY created on your Gary server. The app does not issue this key.</string>
     <string name="active_section_api_key_not_configured">API key not configured</string>
     <string name="active_section_api_key_optional">API key for direct API</string>
     <string name="active_section_api_key_stored_hint">Key is stored securely.</string>
@@ -2698,7 +2698,7 @@
     <string name="active_section_connect">Connect</string>
     <string name="active_section_connect_phone_in_tailscale">Connect this phone in Tailscale or switch to a different route.</string>
     <string name="active_section_connecting">Connecting…</string>
-    <string name="active_section_copy_hermes_pair_command">Copy Hermes pair command</string>
+    <string name="active_section_copy_hermes_pair_command">Copy Gary pair command</string>
     <string name="active_section_current_route">Route: %1$s</string>
     <string name="active_section_dashboard">Dashboard</string>
     <string name="active_section_dashboard_sign_in_hint">Sign in from Manage to use dashboard features.</string>
@@ -2707,9 +2707,9 @@
     <string name="active_section_enable_ws_http_for_dev">Enable ws:// for development</string>
     <string name="active_section_failed_reason">Failed: %1$s</string>
     <string name="active_section_generate_new_code">Generate new code</string>
-    <string name="active_section_hermes_api">Hermes API</string>
-    <string name="active_section_hermes_pair_command">Hermes pair command</string>
-    <string name="active_section_hermes_voice">Hermes Voice</string>
+    <string name="active_section_hermes_api">Gary API</string>
+    <string name="active_section_hermes_pair_command">Gary pair command</string>
+    <string name="active_section_hermes_voice">Gary Voice</string>
     <string name="active_section_hide">Hide</string>
     <string name="active_section_hide_explanation">Hide explanation</string>
     <string name="active_section_how_does_this_work">How does this work?</string>
@@ -2777,7 +2777,7 @@
     <string name="active_section_use_custom_relay_url">Use custom URL</string>
     <string name="active_section_using_saved_url">Using saved URL: %1$s</string>
     <string name="active_section_voice_config_probe_failed">Voice config probe failed</string>
-    <string name="active_section_voice_ready_via_hermes_api">Voice ready via Hermes API</string>
+    <string name="active_section_voice_ready_via_hermes_api">Voice ready via Gary API</string>
     <string name="active_section_voice_ready_via_relay">Voice ready via %1$s</string>
     <string name="active_section_voice_route_needs_review">Voice route needs review: %1$s</string>
 
@@ -2851,8 +2851,8 @@
     <string name="conn_info_grant_never">%1$s: never</string>
     <string name="conn_info_hardware_strongbox">Hardware StrongBox</string>
     <string name="conn_info_hardware_tee">Hardware TEE</string>
-    <string name="conn_info_hermes">Hermes</string>
-    <string name="conn_info_hostname_hermes">%1$s (Hermes)</string>
+    <string name="conn_info_hermes">Gary</string>
+    <string name="conn_info_hostname_hermes">%1$s (Gary)</string>
     <string name="conn_info_hostname_paired">%1$s (paired)</string>
     <string name="conn_info_hostname_relay_paired">%1$s · Relay paired</string>
     <string name="conn_info_idle_suffix"> · Idle</string>
@@ -2951,13 +2951,13 @@
     <string name="conn_info_yolo_mode_profile_off">Profile approvals are Off, so this chat already bypasses prompts. Choose Manual or Smart before using the per-chat override.</string>
     <string name="conn_info_yolo_mode_title">YOLO mode</string>
     <string name="conn_info_approval_mode_title">Profile approval mode</string>
-    <string name="conn_info_approval_mode_desc">Persistent policy for this Hermes profile. Applies across chats and devices.</string>
-    <string name="conn_info_approval_mode_unsupported">Update Hermes to choose a profile approval mode. Per-chat YOLO remains available.</string>
+    <string name="conn_info_approval_mode_desc">Persistent policy for this Gary profile. Applies across chats and devices.</string>
+    <string name="conn_info_approval_mode_unsupported">Update Gary to choose a profile approval mode. Per-chat YOLO remains available.</string>
     <string name="conn_info_approval_mode_profile_read_only">Read-only for this multiplexed profile. Its current mode appears after the profile session starts; changing it requires upstream profile-scoped config RPCs.</string>
     <string name="conn_info_approval_mode_manual">Manual</string>
     <string name="conn_info_approval_mode_manual_desc">Ask before every protected tool call.</string>
     <string name="conn_info_approval_mode_smart">Smart</string>
-    <string name="conn_info_approval_mode_smart_desc">Ask only when Hermes detects elevated risk.</string>
+    <string name="conn_info_approval_mode_smart_desc">Ask only when Gary detects elevated risk.</string>
     <string name="conn_info_approval_mode_off">Off</string>
     <string name="conn_info_approval_mode_off_desc">Persistently bypass approvals for this profile.</string>
 
@@ -3033,7 +3033,7 @@
     <string name="destructive_body_format">%1$s %2$s</string>
     <string name="destructive_no_text">(no text)</string>
     <string name="destructive_chip_unattended">Unattended ON</string>
-    <string name="destructive_chip_active">Hermes active</string>
+    <string name="destructive_chip_active">Gary active</string>
 
     <!-- InsecureConnectionAckDialog -->
     <string name="insecure_ack_title">Allow insecure connections?</string>
@@ -3070,9 +3070,9 @@
     <string name="power_gate_view_connection">View connection</string>
     <string name="power_gate_signin_required">Dashboard sign-in required</string>
     <string name="power_gate_open_signin">Open sign-in</string>
-    <string name="power_gate_explanation_pairing">This feature requires the Relay plugin to be installed on your Hermes server.</string>
+    <string name="power_gate_explanation_pairing">This feature requires the Relay plugin to be installed on your Gary server.</string>
     <string name="power_gate_explanation_expired">Your relay session is no longer accepted by the server. Open the connection to repair.</string>
-    <string name="power_gate_explanation_unavailable">This Hermes server does not expose the surface needed for this feature.</string>
+    <string name="power_gate_explanation_unavailable">This Gary server does not expose the surface needed for this feature.</string>
     <string name="power_gate_explanation_signin">This standard dashboard feature needs dashboard sign-in before it can be used.</string>
 
     <!-- ExtraKeysToolbar -->
@@ -3114,34 +3114,34 @@
 
     <!-- AgentIconRow -->
     <string name="agent_icon_title">Agent visuals</string>
-    <string name="agent_icon_hermes_pet_title">Hermes animated pet</string>
-    <string name="agent_icon_hermes_pet_description">Profile-scoped and shared with upstream Hermes surfaces. It reacts to agent activity and appears as the phone companion.</string>
+    <string name="agent_icon_hermes_pet_title">Gary animated pet</string>
+    <string name="agent_icon_hermes_pet_description">Profile-scoped and shared with upstream Gary surfaces. It reacts to agent activity and appears as the phone companion.</string>
     <string name="agent_icon_hermes_pet_active">Active: %1$s</string>
     <string name="agent_icon_hermes_pet_empty">No upstream pet selected</string>
-    <string name="agent_icon_hermes_pet_unsupported">Update Hermes to manage animated pets here</string>
-    <string name="agent_icon_hermes_pet_browse">Browse Hermes pets</string>
-    <string name="agent_icon_hermes_pet_picker_title">Choose a Hermes pet</string>
+    <string name="agent_icon_hermes_pet_unsupported">Update Gary to manage animated pets here</string>
+    <string name="agent_icon_hermes_pet_browse">Browse Gary pets</string>
+    <string name="agent_icon_hermes_pet_picker_title">Choose a Gary pet</string>
     <string name="agent_icon_hermes_pet_selected">Selected</string>
     <string name="agent_icon_hermes_pet_installed">Installed</string>
     <string name="agent_icon_hermes_pet_adopt">Adopt from Petdex</string>
-    <string name="agent_icon_shared_title">Shared across Hermes</string>
+    <string name="agent_icon_shared_title">Shared across Gary</string>
     <string name="agent_icon_shared_active">Shared avatar</string>
     <string name="agent_icon_shared_empty">No shared avatar</string>
     <string name="agent_icon_change_shared">Change shared avatar</string>
     <string name="agent_icon_remove_shared">Remove</string>
     <string name="agent_icon_remove_shared_title">Remove shared avatar?</string>
-    <string name="agent_icon_remove_shared_message">This removes the avatar from Hermes and other clients. Your phone image is not affected.</string>
+    <string name="agent_icon_remove_shared_message">This removes the avatar from Gary and other clients. Your phone image is not affected.</string>
     <string name="agent_icon_phone_title">This phone only</string>
-    <string name="agent_icon_phone_description">Override the shared avatar on this phone without changing Hermes.</string>
+    <string name="agent_icon_phone_description">Override the shared avatar on this phone without changing Gary.</string>
     <string name="agent_icon_choose_phone">Choose phone image</string>
     <string name="agent_icon_change_phone">Change phone image</string>
     <string name="agent_icon_remove_phone">Remove phone image</string>
-    <string name="agent_icon_animation_note">Animated GIF and WebP overrides play only on this phone. Use Hermes animated pets above for an upstream-managed, profile-scoped animation.</string>
+    <string name="agent_icon_animation_note">Animated GIF and WebP overrides play only on this phone. Use Gary animated pets above for an upstream-managed, profile-scoped animation.</string>
     <string name="agent_icon_set_local">Choose device fallback</string>
     <string name="agent_icon_change_local">Change device fallback</string>
     <string name="agent_icon_clear_local">Clear device fallback</string>
-    <string name="agent_icon_upload_shared">Upload device icon to Hermes</string>
-    <string name="agent_icon_clear_shared">Clear shared Hermes avatar</string>
+    <string name="agent_icon_upload_shared">Upload device icon to Gary</string>
+    <string name="agent_icon_clear_shared">Clear shared Gary avatar</string>
     <string name="agent_icon_set">Choose file</string>
     <string name="agent_icon_change">Choose file</string>
     <string name="agent_icon_clear">Clear</string>
@@ -3199,8 +3199,8 @@
     <string name="inbound_attach_downloading">Downloading&#8230;%1$s</string>
     <string name="inbound_attach_failed">Attachment failed</string>
     <string name="inbound_attach_tap_retry">Tap to retry</string>
-    <string name="inbound_attach_host_only">File is on your Hermes host</string>
-    <string name="inbound_attach_host_only_help">Update Hermes for standard downloads, or pair Relay for compatibility.</string>
+    <string name="inbound_attach_host_only">File is on your Gary host</string>
+    <string name="inbound_attach_host_only_help">Update Gary for standard downloads, or pair Relay for compatibility.</string>
     <string name="inbound_attach_open">Open externally</string>
     <string name="inbound_attach_share">Share</string>
     <string name="inbound_attach_save">Save to device</string>
@@ -3252,12 +3252,12 @@
     <string name="attachment_type_file">File</string>
 
     <!-- CrashReportDialog -->
-    <string name="crash_title">Hermes-Relay closed unexpectedly</string>
-    <string name="crash_body">Hermes-Relay restarted after an unexpected problem. You can continue using the app.</string>
+    <string name="crash_title">GaryAI closed unexpectedly</string>
+    <string name="crash_body">GaryAI restarted after an unexpected problem. You can continue using the app.</string>
     <string name="crash_privacy">Nothing was sent. Review the locally redacted report before choosing copy, share, or GitHub.</string>
     <string name="crash_review">Review report</string>
     <string name="crash_share_title">Share crash report</string>
-    <string name="crash_share_subject">Hermes-Relay crash report — %1$s</string>
+    <string name="crash_share_subject">GaryAI crash report — %1$s</string>
     <string name="crash_toast_no_share">Report copied — no app found to share to</string>
     <string name="crash_toast_opened">Full report copied — review the GitHub issue before submitting</string>
     <string name="crash_toast_no_browser">Report copied — no browser found to open GitHub</string>
@@ -3268,14 +3268,14 @@
     <string name="crash_toast_copied">Crash report copied</string>
 
     <!-- QrPairingScanner -->
-    <string name="qr_scanner_title">Scan Hermes QR</string>
-    <string name="qr_scanner_instruction">Scan a Hermes setup QR</string>
-    <string name="qr_scanner_subtext">Scan a Hermes setup or Relay pairing QR. Standard Dashboard connections do not require an API key.</string>
+    <string name="qr_scanner_title">Scan Gary QR</string>
+    <string name="qr_scanner_instruction">Scan a Gary setup QR</string>
+    <string name="qr_scanner_subtext">Scan a Gary setup or Relay pairing QR. Standard Dashboard connections do not require an API key.</string>
     <string name="qr_scanner_ready">Ready to scan</string>
-    <string name="qr_scanner_found">Hermes setup QR found</string>
+    <string name="qr_scanner_found">Gary setup QR found</string>
     <string name="qr_scanner_relay_title">Scan Relay QR</string>
     <string name="qr_scanner_relay_instruction">Scan a Relay pairing QR</string>
-    <string name="qr_scanner_relay_subtext">Open the Relay pairing QR on your Hermes server. Your existing Dashboard connection and routes will stay unchanged.</string>
+    <string name="qr_scanner_relay_subtext">Open the Relay pairing QR on your Gary server. Your existing Dashboard connection and routes will stay unchanged.</string>
     <string name="qr_scanner_camera_error">Cannot start the camera on this device.</string>
     <string name="qr_scanner_fallback_message">You can pair without the camera.</string>
     <string name="qr_scanner_pair_manual">Pair manually</string>
@@ -3351,7 +3351,7 @@
     <string name="msg_bubble_queued">Queued</string>
     <string name="msg_bubble_steered">Correction sent</string>
     <string name="chat_quote_you">You</string>
-    <string name="chat_quote_hermes">Hermes</string>
+    <string name="chat_quote_hermes">Gary</string>
     <string name="chat_quote_open">Open original message from %1$s</string>
     <string name="chat_quote_remove">Remove quote</string>
     <string name="msg_bubble_delivered">Delivered</string>
@@ -3381,7 +3381,7 @@
     <!-- VoiceOverlayHost -->
     <string name="voice_overlay_title">Voice Overlay</string>
     <string name="voice_overlay_minimize">Minimize</string>
-    <string name="voice_overlay_hermes">Hermes</string>
+    <string name="voice_overlay_hermes">Gary</string>
     <string name="voice_overlay_hide">Hide</string>
     <string name="voice_overlay_cd_exit">Exit voice mode</string>
     <string name="voice_overlay_cd_mic">Voice overlay mic</string>
@@ -3406,14 +3406,14 @@
     <string name="voice_overlay_provider_output_off">output off</string>
     <string name="voice_overlay_provider_placeholder">provider ...</string>
     <string name="voice_overlay_engine_realtime">Realtime Agent</string>
-    <string name="voice_overlay_engine_hermes">Hermes voice</string>
+    <string name="voice_overlay_engine_hermes">Gary voice</string>
     <string name="voice_overlay_engine_placeholder">Voice engine ...</string>
 
     <!-- AppTheme labels + descriptions -->
-    <string name="theme_hermes_relay">Hermes Relay</string>
+    <string name="theme_hermes_relay">GaryAI</string>
     <string name="theme_hermes_relay_desc">The signature electric-blue brand &#8212; follows light/dark</string>
-    <string name="theme_hermes_teal">Hermes Teal</string>
-    <string name="theme_hermes_teal_desc">Classic dark teal &#8212; the canonical Hermes look</string>
+    <string name="theme_hermes_teal">Gary Teal</string>
+    <string name="theme_hermes_teal_desc">Classic dark teal &#8212; the canonical Gary look</string>
     <string name="theme_nous_blue">Nous Blue</string>
     <string name="theme_nous_blue_desc">Light mode &#8212; vivid Nous-blue accents on a cream canvas</string>
     <string name="theme_midnight">Midnight</string>
@@ -3462,8 +3462,8 @@
     <string name="chat_prompt_help_me_code">Help me code</string>
     <string name="chat_prompt_explain">Explain something</string>
     <string name="chat_prompt_what_can_you_do">What can you do?</string>
-    <string name="chat_connect_to_hermes_dots">Connecting to Hermes...</string>
-    <string name="chat_needs_connection">Connect to Hermes</string>
+    <string name="chat_connect_to_hermes_dots">Connecting to Gary...</string>
+    <string name="chat_needs_connection">Connect to Gary</string>
     <string name="chat_streaming">Streaming</string>
     <string name="chat_connected_label">Connected</string>
     <string name="chat_reconnecting_dots">Reconnecting&#8230;</string>
@@ -3475,7 +3475,7 @@
     <string name="chat_connection_label">Connection: %1$s</string>
     <string name="chat_file_too_large">File too large (max %1$d MB)</string>
     <string name="chat_prompt_chat_with">Chat with %1$s</string>
-    <string name="chat_hermes_message">Hermes message</string>
+    <string name="chat_hermes_message">Gary message</string>
     <string name="chat_start_conversation">Start a conversation</string>
     <string name="chat_not_on_plan">Not on your plan</string>
     <string name="chat_needs_setup">Needs setup</string>
@@ -3490,7 +3490,7 @@
     <string name="chat_reasoning_ultra">Ultra</string>
     <string name="chat_date_today">Today</string>
     <string name="chat_date_yesterday">Yesterday</string>
-    <string name="chat_share_subject">Hermes conversation</string>
+    <string name="chat_share_subject">Gary conversation</string>
 
     <!-- DestructiveVerbConfirmDialog -->
 
@@ -3619,7 +3619,7 @@
     <string name="cd_subagent_failed">Failed</string>
     <string name="cd_switch_connection">Switch connection</string>
     <string name="cd_view_injected">View injected context</string>
-    <string name="chat_agent_default">Hermes</string>
+    <string name="chat_agent_default">Gary</string>
     <string name="chat_attachment_file_fallback">File</string>
     <string name="chat_clear">Clear</string>
     <string name="chat_profile_api_label">Profile API</string>
@@ -3630,12 +3630,12 @@
     </plurals>
     <string name="command_palette_count">%d commands</string>
     <string name="cw_api_url_scheme_error">API URL must start with http:// or https://</string>
-    <string name="cw_confirm_desc_hermes">This will connect to an existing Hermes server you control.</string>
-    <string name="cw_confirm_desc_relay">This will pair with an existing Hermes Relay you control.</string>
-    <string name="cw_confirm_title_hermes">Connect to Hermes server</string>
+    <string name="cw_confirm_desc_hermes">This will connect to an existing Gary server you control.</string>
+    <string name="cw_confirm_desc_relay">This will pair with an existing GaryAI you control.</string>
+    <string name="cw_confirm_title_hermes">Connect to Gary server</string>
     <string name="cw_confirm_title_relay">Pair with Relay</string>
-    <string name="cw_dashboard_blank_hint">Enter the base URL of your Hermes server to connect.</string>
-    <string name="cw_dashboard_custom_hint">Enter your Hermes server dashboard URL.</string>
+    <string name="cw_dashboard_blank_hint">Enter the base URL of your Gary server to connect.</string>
+    <string name="cw_dashboard_custom_hint">Enter your Gary server dashboard URL.</string>
     <string name="cw_dashboard_derived">Derived from API URL</string>
     <string name="cw_field_api_url">API URL</string>
     <string name="cw_hide_api_key">Hide API key</string>
@@ -3680,7 +3680,7 @@
         <item quantity="one">%1$d dashboard</item>
         <item quantity="other">%1$d dashboards</item>
     </plurals>
-    <string name="cw_scan_summary_empty">No Hermes servers found on this network</string>
+    <string name="cw_scan_summary_empty">No Gary servers found on this network</string>
     <plurals name="cw_scan_summary_hosts">
         <item quantity="one">Scanned %1$d host</item>
         <item quantity="other">Scanned %1$d hosts</item>
@@ -3752,7 +3752,7 @@
     <string name="endpoints_url_supporting_blank">Enter the server’s Dashboard address</string>
     <string name="endpoints_url_supporting_enter">Use an http:// or https:// Dashboard address</string>
     <string name="endpoints_url_supporting_preview">Will test: %1$s</string>
-    <string name="endpoints_tailscale_setup_hint">Tailscale must be connected on both devices, and Hermes Dashboard must be reachable on port 9119.</string>
+    <string name="endpoints_tailscale_setup_hint">Tailscale must be connected on both devices, and Gary Dashboard must be reachable on port 9119.</string>
     <string name="endpoints_setup_help">Tailscale setup help</string>
     <string name="image_viewer_error">Error saving image</string>
     <string name="image_viewer_failed">Failed to save image</string>
@@ -3836,13 +3836,13 @@
     <!-- Localization guardrail additions for current dev surfaces -->
     <string name="bridge_notification_auto_disabled_title">Timed screen access expired</string>
     <string name="bridge_notification_auto_disabled_body">Screen inspection and control are off after being idle. Other grants are unchanged.</string>
-    <string name="bridge_notification_control_title">Hermes agent has device control</string>
+    <string name="bridge_notification_control_title">Gary agent has device control</string>
     <string name="bridge_notification_control_body">Bridge is active — tap Disable to stop at any time.</string>
-    <string name="gateway_keepalive_title">Hermes connection active</string>
-    <string name="gateway_keepalive_body">Keeping your connection to Hermes open in the background.</string>
-    <string name="notification_trigger_prompt_title">Ask Hermes about this?</string>
+    <string name="gateway_keepalive_title">Gary connection active</string>
+    <string name="gateway_keepalive_body">Keeping your connection to Gary open in the background.</string>
+    <string name="notification_trigger_prompt_title">Ask Gary about this?</string>
     <string name="ncs_triggers_title">Event triggers</string>
-    <string name="ncs_triggers_intro">Rules are off by default. When enabled, the first action is safe: post a local “Ask Hermes?” prompt when a matching notification arrives.</string>
+    <string name="ncs_triggers_intro">Rules are off by default. When enabled, the first action is safe: post a local “Ask Gary?” prompt when a matching notification arrives.</string>
     <string name="ncs_triggers_enable">Enable proactive triggers</string>
     <string name="ncs_triggers_enable_desc">Explicit opt-in. Existing notification forwarding still works when this is off.</string>
     <string name="ncs_kill_switch">Kill switch</string>
@@ -3903,7 +3903,7 @@
     <string name="agent_activity_status_interrupted">Interrupted</string>
     <string name="agent_activity_status_unavailable">Final state unavailable</string>
     <string name="agent_activity_child_loading">Opening read-only child history…</string>
-    <string name="agent_activity_child_unavailable">Child transcript unavailable on this Hermes version or route. Parent-session activity is shown above.</string>
+    <string name="agent_activity_child_unavailable">Child transcript unavailable on this Gary version or route. Parent-session activity is shown above.</string>
     <string name="agent_activity_child_live">Child history · live updates</string>
     <string name="agent_activity_child_history">Child history · read only</string>
     <string name="agent_activity_child_truncated">Recent child activity shown · older or oversized details omitted</string>
@@ -3950,10 +3950,10 @@
     <string name="diag_toolsets_inventory" translatable="false">API toolsets: %1$d of %2$d enabled · Relay tools visible: %3$s</string>
     <string name="diag_yes" translatable="false">yes</string>
     <string name="diag_no" translatable="false">no</string>
-    <string name="dashboard_nous_terminal_warning" translatable="false">The Nous provider login needs attention on the Hermes host. This is separate from Manage sign-in; chat can continue through another configured provider.</string>
+    <string name="dashboard_nous_terminal_warning" translatable="false">The Nous provider login needs attention on the Gary host. This is separate from Manage sign-in; chat can continue through another configured provider.</string>
     <string name="dashboard_gateway_topology" translatable="false">Gateway: %1$s · Profiles: %2$s · Ports: %3$s</string>
     <string name="onboarding_talk_to_agent">Talk to Your Agent</string>
-    <string name="onboarding_stream_desc">Stream conversations with any Hermes profile. Ask questions, run tasks, and collaborate in real time</string>
+    <string name="onboarding_stream_desc">Stream conversations with any Gary profile. Ask questions, run tasks, and collaborate in real time</string>
     <string name="onboarding_lets_connect">Let\'s Connect</string>
     <string name="onboarding_server_url">Enter your relay server URL to get started.</string>
     <string name="onboarding_custom_slot">Custom content slot</string>
@@ -3970,8 +3970,8 @@
     <string name="demo_user_question">Nice! Can you write code too?</string>
     <string name="input_live_voice">Live voice conversation</string>
     <string name="error_classify_realtime_auth_body">The realtime voice provider is missing or rejected server-side auth. Refresh provider auth on the relay or choose another provider.</string>
-    <string name="voice_settings_host_behavior_title">Hermes host behavior</string>
-    <string name="voice_settings_host_behavior_body">These settings control voice mode on the Hermes host. They do not change the phone microphone controls on the Listening tab.</string>
+    <string name="voice_settings_host_behavior_title">Gary host behavior</string>
+    <string name="voice_settings_host_behavior_body">These settings control voice mode on the Gary host. They do not change the phone microphone controls on the Listening tab.</string>
     <string name="voice_settings_choose_provider_title">Choose provider</string>
     <string name="voice_settings_change_provider">Change provider</string>
     <string name="voice_settings_voice_output_label">Voice output</string>
@@ -3979,11 +3979,11 @@
     <string name="voice_settings_disabled_status">Disabled</string>
     <string name="voice_settings_model_and_voice_title">Model &amp; voice</string>
     <string name="voice_settings_uses_host_config">Uses host configuration</string>
-    <string name="voice_settings_configured_in_standard">Configured in Standard Hermes</string>
+    <string name="voice_settings_configured_in_standard">Configured in Standard Gary</string>
     <string name="voice_settings_answer_delivery_title">Answer delivery</string>
     <string name="voice_settings_output_route_label">Output route</string>
     <string name="voice_settings_manage_provider">Manage provider</string>
-    <string name="voice_settings_host_wide_standard_desc">Host-wide Standard Hermes settings</string>
+    <string name="voice_settings_host_wide_standard_desc">Host-wide Standard Gary settings</string>
     <string name="voice_settings_refreshes_from_provider">Refreshes from the provider</string>
     <string name="voice_settings_save_changes">Save changes</string>
     <string name="voice_settings_high_quality">High quality</string>
@@ -4072,12 +4072,12 @@
     <string name="bg_processes_title">Background process</string>
     <string name="bg_collapse_output">Collapse process output</string>
     <string name="bg_expand_output">Expand process output</string>
-    <string name="chat_sends_now">↳ sends now — Hermes adjusts mid-turn</string>
+    <string name="chat_sends_now">↳ sends now — Gary adjusts mid-turn</string>
     <string name="chat_delivered_after_turn">↳ delivered after this turn finishes</string>
     <string name="chat_failed_read_file">Failed to read file</string>
     <string name="chat_dont_ask_again">Don\'t ask again</string>
     <string name="chat_dont_ask_again_verb">Don\'t ask again for \"%1$s\"</string>
-    <string name="chat_voice_needs_route">Voice needs a reachable Hermes dashboard or Relay voice route</string>
+    <string name="chat_voice_needs_route">Voice needs a reachable Gary dashboard or Relay voice route</string>
     <string name="chat_scroll_bottom">Scroll to bottom</string>
     <string name="chat_stream_sessions">sessions stream</string>
     <string name="chat_stream_portable">portable stream</string>
@@ -4092,12 +4092,12 @@
     <string name="power_terminal">Terminal</string>
     <string name="power_terminal_desc">Open a server shell through your paired relay session.</string>
     <string name="power_bridge">Bridge</string>
-    <string name="power_bridge_desc">Let Hermes send approved bridge commands to this phone.</string>
-    <string name="voice_provider_standard">Standard Hermes</string>
+    <string name="power_bridge_desc">Let Gary send approved bridge commands to this phone.</string>
+    <string name="voice_provider_standard">Standard Gary</string>
     <string name="voice_reading_host_config">Reading host voice configuration…</string>
     <string name="voice_open_manage_provider">Open Manage to configure the host voice provider</string>
-    <string name="voice_uses_host_config">Uses this Hermes host’s existing configuration</string>
-    <string name="voice_standard_host_config">Standard Hermes · Host configuration</string>
+    <string name="voice_uses_host_config">Uses this Gary host’s existing configuration</string>
+    <string name="voice_standard_host_config">Standard Gary · Host configuration</string>
     <string name="input_voice_session">voice session</string>
     <string name="input_needs_setup">needs setup</string>
     <string name="attach_cant_read_image">Couldn\'t read this image</string>
@@ -4174,7 +4174,7 @@
     <string name="agent_call">Call</string>
     <string name="agent_search_contacts">Search Contacts</string>
     <string name="agent_open_app">Open App</string>
-    <string name="agent_return_hermes">Return to Hermes</string>
+    <string name="agent_return_hermes">Return to Gary</string>
     <string name="agent_screenshot">Screenshot</string>
     <string name="agent_key_press">Key Press</string>
     <string name="agent_bridge_setup">Bridge Setup</string>
@@ -4203,7 +4203,7 @@
     <string name="floating_pet_action_move_down">Move down</string>
     <string name="floating_pet_action_reset">Reset position</string>
     <string name="appearance_pet_roaming">Walk around the interface</string>
-    <string name="appearance_pet_roaming_desc">When Hermes is idle, the selected Petdex or custom companion walks only on UI-safe perches. Thinking, tool work, speech, scrolling, reduced motion, and full-screen surfaces pause it.</string>
+    <string name="appearance_pet_roaming_desc">When Gary is idle, the selected Petdex or custom companion walks only on UI-safe perches. Thinking, tool work, speech, scrolling, reduced motion, and full-screen surfaces pause it.</string>
     <string name="appearance_pet_temperament">Pet temperament</string>
     <string name="appearance_pet_temperament_desc">Sets how often your pet visits responses, roams, and reacts while idle. Reduced motion and accessibility pauses always take priority.</string>
     <string name="appearance_pet_temperament_calm">Calm</string>
@@ -4289,12 +4289,12 @@
     <string name="msg_bubble_speak_response">Speak response</string>
     <string name="msg_bubble_stop_speaking">Stop speaking</string>
     <string name="voice_overlay_engine_standard">Standard mode</string>
-    <string name="voice_overlay_caption_hermes">Hermes</string>
-    <string name="voice_overlay_open_hermes">Open Hermes</string>
+    <string name="voice_overlay_caption_hermes">Gary</string>
+    <string name="voice_overlay_open_hermes">Open Gary</string>
     <string name="voice_overlay_notification_channel">Voice overlay microphone</string>
-    <string name="voice_overlay_notification_channel_desc">Ongoing privacy and stop controls while the Hermes voice overlay can use the microphone over another app.</string>
-    <string name="voice_overlay_notification_title">Hermes voice overlay active</string>
-    <string name="voice_overlay_notification_body">Microphone access remains available while Hermes is over another app.</string>
+    <string name="voice_overlay_notification_channel_desc">Ongoing privacy and stop controls while the Gary voice overlay can use the microphone over another app.</string>
+    <string name="voice_overlay_notification_title">Gary voice overlay active</string>
+    <string name="voice_overlay_notification_body">Microphone access remains available while Gary is over another app.</string>
     <string name="voice_overlay_notification_stop">Stop voice</string>
     <string name="conn_info_profile_api_key_title">Profile API key</string>
     <string name="conn_info_profile_api_key_hint">Used only for this profile’s shared multiplex Direct API route. Stored encrypted; the connection key is never reused.</string>
@@ -4306,7 +4306,7 @@
     <string name="conn_info_profile_api_key_cleared">Profile API key cleared</string>
     <string name="conn_info_profile_api_key_save_failed">Could not save the profile API key</string>
     <string name="wake_word_title">Wake word</string>
-    <string name="wake_word_enable">Listen for “Hey Hermes”</string>
+    <string name="wake_word_enable">Listen for “Hey Gary”</string>
     <string name="wake_word_enable_desc">Experimental, opt-in detection that runs entirely on this phone.</string>
     <string name="wake_word_phrase">Phrase</string>
     <string name="wake_word_status">Status</string>
@@ -4316,9 +4316,9 @@
     <string name="wake_word_status_paused">Paused while voice is active</string>
     <string name="wake_word_status_detected">Detected — open the notification</string>
     <string name="wake_word_status_error">Needs attention</string>
-    <string name="wake_word_test_action">Test “Hey Hermes”</string>
+    <string name="wake_word_test_action">Test “Hey Gary”</string>
     <string name="wake_word_test_listening">Testing…</string>
-    <string name="wake_word_test_prompt">Say “Hey Hermes” within 10 seconds. The meter confirms microphone input; a successful test will not open voice.</string>
+    <string name="wake_word_test_prompt">Say “Hey Gary” within 10 seconds. The meter confirms microphone input; a successful test will not open voice.</string>
     <string name="wake_word_test_detected">Detected locally. The microphone and model are working.</string>
     <string name="wake_word_test_timed_out">Not detected. Try speaking closer, then lower strictness or confirmation if needed.</string>
     <string name="wake_word_test_unavailable">Testing is available while wake listening is active and voice is closed.</string>
@@ -4336,30 +4336,30 @@
     <string name="wake_word_notification_permission_required">Notification permission is required so Android can show the ongoing microphone privacy control.</string>
     <string name="wake_word_notification_channel">Wake-word microphone</string>
     <string name="wake_word_notification_channel_desc">Ongoing privacy and stop controls while experimental wake-word listening is active.</string>
-    <string name="wake_word_notification_title">“Hey Hermes” listening</string>
+    <string name="wake_word_notification_title">“Hey Gary” listening</string>
     <string name="wake_word_notification_starting">Starting the on-device detector…</string>
     <string name="wake_word_notification_listening">Listening locally. Audio is not uploaded.</string>
-    <string name="wake_word_notification_paused">Paused while a Hermes voice session owns the microphone.</string>
-    <string name="wake_word_notification_detected">Phrase detected. Tap to open Hermes voice.</string>
+    <string name="wake_word_notification_paused">Paused while a Gary voice session owns the microphone.</string>
+    <string name="wake_word_notification_detected">Phrase detected. Tap to open Gary voice.</string>
     <string name="wake_word_notification_error">Wake-word listening needs attention. Open Voice settings.</string>
     <string name="wake_word_notification_stopped">Wake-word listening is stopping.</string>
     <string name="wake_word_notification_stop">Stop</string>
     <string name="wake_word_notification_open">Open voice</string>
-    <string name="assistant_service_label">Hermes Digital Assistant</string>
+    <string name="assistant_service_label">Gary Digital Assistant</string>
     <string name="assistant_mode_title">Android Digital Assistant</string>
-    <string name="assistant_mode_description">Optionally select Hermes as Android’s default Digital Assistant for system-mediated invocation and a background or locked-screen “Hey Hermes” session. Hermes never changes this role without your confirmation.</string>
+    <string name="assistant_mode_description">Optionally select Gary as Android’s default Digital Assistant for system-mediated invocation and a background or locked-screen “Hey Gary” session. Gary never changes this role without your confirmation.</string>
     <string name="assistant_mode_role_status">Default assistant</string>
-    <string name="assistant_mode_role_selected">Hermes selected</string>
+    <string name="assistant_mode_role_selected">Gary selected</string>
     <string name="assistant_mode_role_not_selected">Not selected</string>
     <string name="assistant_mode_role_unavailable">Not supported by this device</string>
-    <string name="assistant_mode_choose">Choose Hermes</string>
+    <string name="assistant_mode_choose">Choose Gary</string>
     <string name="assistant_mode_manage">Android settings</string>
-    <string name="assistant_mode_wake_enable">Background “Hey Hermes”</string>
-    <string name="assistant_mode_wake_enable_desc">Available only while Hermes is the selected Digital Assistant. This is separate from the experimental notification-based listener below.</string>
+    <string name="assistant_mode_wake_enable">Background “Hey Gary”</string>
+    <string name="assistant_mode_wake_enable_desc">Available only while Gary is the selected Digital Assistant. This is separate from the experimental notification-based listener below.</string>
     <string name="assistant_mode_status_session">Opening the assistant session</string>
-    <string name="assistant_mode_removal">To remove Hermes, tap Android settings and choose another assistant or None. Turning off background wake leaves gesture or power-button invocation available while Hermes remains selected.</string>
+    <string name="assistant_mode_removal">To remove Gary, tap Android settings and choose another assistant or None. Turning off background wake leaves gesture or power-button invocation available while Gary remains selected.</string>
     <string name="assistant_mode_battery">Wake detection stays on this phone until activation. Third-party assistants do not receive Google’s dedicated low-power hotword hardware, so continuous local microphone and CPU use can noticeably affect battery life.</string>
-    <string name="assistant_session_launching">Opening Hermes…</string>
+    <string name="assistant_session_launching">Opening Gary…</string>
     <string name="assistant_session_listening">Listening</string>
     <string name="assistant_session_transcribing">Transcribing…</string>
     <string name="assistant_session_thinking">Thinking…</string>
@@ -4379,7 +4379,7 @@
     <string name="assistant_session_screen_context_ready">Screen context ready</string>
     <string name="assistant_session_screen_thumbnail">Current screen thumbnail</string>
     <string name="voice_settings_stop_phrases">Stop phrases</string>
-    <string name="voice_settings_stop_phrases_desc">Exact comma-separated phrases that end an active voice chat. Barge-in must be enabled to hear them while Hermes is Thinking or Speaking. Leave empty to disable.</string>
+    <string name="voice_settings_stop_phrases_desc">Exact comma-separated phrases that end an active voice chat. Barge-in must be enabled to hear them while Gary is Thinking or Speaking. Leave empty to disable.</string>
     <string name="voice_settings_barge_in_rms_multiplier">RMS threshold: %1$.1f×</string>
     <string name="voice_settings_barge_in_rms_multiplier_desc">Higher values require speech to be louder relative to the calibrated quiet room. Upstream default: 3×.</string>
     <string name="voice_settings_barge_in_playback_grace">Playback grace: %1$.2f s</string>
@@ -4387,10 +4387,10 @@
     <string name="voice_settings_barge_in_debug">VAD diagnostics</string>
     <string name="voice_settings_barge_in_debug_desc">Write calibrated floor, RMS, trigger, phase, and decision details to logcat for tuning.</string>
     <string name="plugins_title">Plugins</string>
-    <string name="settings_plugins_desc">Native pages and controls from your Hermes plugins</string>
+    <string name="settings_plugins_desc">Native pages and controls from your Gary plugins</string>
     <string name="plugins_description">Plugins can contribute full native pages with reactive controls and host-rendered animation. They never load executable code on this phone.</string>
-    <string name="plugins_dashboard_required">Connect and sign in to a Hermes Dashboard to discover plugins.</string>
-    <string name="plugins_empty">No installed Hermes plugins currently offer an Android page.</string>
+    <string name="plugins_dashboard_required">Connect and sign in to a Gary Dashboard to discover plugins.</string>
+    <string name="plugins_empty">No installed Gary plugins currently offer an Android page.</string>
     <string name="plugins_allow_changes">Allow changes</string>
     <string name="plugins_allow_changes_desc">Let this plugin send scoped write requests to its own backend.</string>
     <string name="plugins_confirm_action">Confirm plugin action</string>
@@ -4456,7 +4456,7 @@
 <string name="support_bundle_privacy">Nothing is uploaded automatically. Review the exact local export below. It contains %1$d recent reports and diagnostics.</string>
     <string name="support_bundle_copied">Support information copied</string>
     <string name="support_bundle_no_share">Support information copied — no app found to share to</string>
-    <string name="support_bundle_share_title">Share Hermes-Relay support information</string>
+    <string name="support_bundle_share_title">Share GaryAI support information</string>
     <string name="drawer_all_profiles">All Profiles</string>
     <string name="drawer_no_profile_sessions">No matching profile sessions.</string>
     <string name="drawer_customize_sessions">Customize sessions</string>
@@ -4490,7 +4490,7 @@
     <string name="drawer_profile_color_set">Set %1$s profile color to %2$s</string>
     <string name="drawer_close">Close</string>
     <string name="profile_inspector_gateway_settings">Gateway profile settings</string>
-    <string name="profile_inspector_gateway_settings_hint">Saved directly through upstream Hermes for this selected profile.</string>
+    <string name="profile_inspector_gateway_settings_hint">Saved directly through upstream Gary for this selected profile.</string>
     <string name="profile_inspector_edit_config">Edit profile settings</string>
     <string name="profile_inspector_description">Description</string>
     <string name="profile_inspector_provider">Provider</string>
@@ -4500,14 +4500,14 @@
     <string name="profile_inspector_toolsets_hint">Choose which upstream tool groups this profile can use.</string>
     <string name="profile_inspector_tool_count">%1$d tools</string>
     <string name="chat_model_confirmation_title">Confirm model selection</string>
-    <string name="host_resource_recent_oom">Hermes recently restarted after likely running out of memory.</string>
+    <string name="host_resource_recent_oom">Gary recently restarted after likely running out of memory.</string>
     <string name="host_resource_memory_critical">Host memory is critically low; active chats may stop.</string>
     <string name="host_resource_memory_elevated">Host memory is running low.</string>
     <string name="host_resource_disk_critical">Host storage is critically low; messages and settings may fail to save.</string>
     <string name="host_resource_disk_elevated">Host storage is running low.</string>
     <string name="bss_capabilities_title">Capability grants</string>
-    <string name="bss_capabilities_desc">Always/Never grants apply only to this Hermes connection. The master switch and Android permissions still override them.</string>
-    <string name="bss_capabilities_unavailable">Select and connect a Hermes connection before changing grants.</string>
+    <string name="bss_capabilities_desc">Always/Never grants apply only to this Gary connection. The master switch and Android permissions still override them.</string>
+    <string name="bss_capabilities_unavailable">Select and connect a Gary connection before changing grants.</string>
     <string name="bss_timed_capabilities_title">Screen access</string>
     <string name="bss_timed_capabilities_desc">Screen inspection and control expire after %1$d minutes of inactivity. Harmless permanent grants do not extend this timer.</string>
     <string name="bss_screen_access_off_desc">Screen access is off. New finite access uses a %1$d-minute idle limit by default.</string>
@@ -4530,7 +4530,7 @@
     <!-- Bridge capability cockpit and guided access flow -->
     <string name="bridge_access_title">Agent access</string>
     <string name="bridge_access_not_set_up">Not set up</string>
-    <string name="bridge_access_summary_desc">Choose what Hermes can use on this connection.</string>
+    <string name="bridge_access_summary_desc">Choose what Gary can use on this connection.</string>
     <string name="bridge_access_set_up">Set up access</string>
     <string name="bridge_access_always">Always available</string>
     <string name="bridge_access_enabled_count">%1$d of %2$d capabilities enabled</string>
@@ -4559,7 +4559,7 @@
     <string name="bridge_access_continue">Continue</string>
     <string name="bridge_access_saved_review_android">Access saved. Review the required Android access before enabling Master.</string>
     <string name="bridge_access_read_group">Read access</string>
-    <string name="bridge_access_read_group_desc">Choose which device data Hermes may read while Master is on.</string>
+    <string name="bridge_access_read_group_desc">Choose which device data Gary may read while Master is on.</string>
     <string name="bridge_access_actions_group">Actions</string>
     <string name="bridge_access_actions_group_desc">Calls, SMS, and sharing still require confirmation when enabled.</string>
     <string name="bridge_android_access_title">Android access</string>
@@ -4574,12 +4574,12 @@
     <string name="bridge_android_selected_needs_desc">These Android permissions are still missing. Disabled capabilities are not included.</string>
     <string name="bridge_android_open_settings">Open</string>
     <string name="bridge_timed_title">Allow screen access</string>
-    <string name="bridge_timed_desc">Choose what Hermes can do and how long it stays available.</string>
+    <string name="bridge_timed_desc">Choose what Gary can do and how long it stays available.</string>
     <string name="bridge_timed_inspection_desc">Accessibility tree, UI events, and screenshots</string>
     <string name="bridge_timed_control_desc">Tap, type, swipe, open apps, and navigation</string>
     <string name="bridge_timed_ends_title">Ends after inactivity</string>
     <string name="bridge_timed_lifetime_title">How access ends</string>
-    <string name="bridge_timed_scope_title">What Hermes can do</string>
+    <string name="bridge_timed_scope_title">What Gary can do</string>
     <string name="bridge_timed_until_off">Until turned off</string>
     <string name="bridge_timed_idle_explainer">No fixed session limit. Active screen commands refresh the %1$s idle timer.</string>
     <string name="bridge_timed_unlimited_warning">No idle timeout. Screen access remains available through inactivity and reconnect until you end it, disable Master, or change policy. Best for a dedicated device.</string>
@@ -4591,8 +4591,8 @@
     <string name="provider_usage_title">Usage &amp; limits</string>
     <string name="provider_usage_back">Back</string>
     <string name="provider_usage_refresh">Refresh usage</string>
-    <string name="provider_usage_intro">Account limits from providers configured on this Hermes connection.</string>
-    <string name="provider_usage_not_available">This Hermes connection does not expose provider usage. Update Hermes or install/update the Relay plugin to enable it.</string>
+    <string name="provider_usage_intro">Account limits from providers configured on this Gary connection.</string>
+    <string name="provider_usage_not_available">This Gary connection does not expose provider usage. Update Gary or install/update the Relay plugin to enable it.</string>
     <string name="provider_usage_none_configured">No visible provider has account usage available.</string>
     <string name="provider_usage_loading">Loading provider usage…</string>
     <string name="provider_usage_error">Couldn\'t load provider usage.</string>
@@ -4608,10 +4608,10 @@
     <string name="provider_usage_providers_desc">Choose which provider cards appear on the main Settings page. All providers remain visible here.</string>
     <string name="provider_usage_settings_desc">Account usage and provider limits</string>
     <string name="provider_usage_settings_desc_relay">Relay plugin enhanced usage and limits</string>
-    <string name="provider_usage_settings_desc_basic">Basic Hermes usage · Relay plugin adds pools and more</string>
+    <string name="provider_usage_settings_desc_basic">Basic Gary usage · Relay plugin adds pools and more</string>
     <string name="provider_usage_customize">Display</string>
     <string name="provider_usage_hidden_hint">Usage cards are hidden on Settings.</string>
-    <string name="provider_usage_not_available_compact">Provider usage is unavailable. Update Hermes or install/update the Relay plugin.</string>
+    <string name="provider_usage_not_available_compact">Provider usage is unavailable. Update Gary or install/update the Relay plugin.</string>
     <string name="provider_usage_provider_not_configured">Not configured on this host</string>
     <string name="provider_usage_provider_unavailable">Usage is temporarily unavailable</string>
     <string name="provider_usage_active_unknown">No active credential yet for this session.</string>
@@ -4625,7 +4625,7 @@
     <string name="provider_usage_manage_credits">Manage credits</string>
     <string name="provider_usage_capability_relay_title">Relay plugin enhanced</string>
     <string name="provider_usage_capability_relay_body">Credential pools, structured Nous balances, and OpenCode Go are provided by the Relay plugin.</string>
-    <string name="provider_usage_capability_basic_title">Basic usage from Hermes</string>
+    <string name="provider_usage_capability_basic_title">Basic usage from Gary</string>
     <string name="provider_usage_capability_basic_body">Install or update the Relay plugin for credential pools, structured Nous balances, and OpenCode Go.</string>
     <string name="settings_git_workspace">Git workspace</string>
     <string name="settings_git_workspace_desc">Current-session Git first, with optional host discovery</string>
@@ -4634,7 +4634,7 @@
     <string name="chat_correct_now">Correct now</string>
     <string name="chat_queue_next">Queue next</string>
     <string name="chat_busy_default_title">While responding</string>
-    <string name="chat_busy_default_description">Choose what Send does while Hermes is working. This device-wide default is shared with the composer. Attachments and unavailable corrections queue instead.</string>
+    <string name="chat_busy_default_description">Choose what Send does while Gary is working. This device-wide default is shared with the composer. Attachments and unavailable corrections queue instead.</string>
     <string name="chat_queue_paused">Queue paused</string>
     <string name="chat_queue_resume">Resume</string>
     <string name="chat_queue_remove">Remove queued message</string>
@@ -4666,7 +4666,7 @@
 
     <!-- User-started voice overlay, independent of Device Control. -->
     <string name="voice_overlay_setup_title">Voice over other apps</string>
-    <string name="voice_overlay_setup_body">Keep voice controls visible while using another app. Audio goes to your configured Hermes server. This does not grant screen reading or phone control. Allow display over other apps in Android Settings, then return here. A microphone notification with Stop voice is required. Closing the overlay or locking the screen ends this voice session.</string>
+    <string name="voice_overlay_setup_body">Keep voice controls visible while using another app. Audio goes to your configured Gary server. This does not grant screen reading or phone control. Allow display over other apps in Android Settings, then return here. A microphone notification with Stop voice is required. Closing the overlay or locking the screen ends this voice session.</string>
     <string name="voice_overlay_setup_start">Start voice overlay</string>
     <string name="voice_overlay_settings_hint">Optional in both builds. Open Voice Focus in Chat and choose Overlay to start. Permissions alone never start listening.</string>
     <string name="voice_overlay_reset_position">Reset position</string>
@@ -4675,7 +4675,7 @@
     <string name="dashboard_http_allow">I accept the risk and allow HTTP for this address</string>
     <string name="cw_auth_verified">Sign-in verified</string>
     <string name="cw_chat_checked_on_open">Verified when Chat opens</string>
-    <string name="dashboard_local_auth_help">Hermes is reachable, but protected requests are not authorized. If this Dashboard is forwarded from loopback, check its bind address, authentication provider, and dashboard.public_url on the host. A 401 alone does not identify the cause.</string>
+    <string name="dashboard_local_auth_help">Gary is reachable, but protected requests are not authorized. If this Dashboard is forwarded from loopback, check its bind address, authentication provider, and dashboard.public_url on the host. A 401 alone does not identify the cause.</string>
     <string name="voice_streaming_failed_basic">Streaming voice failed. Using basic speech, which may pause between sentences. Check the voice provider settings.</string>
     <string name="voice_streaming_stopped_basic_next">Streaming voice stopped. Remaining speech will use basic speech. Check the voice provider settings.</string>
     <string name="stats_tts_queue_wait">Audio queue wait</string>
@@ -4690,4 +4690,5 @@
     <string name="paired_devices_policy_failed">Could not shorten the session. Refresh Relay sessions and try a shorter duration, or pair again with a fresh operator-approved code to renew access.</string>
     <string name="paired_devices_updating">Updating session…</string>
     <string name="paired_devices_no_shorter_duration">No shorter preset remains. You can revoke this session, or pair again to renew access.</string>
+    <string name="about_builder_credit">GaryAI was built and named by Ken Mood.</string>
 </resources>

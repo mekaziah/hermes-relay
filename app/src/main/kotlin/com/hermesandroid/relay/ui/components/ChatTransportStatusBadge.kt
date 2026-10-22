@@ -63,7 +63,7 @@ fun resolveChatTransportStatus(
             tier = ChatTransportTier.Offline,
             tone = ChatTransportTone.Unavailable,
             reason = reason,
-            detail = "No reachable Hermes chat transport is available.",
+            detail = "No reachable Gary chat transport is available.",
         )
 
     fun manualSse(tier: ChatTransportTier, supported: Boolean): ChatTransportStatus {
@@ -121,7 +121,7 @@ private fun ChatTransportTier.plainName(): String =
 private fun ChatTransportTier.detailText(): String =
     when (this) {
         ChatTransportTier.Gateway ->
-            "Hermes Chat uses the signed-in Dashboard connection."
+            "Gary Chat uses the signed-in Dashboard connection."
         ChatTransportTier.Sessions ->
             "Direct API compatibility chat with server-side session history."
         ChatTransportTier.Completions ->

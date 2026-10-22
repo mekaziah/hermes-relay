@@ -1608,7 +1608,7 @@ fun RelayApp() {
             }
         }
         // The SAME readiness signal ChatScreen renders its "Connect Standard
-        // Hermes" CTA from (chat client exists + reachable verdict). The gate
+        // Gary" CTA from (chat client exists + reachable verdict). The gate
         // must release on this — releasing on the resolver's earlier
         // evidence alone left a window where the reveal showed the CTA for
         // the few hundred ms until the client-based health verdict landed.
@@ -1705,7 +1705,7 @@ fun RelayApp() {
                         StartupCheck(StartupCheckState.Active, "gateway retrying")
                     startupEndpoint != null -> StartupCheck(
                         StartupCheckState.Active,
-                        "waking ${effectiveDisplayProfile?.name?.replaceFirstChar { it.uppercase() } ?: "Hermes"}",
+                        "waking ${effectiveDisplayProfile?.name?.replaceFirstChar { it.uppercase() } ?: "Gary"}",
                     )
                     appReady ->
                         StartupCheck(StartupCheckState.Active, "contacting hermes")
@@ -3540,7 +3540,7 @@ fun RelayApp() {
                             authorizedPairHandoffId = existingId
                         },
                         // Offer demo only on the bare "Connect" entry (the
-                        // "No Hermes connection" path) — not on add-connection /
+                        // "No Gary connection" path) — not on add-connection /
                         // re-pair flows, which have a placeholder connection in
                         // flight that enterDemo would leave un-discarded.
                         onTryDemo = if (connectionIdArg == null) enterDemo else null,

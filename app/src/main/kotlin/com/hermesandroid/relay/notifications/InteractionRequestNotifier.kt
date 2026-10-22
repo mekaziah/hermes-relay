@@ -32,7 +32,7 @@ object InteractionRequestNotifier {
 
     private const val TAG = "InteractionNotifier"
     internal const val CHANNEL_ID = "chat_interactions"
-    private const val CHANNEL_NAME = "Hermes needs input"
+    private const val CHANNEL_NAME = "Gary needs input"
     private const val GROUP_KEY = "gateway-interactions"
     internal const val NOTIFICATION_ID = 3823
     internal const val DEFAULT_PROFILE_ROUTE_VALUE = ChatNotificationTarget.DEFAULT_PROFILE
@@ -61,19 +61,19 @@ object InteractionRequestNotifier {
         "chat?sessionId=${Uri.encode(sessionId)}&profile=${Uri.encode(profile ?: DEFAULT_PROFILE_ROUTE_VALUE)}"
 
     internal fun safeTitle(ask: GatewayAsk): String = when (ask.kind) {
-        GatewayAsk.Kind.APPROVAL -> "Hermes needs approval"
-        GatewayAsk.Kind.CLARIFY -> "Hermes has a question"
+        GatewayAsk.Kind.APPROVAL -> "Gary needs approval"
+        GatewayAsk.Kind.CLARIFY -> "Gary has a question"
         GatewayAsk.Kind.SUDO,
         GatewayAsk.Kind.SECRET,
-        -> "Hermes needs sensitive input"
+        -> "Gary needs sensitive input"
     }
 
     internal fun safeBody(ask: GatewayAsk): String = when (ask.kind) {
-        GatewayAsk.Kind.APPROVAL -> "Open Hermes to review the requested action."
-        GatewayAsk.Kind.CLARIFY -> "Open Hermes to answer and continue this turn."
+        GatewayAsk.Kind.APPROVAL -> "Open Gary to review the requested action."
+        GatewayAsk.Kind.CLARIFY -> "Open Gary to answer and continue this turn."
         GatewayAsk.Kind.SUDO,
         GatewayAsk.Kind.SECRET,
-        -> "Open Hermes to respond securely."
+        -> "Open Gary to respond securely."
     }
 
     internal fun safeExpandedBody(
@@ -84,7 +84,7 @@ object InteractionRequestNotifier {
         val action = when (ask.kind) {
             GatewayAsk.Kind.APPROVAL ->
                 "Review the requested action. Nothing is approved from the notification."
-            GatewayAsk.Kind.CLARIFY -> "Open this conversation to answer Hermes' question."
+            GatewayAsk.Kind.CLARIFY -> "Open this conversation to answer Gary' question."
             GatewayAsk.Kind.SUDO -> "Open this conversation to respond securely or deny."
             GatewayAsk.Kind.SECRET -> "Open this conversation to respond securely or skip."
         }
@@ -141,8 +141,8 @@ object InteractionRequestNotifier {
         val expandedBody = safeExpandedBody(sessionId, ask, profile)
         val publicVersion = NotificationCompat.Builder(context, CHANNEL_ID)
             .setSmallIcon(R.mipmap.ic_launcher)
-            .setContentTitle("Hermes needs your input")
-            .setContentText("Open Hermes to continue.")
+            .setContentTitle("Gary needs your input")
+            .setContentText("Open Gary to continue.")
             .setCategory(NotificationCompat.CATEGORY_REMINDER)
             .build()
 
@@ -216,7 +216,7 @@ object InteractionRequestNotifier {
                 CHANNEL_NAME,
                 NotificationManager.IMPORTANCE_HIGH,
             ).apply {
-                description = "Alerts when a Hermes turn is waiting for your response."
+                description = "Alerts when a Gary turn is waiting for your response."
                 lockscreenVisibility = Notification.VISIBILITY_PRIVATE
                 setShowBadge(true)
             },

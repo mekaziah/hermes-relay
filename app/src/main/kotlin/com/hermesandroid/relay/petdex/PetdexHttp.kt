@@ -49,7 +49,7 @@ internal class SecurePetdexFetcher(
             repeat(MAX_REDIRECTS + 1) { redirectCount ->
                 val request = Request.Builder()
                     .url(current)
-                    .header("User-Agent", "Hermes-Relay-Android-Petdex")
+                    .header("User-Agent", "GaryAI-Android-Petdex")
                     .get()
                     .build()
                 http.newCall(request).execute().use { response ->

@@ -13,7 +13,6 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableFloatStateOf
 import androidx.compose.runtime.remember
-import androidx.compose.runtime.withFrameNanos
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clipToBounds
 import androidx.compose.ui.geometry.Offset
@@ -25,6 +24,7 @@ import androidx.compose.ui.text.rememberTextMeasurer
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.hermesandroid.relay.ui.theme.LocalBrand
+import kotlinx.coroutines.delay
 
 /**
  * ASCII morphing sphere — the visual embodiment of the AI agent.
@@ -53,6 +53,16 @@ import com.hermesandroid.relay.ui.theme.LocalBrand
 private const val SPHERE_TIME_UNITS_PER_SEC = 1f
 private const val SPHERE_TWO_PI = 6.2832f
 private const val SPHERE_COLOR_RADIANS_PER_SEC = 0.7854f
+
+/**
+ * Sampling interval for the procedural sphere loop, in ms.
+ *
+ * 33ms → ~30fps. The sphere advances by real elapsed time, so this only
+ * changes how often the glyph grid is recomputed, never how fast it moves.
+ * Raising it lowers CPU/heat linearly; dropping it back toward 16ms restores
+ * display-rate smoothness.
+ */
+private const val SPHERE_FRAME_DELAY_MS = 33L
 
 internal enum class SphereMotionMode {
     Still,
@@ -133,16 +143,27 @@ fun MorphingSphere(
     )
     if (motionMode == SphereMotionMode.Procedural) {
         LaunchedEffect(motionMode) {
-            var lastNanos = withFrameNanos { it }
+            // Wall-clock timing, never `withFrameNanos`: this loop throttles with
+            // `delay`, and a throttled loop that awaits the frame clock freezes
+            // after one step (the frame requested by its own state write is drawn
+            // during the sleep, leaving nothing to wake the next await). The state
+            // writes below request the frames this loop needs.
+            var lastNanos = System.nanoTime()
             while (true) {
-                val now = withFrameNanos { it }
+                val now = System.nanoTime()
                 val dtSec = (now - lastNanos).coerceAtLeast(0L) / 1_000_000_000f
+                // Ambient ASCII art does not need display-rate sampling. Each
+                // frame redraws cols*rows glyphs (~2k), so the difference
+                // between 60fps and 30fps is a large, permanent CPU cost for a
+                // change nobody can see. dtSec above is measured across the
+                // delay, so the sphere keeps its speed — just fewer samples.
                 lastNanos = now
                 animatedTime.floatValue =
                     (animatedTime.floatValue + dtSec * SPHERE_TIME_UNITS_PER_SEC) % 1000f
                 animatedColorPhase.floatValue =
                     (animatedColorPhase.floatValue + dtSec * SPHERE_COLOR_RADIANS_PER_SEC) %
                     SPHERE_TWO_PI
+                delay(SPHERE_FRAME_DELAY_MS)
             }
         }
     }

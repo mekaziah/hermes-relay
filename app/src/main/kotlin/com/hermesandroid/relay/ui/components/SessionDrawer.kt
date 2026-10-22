@@ -7,10 +7,6 @@ import android.graphics.RectF
 import android.graphics.SweepGradient
 import androidx.annotation.StringRes
 import androidx.compose.animation.Crossfade
-import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -2021,16 +2017,11 @@ private fun Modifier.sessionActivityBorder(
     if (!sessionActivityShowsRowBorder(state)) return this
     val color = RelayRefresh.Relay
     val shouldRotate = animated
-    val phase = if (shouldRotate) {
-        val transition = rememberInfiniteTransition(label = "session-activity")
-        transition.animateFloat(
-            initialValue = 0f,
-            targetValue = 1f,
-            animationSpec = infiniteRepeatable(
-                animation = tween(durationMillis = 2_230, easing = LinearEasing),
-            ),
-            label = "session-activity-glow",
-        )
+    val phase: Float? = if (shouldRotate) {
+        // Frame-throttled: the row border can glow for as long as a session stays
+        // active, so it must not pin the window at the display refresh rate
+        // (see AmbientAnimation.kt).
+        rememberAmbientPhase(periodMillis = 2_230)
     } else {
         null
     }
@@ -2098,7 +2089,7 @@ private fun Modifier.sessionActivityBorder(
             drawContent()
             if (phase != null) {
                 shaderMatrix.setRotate(
-                    phase.value * 360f - 90f,
+                    phase * 360f - 90f,
                     size.width / 2f,
                     size.height / 2f,
                 )

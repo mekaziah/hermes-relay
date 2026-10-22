@@ -194,7 +194,7 @@ fun DiagnosticDetailDialog(entry: DiagnosticLogEntry, onDismiss: () -> Unit) {
                             onClick = {
                                 val shared = IssueReport.share(
                                     context,
-                                    subject = "Hermes-Relay diagnostic — ${entry.title}",
+                                    subject = "GaryAI diagnostic — ${entry.title}",
                                     text = plainText,
                                     chooserTitle = exportChooserTitle,
                                 )
@@ -277,7 +277,7 @@ internal fun DiagnosticSeverityChip(severity: DiagnosticSeverity) {
 
 /** Full, copy/share-ready plain-text rendering of a single diagnostic entry. */
 private fun DiagnosticLogEntry.toPlainText(): String = buildString {
-    appendLine("Hermes-Relay diagnostic")
+    appendLine("GaryAI diagnostic")
     appendLine("Title:    $title")
     appendLine("Category: ${category.label}")
     appendLine("Severity: ${severity.name}")

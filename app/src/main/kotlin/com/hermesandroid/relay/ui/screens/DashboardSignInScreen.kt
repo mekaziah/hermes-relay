@@ -98,7 +98,7 @@ import okhttp3.Request
 import okhttp3.Response
 import kotlin.coroutines.resume
 
-private const val NATIVE_DASHBOARD_AUTH_LOG_TAG = "HermesNativeAuth"
+private const val NATIVE_DASHBOARD_AUTH_LOG_TAG = "GaryNativeAuth"
 
 internal fun nativeDashboardDiagnosticProviderKind(providerName: String?): String =
     when (providerName?.trim()?.lowercase()) {

@@ -58,14 +58,14 @@ internal fun buildCustomPetPrompt(
     description: String,
     kind: CustomPetKind,
 ): String {
-    val safeName = name.trim().ifBlank { "My Hermes companion" }
+    val safeName = name.trim().ifBlank { "My Gary companion" }
     val safeDescription = description.trim().ifBlank {
         "a friendly companion that remains recognizable at small mobile sizes"
     }
     val output = if (kind == CustomPetKind.STATIC) {
         "Create one transparent PNG or WebP image. Keep the subject centered with generous edge padding."
     } else {
-        "Create a validated Hermes pet pack ZIP using pet.json plus transparent sprite sheets. " +
+        "Create a validated Gary pet pack ZIP using pet.json plus transparent sprite sheets. " +
             "Include idle, walk-left/right, thinking or working, writing, speaking, listening, greet, done, and error where practical. " +
             "Frames must show real motion while keeping the character, scale, baseline, and anchor consistent. " +
             "At minimum, pet.json must use schemaVersion 1, a stable id and label, and an idle state. " +
@@ -74,7 +74,7 @@ internal fun buildCustomPetPrompt(
             "All referenced files must remain inside the pack folder."
     }
     return """
-        Help me create a custom floating pet for the Hermes Relay Android app.
+        Help me create a custom floating pet for the GaryAI Android app.
 
         Pet name: $safeName
         Character direction: $safeDescription
@@ -82,7 +82,7 @@ internal fun buildCustomPetPrompt(
 
         $output
 
-        Follow the current Hermes Relay pet contract above. If the repository docs/pet-spec.md or user-docs/features/custom-avatars.md are available, use them as the final authority. Use image-generation tools only if they are available in this chat. Do not upload my reference image, generated art, or pet pack anywhere except through tools I explicitly approve. Work locally where possible.
+        Follow the current GaryAI pet contract above. If the repository docs/pet-spec.md or user-docs/features/custom-avatars.md are available, use them as the final authority. Use image-generation tools only if they are available in this chat. Do not upload my reference image, generated art, or pet pack anywhere except through tools I explicitly approve. Work locally where possible.
 
         Before returning anything, validate the manifest and every referenced file, reject path traversal, verify decoded image dimensions and safe margins, and check that animated frames differ visibly without drifting. Then show me a concise review summary and attach the final PNG/WebP or ZIP for me to inspect. Do not install, publish, or share it automatically. I will review it and import it from Appearance > Floating pet.
 

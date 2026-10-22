@@ -62,7 +62,7 @@ fun localizeAgentNameKey(name: String): Int? = when (name) {
     "Call" -> R.string.agent_call
     "Search Contacts" -> R.string.agent_search_contacts
     "Open App" -> R.string.agent_open_app
-    "Return to Hermes" -> R.string.agent_return_hermes
+    "Return to Gary" -> R.string.agent_return_hermes
     "Screenshot" -> R.string.agent_screenshot
     "Key Press" -> R.string.agent_key_press
     "Bridge Setup" -> R.string.agent_bridge_setup

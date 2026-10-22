@@ -1,10 +1,5 @@
 package com.hermesandroid.relay.ui.components
 
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
-import androidx.compose.animation.core.tween
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -91,13 +86,14 @@ fun CompactToolCall(
             // state — MoreHoriz in Muted with the same alpha breathe; the
             // Cyan spinner stays reserved for actually-executing tools.
             isPreparing -> {
-                val breathe = rememberInfiniteTransition(label = "compactToolGenerating")
-                val alpha = breathe.animateFloat(
-                    initialValue = 0.35f,
-                    targetValue = 0.9f,
-                    animationSpec = infiniteRepeatable(tween(900), repeatMode = RepeatMode.Reverse),
-                    label = "compactToolGeneratingAlpha",
-                ).value
+                // Frame-throttled (see AmbientAnimation.kt) — a "preparing" card is on
+                // screen for the whole of a long tool turn, so it must not pin the
+                // window at the display refresh rate.
+                val alpha = rememberAmbientBreathe(
+                    minValue = 0.35f,
+                    maxValue = 0.9f,
+                    periodMillis = 1_800,
+                )
                 Icon(
                     imageVector = Icons.Filled.MoreHoriz,
                     contentDescription = stringResource(R.string.tool_preparing_a11y),

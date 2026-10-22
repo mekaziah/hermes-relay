@@ -144,13 +144,11 @@ import com.hermesandroid.relay.network.relay.VoiceOutputConfig
 import com.hermesandroid.relay.ui.components.reasoningEffortLabel
 import com.hermesandroid.relay.ui.components.resolveSessionModelUiState
 import com.hermesandroid.relay.ui.components.rememberAccessibleMotionState
+import com.hermesandroid.relay.ui.components.rememberAmbientBreathe
+import com.hermesandroid.relay.ui.components.rememberAmbientPhase
 import androidx.compose.animation.AnimatedContent
 import androidx.compose.animation.core.LinearEasing
-import androidx.compose.animation.core.RepeatMode
-import androidx.compose.animation.core.animateFloat
 import androidx.compose.animation.core.animateFloatAsState
-import androidx.compose.animation.core.infiniteRepeatable
-import androidx.compose.animation.core.rememberInfiniteTransition
 import androidx.compose.animation.core.tween
 import androidx.compose.animation.togetherWith
 import androidx.compose.animation.slideInVertically
@@ -2441,7 +2439,7 @@ fun ChatScreen(
     // Precedence mirrors the messaging-app pattern: show the profile's
     // human-readable description (e.g. "Victor") if present, then the
     // profile's slug name, then the personality, then the connection label,
-    // then the literal "Hermes" fallback.
+    // then the literal "Gary" fallback.
     //
     // Wrapped in `derivedStateOf` so the recomposition scope tracks every
     // state read inside (effectiveProfile, selectedPersonality,
@@ -2555,7 +2553,7 @@ fun ChatScreen(
             }
             val threadsProactiveEnabled by connectionViewModel.proactiveEnabled.collectAsState()
             val threadsAuthState by connectionViewModel.authState.collectAsState()
-            // Threads capability = "Let Hermes message me" on + relay paired.
+            // Threads capability = "Let Gary message me" on + relay paired.
             // Shows the drawer's Threads affordance even before the first Thread
             // arrives (the drawer also self-shows it when a source=phone session
             // is already present).
@@ -2593,7 +2591,7 @@ fun ChatScreen(
                 val latest = entries.maxBy { it.receivedAt }
                 ProvisionalThreadRow(
                     chatId = chatId,
-                    title = latest.title.ifBlank { "Hermes" },
+                    title = latest.title.ifBlank { "Gary" },
                     messageCount = entries.size,
                     lastActivityAt = latest.receivedAt,
                 )
@@ -4619,7 +4617,7 @@ fun ChatScreen(
                             }
                             scope.launch {
                                 clipboard.setClipEntry(
-                                    ClipEntry(ClipData.newPlainText("Hermes response failure", details)),
+                                    ClipEntry(ClipData.newPlainText("Gary response failure", details)),
                                 )
                                 snackbarHostState.showSnackbar(
                                     message = context.getString(R.string.chat_copied_to_clipboard),
@@ -4707,7 +4705,7 @@ fun ChatScreen(
                         isDemoMode = isDemoMode,
                         voiceReady = voiceReady,
                         onDemoNotice = {
-                            UiMessageBus.warning("Voice is unavailable in the offline demo — connect to Hermes to use it")
+                            UiMessageBus.warning("Voice is unavailable in the offline demo — connect to Gary to use it")
                         },
                         onStartVoice = requestVoiceMode,
                         onSetupNotice = {
@@ -4717,7 +4715,7 @@ fun ChatScreen(
                                             "Voice needs a one-time sign-in on the $route route — open Manage"
                                         } ?: "Voice needs dashboard sign-in — open Manage to sign in"
                                     com.hermesandroid.relay.viewmodel.StandardVoiceAvailability.Unsupported ->
-                                        "This Hermes build has no voice routes — update hermes-agent or pair Relay"
+                                        "This Gary build has no voice routes — update hermes-agent or pair Relay"
                                     else ->
                                         context.getString(R.string.chat_voice_needs_route)
                                 })
@@ -5190,16 +5188,10 @@ internal fun buildProvisionalThreadRows(
 @Composable
 private fun ChatConnectingAvatarGlyph() {
     Box(contentAlignment = Alignment.Center, modifier = Modifier.fillMaxSize()) {
-        val transition = rememberInfiniteTransition(label = "chat-avatar-loading")
-        val glyphAlpha by transition.animateFloat(
-            initialValue = 0.45f,
-            targetValue = 1f,
-            animationSpec = infiniteRepeatable(
-                animation = tween(durationMillis = 760, easing = LinearEasing),
-                repeatMode = RepeatMode.Reverse,
-            ),
-            label = "chat-avatar-loading-alpha",
-        )
+        // Frame-throttled (see AmbientAnimation.kt) — the connecting avatar can
+        // persist for the whole of a reconnect, so it must not pin the window at
+        // the display refresh rate.
+        val glyphAlpha = rememberAmbientBreathe(minValue = 0.45f, maxValue = 1f, periodMillis = 1_520)
         CircularProgressIndicator(
             modifier = Modifier
                 .size(19.dp)
@@ -5215,16 +5207,7 @@ private fun ChatSkeletonLine(
     modifier: Modifier = Modifier,
     height: Dp = 12.dp,
 ) {
-    val transition = rememberInfiniteTransition(label = "chat-skeleton")
-    val alpha by transition.animateFloat(
-        initialValue = 0.18f,
-        targetValue = 0.42f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 980, easing = LinearEasing),
-            repeatMode = RepeatMode.Reverse,
-        ),
-        label = "chat-skeleton-alpha",
-    )
+    val alpha = rememberAmbientBreathe(minValue = 0.18f, maxValue = 0.42f, periodMillis = 1_960)
     Box(
         modifier = modifier
             .height(height)
@@ -5414,9 +5397,9 @@ private fun buildChatLoadingCommands(
             },
             command = "/gateway wake",
             detail = if (chatReady) {
-                "${agentDisplayName.ifBlank { "Hermes" }} online"
+                "${agentDisplayName.ifBlank { "Gary" }} online"
             } else {
-                "waking ${agentDisplayName.ifBlank { "Hermes" }}"
+                "waking ${agentDisplayName.ifBlank { "Gary" }}"
             },
         ),
         ChatLoadingCommand(
@@ -5472,28 +5455,12 @@ private fun ChatLoadingCommandPanel(
 
 @Composable
 private fun ChatLoadingCommandRow(command: ChatLoadingCommand) {
-    val transition = rememberInfiniteTransition(label = "chat-loading-command")
-    val spinnerFrame by transition.animateFloat(
-        initialValue = 0f,
-        targetValue = CHAT_LOADING_SPINNER_FRAMES.size.toFloat(),
-        animationSpec = infiniteRepeatable(
-            animation = tween(
-                durationMillis = CHAT_LOADING_SPINNER_FRAMES.size * 120,
-                easing = LinearEasing,
-            ),
-            repeatMode = RepeatMode.Restart,
-        ),
-        label = "chat-loading-command-spinner",
-    )
-    val dotsFrame by transition.animateFloat(
-        initialValue = 0f,
-        targetValue = 4f,
-        animationSpec = infiniteRepeatable(
-            animation = tween(durationMillis = 900, easing = LinearEasing),
-            repeatMode = RepeatMode.Restart,
-        ),
-        label = "chat-loading-command-dots",
-    )
+    // Frame-throttled sawtooths (see AmbientAnimation.kt) — this cold-start card
+    // can sit on screen for the length of a connect.
+    val spinnerPhase = rememberAmbientPhase(periodMillis = CHAT_LOADING_SPINNER_FRAMES.size * 120)
+    val spinnerFrame = spinnerPhase * CHAT_LOADING_SPINNER_FRAMES.size.toFloat()
+    val dotsPhase = rememberAmbientPhase(periodMillis = 900)
+    val dotsFrame = dotsPhase * 4f
     fun glyphFor(state: ChatLoadingCommandState): String = when (state) {
         ChatLoadingCommandState.Pending -> "."
         ChatLoadingCommandState.Active -> {
@@ -5849,13 +5816,13 @@ private fun shareConversation(
     messages: List<com.hermesandroid.relay.data.ChatMessage>,
 ) {
     val body = buildString {
-        appendLine("# Hermes conversation")
+        appendLine("# Gary conversation")
         appendLine()
         messages.forEach { message ->
             if (message.content.isBlank()) return@forEach
             val speaker = when {
                 message.role.name.equals("user", ignoreCase = true) -> "**You:**"
-                message.role.name.equals("assistant", ignoreCase = true) -> "**Hermes:**"
+                message.role.name.equals("assistant", ignoreCase = true) -> "**Gary:**"
                 else -> "**System:**"
             }
             appendLine(speaker)
